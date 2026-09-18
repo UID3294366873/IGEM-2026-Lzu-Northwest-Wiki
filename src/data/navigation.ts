@@ -1,0 +1,56 @@
+import type { RouteMetadata } from '../types/navigation';
+
+/**
+ * 全站页面元数据的唯一来源。这里不导入页面组件，因而布局、搜索与导航可以安全复用。
+ */
+export const routeMetadata: RouteMetadata[] = [
+  {
+    path: '/',
+    label: '首页',
+    title: '首页',
+    description: '项目总览与核心入口。',
+    group: 'Overview',
+  },
+  {
+    path: '/description',
+    label: '项目描述',
+    title: '项目描述',
+    description: '项目背景、问题、方案与影响。',
+    group: 'Project',
+  },
+  {
+    path: '/team',
+    label: '团队介绍',
+    title: '团队介绍',
+    description: '成员、分工与协作者。',
+    group: 'Team',
+  },
+  {
+    path: '/notebook',
+    label: '实验记录',
+    title: '实验记录',
+    description: '项目进度与实验时间线。',
+    group: 'Lab',
+  },
+  {
+    path: '/contribution',
+    label: '奖项/贡献',
+    title: '奖项与贡献',
+    description: '社区贡献和奖项证据。',
+    group: 'Project',
+  },
+  {
+    path: '/search',
+    label: '搜索',
+    title: '站内搜索',
+    description: '按页面标题与简介搜索。',
+    group: 'Utility',
+  },
+  {
+    path: '/contact',
+    label: '联系',
+    title: '联系表单',
+    description: '联系表单验证示例。',
+    group: 'Utility',
+  },
+];

@@ -1,0 +1,15 @@
+image: node:22-alpine
+
+pages:
+  stage: deploy
+  before_script:
+    - corepack enable
+    - yarn install --frozen-lockfile
+  script:
+    - yarn run check
+    - mv dist public
+  artifacts:
+    paths:
+      - public
+  rules:
+    - if: '$CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH'
