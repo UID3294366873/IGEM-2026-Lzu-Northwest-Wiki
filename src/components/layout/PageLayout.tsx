@@ -1,8 +1,6 @@
-import type { PropsWithChildren } from 'react';
+import type { PropsWithChildren, ReactNode } from 'react';
 import { useDocumentTitle } from '../../hooks/useDocumentTitle';
 import type { PageSection } from '../../types/navigation';
-import { Badge } from '../common/Badge';
-import { Breadcrumbs } from '../navigation/Breadcrumbs';
 import { PageNavigation } from '../navigation/PageNavigation';
 import { TableOfContents } from '../navigation/TableOfContents';
 import { Container } from './Container';
@@ -13,6 +11,10 @@ interface PageLayoutProps extends PropsWithChildren {
   lead: string;
   group?: string;
   sections?: PageSection[];
+  /** 仅作用于当前页面的类名，用于在不改动共享模板的情况下覆写布局。 */
+  pageClassName?: string;
+  /** 当前页面可选的头图内容；未传入时使用通用低保真占位框。 */
+  heroMedia?: ReactNode;
 }
 
 /**
@@ -25,34 +27,41 @@ export function PageLayout({
   lead,
   group = 'Wiki',
   sections = [],
+  pageClassName = '',
+  heroMedia,
   children,
 }: PageLayoutProps) {
   useDocumentTitle(title);
   return (
-    <Container as="main" className="page">
+    <Container as="main" className={`page project-page ${pageClassName}`.trim()}>
       <div id="main-content" tabIndex={-1}>
-        <Breadcrumbs group={group} current={title} isHome={title === '首页'} />
-        <header className="page__header">
-          <div className="page__kicker">
-            <Badge>{group}</Badge>
-            <span>2026 / TEAM WIKI</span>
+        <header className="project-hero">
+          <div className="project-hero__copy">
+            <p className="project-hero__eyebrow">{group} / 2026 Wiki</p>
+            <h1>{title}</h1>
+            <p>{lead}</p>
           </div>
-          <h1 className="page__title">{title}</h1>
-          <p className="page__lead">{lead}</p>
-          <div className="page__meta">
-            <span>STATUS: DRAFT</span>
-            <span>UPDATED: 2026-09-08</span>
-          </div>
+          {heroMedia ?? (
+            <div
+              className="project-hero__media"
+              role="img"
+              aria-label={`${title} 主视觉预留区域`}
+            />
+          )}
         </header>
-        <div className="page__layout">
-          <div className="page__content">{children}</div>
+        <div
+          className={`project-page__body${sections.length === 0 ? ' project-page__body--single' : ''}`}
+        >
           {sections.length > 0 ? (
-            <aside className="page__aside">
+            <aside className="project-page__aside">
               <TableOfContents sections={sections} />
             </aside>
           ) : null}
+          <article className="project-page__article">
+            {children}
+            <PageNavigation />
+          </article>
         </div>
-        <PageNavigation />
       </div>
     </Container>
   );

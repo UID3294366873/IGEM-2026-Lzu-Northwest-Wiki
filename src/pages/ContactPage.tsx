@@ -11,6 +11,7 @@ export function ContactPage() {
   const form = useContactForm();
   return (
     <PageLayout
+      pageClassName="wiki-page--contact"
       title="联系表单"
       lead="欢迎交流、复现和改进我们的工作。"
       group="Utility"

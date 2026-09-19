@@ -19,6 +19,7 @@ const sections = [
 export function ContributionPage() {
   return (
     <PageLayout
+      pageClassName="wiki-page--contribution"
       title="奖项与贡献"
       lead="贡献必须让未来团队能够找到、理解、验证并复用。"
       group="Project"

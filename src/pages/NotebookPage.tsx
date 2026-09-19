@@ -18,6 +18,7 @@ const sections = [
 export function NotebookPage() {
   return (
     <PageLayout
+      pageClassName="wiki-page--notebook"
       title="实验记录"
       lead="把过程、失败和决策完整记录下来，让结果可以被追溯与复现。"
       group="Lab"

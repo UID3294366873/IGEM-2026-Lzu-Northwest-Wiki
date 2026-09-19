@@ -7,7 +7,11 @@ import { PageLayout } from '../components/layout/PageLayout';
  */
 export function NotFoundPage() {
   return (
-    <PageLayout title="页面不存在" lead="请求的页面尚未创建或地址有误。">
+    <PageLayout
+      title="页面不存在"
+      lead="请求的页面尚未创建或地址有误。"
+      pageClassName="wiki-page--not-found"
+    >
       <p>
         <Link to="/">返回首页</Link>
       </p>

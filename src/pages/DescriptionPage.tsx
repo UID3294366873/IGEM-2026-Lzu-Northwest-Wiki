@@ -20,10 +20,11 @@ const sections = [
 export function DescriptionPage() {
   return (
     <PageLayout
-      title="项目描述"
+      title="Project Description"
       lead="说明为什么选择这个问题，以及合成生物学方案如何回应它。"
       group="Project"
       sections={sections}
+      pageClassName="wiki-page--description"
     >
       <section className="content-section" id="problem">
         <SectionHeading

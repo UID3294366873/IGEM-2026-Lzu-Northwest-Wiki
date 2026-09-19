@@ -29,6 +29,7 @@ export function TeamPage() {
   const { state, retry } = useAsyncData(loadMembers, isEmpty);
   return (
     <PageLayout
+      pageClassName="wiki-page--team"
       title="团队介绍"
       lead="跨学科协作不是一张合影，而是清晰的角色、责任和归因边界。"
       group="Team"

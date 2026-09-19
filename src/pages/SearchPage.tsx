@@ -26,6 +26,7 @@ export function SearchPage() {
 
   return (
     <PageLayout
+      pageClassName="wiki-page--search"
       title="站内搜索"
       lead="快速定位页面、项目证据和维护入口。"
       group="Utility"

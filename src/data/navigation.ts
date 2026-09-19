@@ -6,38 +6,38 @@ import type { RouteMetadata } from '../types/navigation';
 export const routeMetadata: RouteMetadata[] = [
   {
     path: '/',
-    label: '首页',
+    label: 'Home',
     title: '首页',
     description: '项目总览与核心入口。',
     group: 'Overview',
   },
   {
     path: '/description',
-    label: '项目描述',
+    label: 'Projects',
     title: '项目描述',
     description: '项目背景、问题、方案与影响。',
     group: 'Project',
   },
   {
-    path: '/team',
-    label: '团队介绍',
-    title: '团队介绍',
-    description: '成员、分工与协作者。',
-    group: 'Team',
-  },
-  {
     path: '/notebook',
-    label: '实验记录',
+    label: 'Lab',
     title: '实验记录',
     description: '项目进度与实验时间线。',
     group: 'Lab',
   },
   {
     path: '/contribution',
-    label: '奖项/贡献',
+    label: 'Engagement',
     title: '奖项与贡献',
     description: '社区贡献和奖项证据。',
     group: 'Project',
+  },
+  {
+    path: '/team',
+    label: 'Team',
+    title: '团队介绍',
+    description: '成员、分工与协作者。',
+    group: 'Team',
   },
   {
     path: '/search',
@@ -45,6 +45,7 @@ export const routeMetadata: RouteMetadata[] = [
     title: '站内搜索',
     description: '按页面标题与简介搜索。',
     group: 'Utility',
+    showInNavigation: false,
   },
   {
     path: '/contact',
@@ -52,5 +53,6 @@ export const routeMetadata: RouteMetadata[] = [
     title: '联系表单',
     description: '联系表单验证示例。',
     group: 'Utility',
+    showInNavigation: false,
   },
 ];
