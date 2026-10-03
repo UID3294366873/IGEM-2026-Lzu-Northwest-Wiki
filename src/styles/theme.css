@@ -39,7 +39,7 @@
   --border-style: solid;
   --radius-small: 0;
   --radius-large: 0;
-  --content-width: 90rem;
+  --content-width: 100%;
   --reading-width: 72ch;
   --sidebar-width: 15rem;
   --transition-fast: 160ms ease;

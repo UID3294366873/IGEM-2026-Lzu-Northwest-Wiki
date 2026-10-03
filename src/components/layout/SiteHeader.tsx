@@ -1,4 +1,4 @@
-import { NavLink } from 'react-router-dom';
+import { NavLink, useLocation } from 'react-router-dom';
 import { routeMetadata } from '../../data/navigation';
 import { useDisclosure } from '../../hooks/useDisclosure';
 
@@ -9,6 +9,7 @@ import { useDisclosure } from '../../hooks/useDisclosure';
 export function SiteHeader() {
   const teamName = import.meta.env.VITE_TEAM_NAME || 'LZU-Northwest';
   const menu = useDisclosure();
+  const location = useLocation();
   return (
     <header className="site-header">
       <a className="site-header__skip-link" href="#main-content">
@@ -38,20 +39,45 @@ export function SiteHeader() {
           <ul className="site-header__list">
             {routeMetadata
               .filter((route) => route.showInNavigation !== false)
-              .map((route) => (
-                <li className="site-header__item" key={route.path}>
-                  <NavLink
-                    className={({ isActive }) =>
-                      `site-header__link${isActive ? ' site-header__link--active' : ''}`
-                    }
-                    end={route.path === '/'}
-                    to={route.path}
-                    onClick={menu.close}
+              .map((route) => {
+                const isEngagement = route.path === '/contribution';
+                const isEngagementActive =
+                  location.pathname === '/contribution' ||
+                  location.pathname === '/entrepreneurship';
+                return (
+                  <li
+                    className={`site-header__item${isEngagement ? ' site-header__item--dropdown' : ''}`}
+                    key={route.path}
                   >
-                    {route.label}
-                  </NavLink>
-                </li>
-              ))}
+                    <NavLink
+                      className={({ isActive }) =>
+                        `site-header__link${isActive || (isEngagement && isEngagementActive) ? ' site-header__link--active' : ''}`
+                      }
+                      end={route.path === '/'}
+                      to={route.path}
+                      onClick={menu.close}
+                      aria-haspopup={isEngagement ? 'true' : undefined}
+                    >
+                      {route.label}
+                    </NavLink>
+                    {isEngagement ? (
+                      <ul className="site-header__submenu" aria-label="Engagement submenu">
+                        <li>
+                          <NavLink
+                            className={({ isActive }) =>
+                              `site-header__submenu-link${isActive ? ' site-header__submenu-link--active' : ''}`
+                            }
+                            to="/entrepreneurship"
+                            onClick={menu.close}
+                          >
+                            Entrepreneurship
+                          </NavLink>
+                        </li>
+                      </ul>
+                    ) : null}
+                  </li>
+                );
+              })}
           </ul>
         </nav>
       </div>

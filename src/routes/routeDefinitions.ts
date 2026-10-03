@@ -1,6 +1,7 @@
 import { ContactPage } from '../pages/ContactPage';
 import { ContributionPage } from '../pages/ContributionPage';
 import { DescriptionPage } from '../pages/DescriptionPage';
+import { EntrepreneurshipPage } from '../pages/EntrepreneurshipPage';
 import { HomePage } from '../pages/HomePage';
 import { NotebookPage } from '../pages/NotebookPage';
 import { SearchPage } from '../pages/SearchPage';
@@ -17,6 +18,7 @@ const componentByPath = {
   '/team': TeamPage,
   '/notebook': NotebookPage,
   '/contribution': ContributionPage,
+  '/entrepreneurship': EntrepreneurshipPage,
   '/search': SearchPage,
   '/contact': ContactPage,
 } as const;

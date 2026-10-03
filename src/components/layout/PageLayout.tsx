@@ -15,6 +15,8 @@ interface PageLayoutProps extends PropsWithChildren {
   pageClassName?: string;
   /** 当前页面可选的头图内容；未传入时使用通用低保真占位框。 */
   heroMedia?: ReactNode;
+  /** 可选的自定义侧边栏；用于需要层级目录等特殊导航的长页面。 */
+  sidebar?: ReactNode;
 }
 
 /**
@@ -29,9 +31,11 @@ export function PageLayout({
   sections = [],
   pageClassName = '',
   heroMedia,
+  sidebar,
   children,
 }: PageLayoutProps) {
   useDocumentTitle(title);
+  const hasSidebar = sections.length > 0 || Boolean(sidebar);
   return (
     <Container as="main" className={`page project-page ${pageClassName}`.trim()}>
       <div id="main-content" tabIndex={-1}>
@@ -49,12 +53,10 @@ export function PageLayout({
             />
           )}
         </header>
-        <div
-          className={`project-page__body${sections.length === 0 ? ' project-page__body--single' : ''}`}
-        >
-          {sections.length > 0 ? (
+        <div className={`project-page__body${hasSidebar ? '' : ' project-page__body--single'}`}>
+          {hasSidebar ? (
             <aside className="project-page__aside">
-              <TableOfContents sections={sections} />
+              {sidebar ?? <TableOfContents sections={sections} />}
             </aside>
           ) : null}
           <article className="project-page__article">

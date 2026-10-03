@@ -33,6 +33,14 @@ export const routeMetadata: RouteMetadata[] = [
     group: 'Project',
   },
   {
+    path: '/entrepreneurship',
+    label: 'Entrepreneurship',
+    title: 'Entrepreneurship',
+    description: 'Sybio-Gutweaver business plan and commercialization pathway.',
+    group: 'Engagement',
+    showInNavigation: false,
+  },
+  {
     path: '/team',
     label: 'Team',
     title: '团队介绍',
