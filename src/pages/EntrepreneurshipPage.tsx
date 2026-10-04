@@ -3,6 +3,7 @@ import { EntrepreneurshipTableOfContents } from '../components/navigation/Entrep
 import type { EntrepreneurshipTocItem } from '../components/navigation/EntrepreneurshipTableOfContents';
 import { PageLayout } from '../components/layout/PageLayout';
 import entrepreneurshipContent from '../data/entrepreneurshipContent.json';
+import igemAssetUrls from '../data/igemAssetUrls.json';
 
 interface RichSegment {
   text: string;
@@ -54,12 +55,12 @@ interface EntrepreneurshipContent {
 const content = entrepreneurshipContent as EntrepreneurshipContent;
 
 /**
- * 添加 Vite base 路径，确保本地与 iGEM 子路径部署都能加载静态图片。
- * @param filename 独立图片目录中的文件名。
- * @returns 可直接用于 img src 的地址。
+ * 将内容文件中的逻辑文件名映射到 iGEM Uploads 返回的正式资源地址。
+ * @param filename 资源清单中的逻辑文件名。
+ * @returns 可直接用于 img src 的 static.igem.wiki 地址。
  */
 function imageUrl(filename: string): string {
-  return `${import.meta.env.BASE_URL}images/entrepreneurship/${filename}`;
+  return (igemAssetUrls as Record<string, string>)[filename] ?? '';
 }
 
 /**
@@ -89,14 +90,18 @@ function renderRichText(segments: RichSegment[], fallback: string): ReactNode {
  */
 function renderImages(images: ContentImage[] | undefined, keyPrefix: string): ReactNode {
   if (!images?.length) return null;
-  return images.map((image, index) => (
-    <figure
-      className="entrepreneurship-document__figure"
-      key={`${keyPrefix}-${image.src}-${index}`}
-    >
-      <img loading="lazy" src={imageUrl(image.src)} alt={image.alt} />
-    </figure>
-  ));
+  return images.map((image, index) => {
+    const src = imageUrl(image.src);
+    if (!src) return null;
+    return (
+      <figure
+        className="entrepreneurship-document__figure"
+        key={`${keyPrefix}-${image.src}-${index}`}
+      >
+        <img loading="lazy" src={src} alt={image.alt} />
+      </figure>
+    );
+  });
 }
 
 /**
@@ -128,8 +133,8 @@ function renderTable(block: TableBlock, blockIndex: number): ReactNode {
   if (!hasCellText && images.length > 0) {
     const isCcicPair =
       images.length === 2 &&
-      images.some((image) => image.src === 'image36.jpeg') &&
-      images.some((image) => image.src === 'image37.jpeg');
+      images.some((image) => image.src === 'entrepreneurship-image-36.jpeg') &&
+      images.some((image) => image.src === 'entrepreneurship-image-37.jpeg');
     return (
       <div
         className={`entrepreneurship-document__media-grid${isCcicPair ? ' entrepreneurship-document__media-grid--equal-pair' : ''}`}

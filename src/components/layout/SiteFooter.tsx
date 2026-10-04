@@ -4,16 +4,16 @@
  */
 export function SiteFooter() {
   const year = import.meta.env.VITE_TEAM_YEAR || '2026';
-  const slug = import.meta.env.VITE_TEAM_SLUG || 'example-team';
+  const slug = import.meta.env.VITE_TEAM_SLUG || 'lzu-northwest';
   return (
     <footer className="site-footer">
       <div className="site-footer__brand">
         <strong>[ iGEM / {year} ]</strong>
-        <p>{import.meta.env.VITE_TEAM_NAME || 'Example Team'} Wiki</p>
+        <p>{import.meta.env.VITE_TEAM_NAME || 'LZU-Northwest'} Wiki</p>
       </div>
       <div className="site-footer__legal">
         <p>
-          © {year} {import.meta.env.VITE_TEAM_NAME || 'Example Team'}。
+          © {year} {import.meta.env.VITE_TEAM_NAME || 'LZU-Northwest'}。
         </p>
         <p>
           Wiki 内容采用 <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>{' '}

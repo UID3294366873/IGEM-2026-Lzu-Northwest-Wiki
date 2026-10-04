@@ -2,7 +2,6 @@ import { Accordion } from '../components/common/Accordion';
 import { Badge } from '../components/common/Badge';
 import { Callout } from '../components/common/Callout';
 import { Card } from '../components/common/Card';
-import { QuoteBlock } from '../components/common/QuoteBlock';
 import { SectionHeading } from '../components/common/SectionHeading';
 import { PageLayout } from '../components/layout/PageLayout';
 
@@ -21,7 +20,7 @@ export function DescriptionPage() {
   return (
     <PageLayout
       title="Project Description"
-      lead="说明为什么选择这个问题，以及合成生物学方案如何回应它。"
+      lead="Sybio-Gutweaver：面向放疗相关急性肠损伤的工程化口服活菌候选方案。"
       group="Project"
       sections={sections}
       pageClassName="wiki-page--description"
@@ -35,11 +34,12 @@ export function DescriptionPage() {
         <div className="split-panel">
           <div>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing
-              elit。正式版本应包含可靠的一手数据、文献引用和当地情境。
+              腹盆腔肿瘤放疗可能引发氧化应激、黏膜损伤与肠屏障破坏。项目以工程化 Escherichia coli
+              Nissle 1917
+              为底盘，探索将抗氧化、屏障支持、短期可控黏附和生物安全控制整合为口服活菌候选制剂。
             </p>
             <Callout title="证据插槽" tone="warning">
-              <p>在此链接正式来源，并说明数字对应的年份、地区和统计口径。</p>
+              <p>所有疾病负担数字、机制描述和临床判断必须在发布前链接到可核验来源。</p>
             </Callout>
           </div>
           <div className="media-placeholder" role="img" aria-label="问题背景图表预留区域">
@@ -68,11 +68,11 @@ export function DescriptionPage() {
       </section>
       <section className="content-section" id="impact">
         <SectionHeading eyebrow="03 / Responsibility" title="影响、反馈与实施边界" />
-        <QuoteBlock
-          quote="真正有用的系统不仅要在实验室工作，还必须能被目标使用者理解和维护。"
-          author="模拟利益相关方"
-          context="需求访谈占位内容"
-        />
+        <Callout title="访谈证据" tone="warning">
+          <p>
+            商业计划记录了医疗机构、科研机构和活菌制剂产业专家访谈。正式页面只发布经团队确认的访谈摘要、日期、参与者身份说明与授权范围，不使用模拟引语。
+          </p>
+        </Callout>
         <div className="card-grid card-grid--two">
           <Card title="预期价值" headingLevel={3}>
             <p>说明谁会受益、如何衡量成效、哪些变化可以合理归因于项目。</p>

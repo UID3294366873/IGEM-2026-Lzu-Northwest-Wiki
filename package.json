@@ -11,6 +11,9 @@
   "scripts": {
     "dev": "node ./node_modules/vite/bin/vite.js",
     "build": "node ./node_modules/typescript/bin/tsc -b && node ./node_modules/vite/bin/vite.js build",
+    "validate:igem-assets": "node scripts/validate-igem-assets.mjs",
+    "validate:igem-content": "node scripts/validate-igem-content.mjs",
+    "check:igem-dist": "node scripts/check-igem-dist.mjs",
     "preview": "node ./node_modules/vite/bin/vite.js preview",
     "lint": "node ./node_modules/eslint/bin/eslint.js . --max-warnings 0",
     "format": "node ./node_modules/prettier/bin/prettier.cjs --write .",

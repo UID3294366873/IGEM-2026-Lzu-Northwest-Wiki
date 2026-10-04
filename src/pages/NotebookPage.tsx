@@ -30,30 +30,36 @@ export function NotebookPage() {
           title="工程进度"
           description="每个节点应链接到原始记录、数据和对应的设计决策。"
         />
-        <ol className="timeline">
-          {timelineEvents.map((event, index) => (
-            <li className="timeline__item" key={event.id}>
-              <div className="timeline__marker" aria-hidden="true">
-                {String(index + 1).padStart(2, '0')}
-              </div>
-              <article className="timeline__content">
-                <div className="timeline__meta">
-                  <time dateTime={event.date}>{event.date}</time>
-                  <Badge tone={index === timelineEvents.length - 1 ? 'success' : 'neutral'}>
-                    {index === timelineEvents.length - 1 ? 'CURRENT' : 'COMPLETE'}
-                  </Badge>
+        {timelineEvents.length === 0 ? (
+          <Callout title="等待真实实验记录" tone="warning">
+            <p>为保护科研诚信，此处不展示模拟实验、虚构结果或占位日期。</p>
+          </Callout>
+        ) : (
+          <ol className="timeline">
+            {timelineEvents.map((event, index) => (
+              <li className="timeline__item" key={event.id}>
+                <div className="timeline__marker" aria-hidden="true">
+                  {String(index + 1).padStart(2, '0')}
                 </div>
-                <h3>{event.title}</h3>
-                <p>{event.description}</p>
-              </article>
-            </li>
-          ))}
-        </ol>
+                <article className="timeline__content">
+                  <div className="timeline__meta">
+                    <time dateTime={event.date}>{event.date}</time>
+                    <Badge tone={index === timelineEvents.length - 1 ? 'success' : 'neutral'}>
+                      {index === timelineEvents.length - 1 ? 'CURRENT' : 'COMPLETE'}
+                    </Badge>
+                  </div>
+                  <h3>{event.title}</h3>
+                  <p>{event.description}</p>
+                </article>
+              </li>
+            ))}
+          </ol>
+        )}
       </section>
       <section className="content-section" id="records">
         <SectionHeading eyebrow="02 / Index" title="记录索引" />
         <DataTable
-          caption="示例实验记录索引"
+          caption="实验记录索引"
           columns={[
             { key: 'date', label: '日期' },
             { key: 'title', label: '记录' },

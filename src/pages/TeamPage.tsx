@@ -3,7 +3,7 @@ import { AsyncStateView } from '../components/common/AsyncStateView';
 import { Badge } from '../components/common/Badge';
 import { Card } from '../components/common/Card';
 import { SectionHeading } from '../components/common/SectionHeading';
-import { StatGrid } from '../components/common/StatGrid';
+import { Callout } from '../components/common/Callout';
 import { PageLayout } from '../components/layout/PageLayout';
 import { teamMembers } from '../data/team';
 import { useAsyncData } from '../hooks/useAsyncData';
@@ -21,7 +21,7 @@ const isEmpty = (members: TeamMember[]): boolean => members.length === 0;
  * @returns 团队页面。
  */
 export function TeamPage() {
-  /** 模拟异步数据源；接入 API 时可在此替换为 fetch，不必改卡片结构。 */
+  /** 保留异步边界，后续可接入经团队核验的数据源。 */
   const loadMembers = useCallback(
     async (): Promise<TeamMember[]> => Promise.resolve(teamMembers),
     [],
@@ -37,15 +37,9 @@ export function TeamPage() {
     >
       <section className="content-section" id="team-overview">
         <SectionHeading eyebrow="01 / People" title="一个团队，多种视角" />
-        <StatGrid
-          label="团队构成"
-          items={[
-            { value: '08', label: '学生成员' },
-            { value: '03', label: '学科方向' },
-            { value: '02', label: '指导老师' },
-            { value: '01', label: '共同目标' },
-          ]}
-        />
+        <Callout title="内容核验中" tone="warning">
+          <p>成员数量、姓名、角色、个人简介与照片将在成员本人及团队负责人核验后发布。</p>
+        </Callout>
       </section>
       <section className="content-section" id="members">
         <SectionHeading

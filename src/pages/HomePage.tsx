@@ -11,10 +11,17 @@ export function HomePage() {
   return (
     <main className="home-page" id="main-content" tabIndex={-1}>
       <section className="home-hero" aria-labelledby="home-title">
-        <h1 id="home-title">让每一次实验都成为下一轮设计的证据。</h1>
+        <p className="home-hero__eyebrow">LZU-Northwest · iGEM 2026</p>
+        <h1 id="home-title">Sybio-Gutweaver</h1>
+        <p className="home-hero__lead">
+          面向放疗相关急性肠损伤的工程化口服活菌候选方案，将抗氧化、屏障支持、可控黏附与双重生物安全机制整合到同一系统中。
+        </p>
+        <Link className="home-hero__action" to="/description">
+          了解项目方案 →
+        </Link>
       </section>
       <section className="home-process" aria-labelledby="process-title">
-        <h2 id="process-title">当我们的产品进入目标环境</h2>
+        <h2 id="process-title">从工程设计到可验证证据</h2>
         <div className="home-process__canvas">
           <article className="home-process__step home-process__step--left">
             <strong>01 / Sense</strong>

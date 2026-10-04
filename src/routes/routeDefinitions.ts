@@ -1,13 +1,19 @@
+import { lazy } from 'react';
 import { ContactPage } from '../pages/ContactPage';
 import { ContributionPage } from '../pages/ContributionPage';
 import { DescriptionPage } from '../pages/DescriptionPage';
-import { EntrepreneurshipPage } from '../pages/EntrepreneurshipPage';
 import { HomePage } from '../pages/HomePage';
 import { NotebookPage } from '../pages/NotebookPage';
 import { SearchPage } from '../pages/SearchPage';
 import { TeamPage } from '../pages/TeamPage';
 import { routeMetadata } from '../data/navigation';
 import type { RouteDefinition } from '../types/navigation';
+
+const EntrepreneurshipPage = lazy(() =>
+  import('../pages/EntrepreneurshipPage').then((module) => ({
+    default: module.EntrepreneurshipPage,
+  })),
+);
 
 /**
  * 组件路径映射。页面文案统一维护在 navigation 数据中，避免产生循环依赖。

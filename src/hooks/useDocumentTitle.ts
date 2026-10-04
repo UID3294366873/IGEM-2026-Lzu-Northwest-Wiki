@@ -6,7 +6,7 @@ import { useEffect } from 'react';
  */
 export function useDocumentTitle(pageTitle: string): void {
   useEffect(() => {
-    const team = import.meta.env.VITE_TEAM_NAME || 'Example Team';
+    const team = import.meta.env.VITE_TEAM_NAME || 'LZU-Northwest';
     const year = import.meta.env.VITE_TEAM_YEAR || '2026';
     document.title = `${pageTitle} | ${team} - iGEM ${year}`;
   }, [pageTitle]);

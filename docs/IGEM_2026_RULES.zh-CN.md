@@ -1,17 +1,18 @@
 # 2026 iGEM Wiki 官方规范核验记录
 
-> 核验日期：2026-09-04。iGEM 规则可能继续调整；Wiki Freeze 前必须重新打开官方页面逐项复核。本文区分“官方已确认”和“保守兼容策略”，不把历史惯例冒充 2026 新规。
+> 核验日期：2026-10-04。iGEM 规则可能继续调整；Wiki Freeze 前必须重新打开官方页面逐项复核。本文区分“官方已确认”和“保守兼容策略”，不把历史惯例冒充 2026 新规。
 
 ## 一、官方已确认的 2026 信息
 
 1. **官方地址与路径**：团队 Wiki 生产地址采用 `https://2026.igem.wiki/<team-slug>/`。官方 2026 项目和已迁移团队均采用该格式。Vite `base` 与 React Router `basename` 必须包含团队 slug，否则直接访问页面或加载构建资源会失败。
-2. **源码与部署**：源码保存在 iGEM GitLab 的 2026 团队项目中，通过 GitLab Pages 管线发布。构建产物目录需要作为 `public` artifact 发布；本项目由 `dist` 改名为 `public`。
+2. **源码与部署**：源码保存在 iGEM GitLab 的 2026 团队项目中，通过 GitLab Pages 管线发布。构建产物目录需要作为 `public` artifact 发布；本项目把 `dist` 内容复制到 `public`，并生成 SPA fallback。
 3. **资源托管**：图片、照片、图标和字体等 Wiki 资源必须通过 iGEM Uploads 上传并由 `static.igem.wiki` 提供。不要使用 Google Fonts、公共 CDN、外部图床或运行时从 GitHub 拉取资源。
 4. **视频与音频**：视频应通过 iGEM Video Universe（`video.igem.org`）提供。2026 官方模板更新新增了 Video & Audio 指南入口。不要嵌入 YouTube、Vimeo 或其他第三方播放器。
-5. **页脚信息**：每页必须包含内容许可声明，以及指向团队 `gitlab.igem.org` 源码仓库的链接。官方模板使用 CC BY 4.0 作为 Wiki 内容许可。
-6. **官方平台 UI**：生产平台会提供官方登录/工具栏。团队代码不得隐藏、覆盖、仿冒或替换它；也不要用全屏固定层遮挡其交互区域。
-7. **截止时间**：2026 Wiki Freeze 为 **2026-10-21 15:00 UTC**；Thaw 为 **2026-11-25 15:00 UTC**；最终归档为 **2026-12-09 15:00 UTC**。以官方日历的最新显示为准。
-8. **奖项术语变化**：2026 官方模板将 `Prize` 更新为 `Award`，Judging 链接更新到 `/judging/awards/...`；Best Software Tool 更新为 Best Software，并调整了资格说明。页面内容应按 2026 Judging Handbook 和 Award 页面逐项编写。
+5. **许可与页脚信息**：根 `LICENSE` 保留官方 CC BY 4.0 原文；每页包含内容许可声明，以及指向团队 `gitlab.igem.org` 源码仓库的链接。
+6. **产物大小**：官方 Pages artifact 上限为 5 MB。图片、字体、PDF、数据集等大文件应通过 Uploads 托管，不进入构建产物。
+7. **官方平台 UI**：生产平台会提供官方登录/工具栏。团队代码不得隐藏、覆盖、仿冒或替换它；也不要用全屏固定层遮挡其交互区域。
+8. **截止时间**：2026 Wiki Freeze 为 **2026-10-21 15:00 UTC**；Thaw 为 **2026-11-25 15:00 UTC**；最终归档为 **2026-12-09 15:00 UTC**。以官方日历的最新显示为准。
+9. **奖项术语变化**：2026 官方模板将 `Prize` 更新为 `Award`，Judging 链接更新到 `/judging/awards/...`；Best Software Tool 更新为 Best Software，并调整了资格说明。页面内容应按 2026 Judging Handbook 和 Award 页面逐项编写。
 
 ## 二、禁止项与保守兼容边界
 
@@ -47,4 +48,4 @@
 - [iGEM Wiki Video & Audio 指南入口](https://teams.igem.org/go/deliverables/wiki/videos-and-audios)
 - [Creative Commons Attribution 4.0](https://creativecommons.org/licenses/by/4.0/)
 
-由于 `teams.igem.org/go/...` 是登录态动态入口，自动抓取可能返回空壳或重定向；2026-09-04 的核验同时参考了官方模板 2026 release 的提交说明。最终提交前应由已登录的团队成员人工复核这两个入口。
+由于 `teams.igem.org/go/...` 是登录态动态入口，自动抓取可能返回空壳或重定向；2026-10-04 的核验同时读取了官方页面分包中的 Requirements、FAQ 与 Uploads 规则，以及官方模板原文件。最终提交前仍应由已登录的团队成员人工复核。

@@ -1,3 +1,4 @@
+import { Suspense } from 'react';
 import { Route, Routes } from 'react-router-dom';
 import { BackToTop } from './components/common/BackToTop';
 import { SiteFooter } from './components/layout/SiteFooter';
@@ -13,12 +14,14 @@ export default function App() {
   return (
     <div className="app-shell">
       <SiteHeader />
-      <Routes>
-        {routeDefinitions.map(({ path, component: Page }) => (
-          <Route key={path} path={path} element={<Page />} />
-        ))}
-        <Route path="*" element={<NotFoundPage />} />
-      </Routes>
+      <Suspense fallback={<main className="async-state">正在加载页面…</main>}>
+        <Routes>
+          {routeDefinitions.map(({ path, component: Page }) => (
+            <Route key={path} path={path} element={<Page />} />
+          ))}
+          <Route path="*" element={<NotFoundPage />} />
+        </Routes>
+      </Suspense>
       <SiteFooter />
       <BackToTop />
     </div>

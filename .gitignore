@@ -1,5 +1,7 @@
 node_modules/
 dist/
+local-assets/
+.playwright-cli/
 .env.local
 .DS_Store
 *.log

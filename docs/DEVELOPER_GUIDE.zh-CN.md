@@ -138,14 +138,14 @@ const loadMembers = async (): Promise<TeamMember[]> => {
 
 ## 8. 静态资源
 
-开发期可用小型本地占位文件；生产资源必须经 [iGEM Uploads](https://teams.igem.org/go/deliverables/wiki/uploads) 上传。得到 URL 后写成 `https://static.igem.wiki/...`，同时补充准确 `alt`。视频使用 [iGEM Video Universe](https://video.igem.org/) 和当年官方嵌入方式，禁止 YouTube/Vimeo。
+图片资源经 [iGEM Uploads](https://teams.igem.org/go/deliverables/wiki/uploads) 上传，返回的 URL 统一记录在 `src/data/igemAssetUrls.json`，本地开发和官方构建使用同一套 `static.igem.wiki` 地址。可运行 `yarn validate:igem-assets` 手动核对清单。视频使用 [iGEM Video Universe](https://video.igem.org/) 和当年官方嵌入方式，禁止 YouTube/Vimeo。
 
 ## 9. 部署到 iGEM GitLab Pages
 
-1. 确认 `.env` 中 `VITE_TEAM_SLUG` 与官方仓库 slug 完全一致；CI 需要变量时，在 GitLab Settings → CI/CD → Variables 添加同名变量。不要提交秘密。
+1. 当前团队显示名为 `LZU-Northwest`、slug 为 `lzu-northwest`；若官方 GitLab 实际路径不同，以官方分配值为准并同步修改 CI。不要在 `VITE_*` 变量中存秘密。
 2. 在官方仓库创建分支并提交：`git add .`、`git commit`、`git push`。
-3. 合并到默认分支后，`.gitlab-ci.yml` 使用 Node 22，执行 `yarn install --frozen-lockfile` 和 `yarn run check`。
-4. Vite 输出 `dist/`；管线把它改名为 GitLab Pages 要求的 `public/` 并上传 artifact。
+3. 合并到默认分支后，`.gitlab-ci.yml` 使用 Node 22，执行依赖锁定、代码质量检查、官方资源清单验证和生产构建。
+4. Vite 输出 `dist/`；管线复制到 GitLab Pages 要求的 `public/` artifact。`yarn check:igem-dist` 会拒绝本地图片或超过 5 MB 的产物。
 5. 在 GitLab Build → Pipelines 确认 `pages` job 成功。
 6. 打开 `https://2026.igem.wiki/<team-slug>/`，再直接访问 `/description` 等深层链接。
 7. 用浏览器 Network 面板检查：无 Google Fonts、CDN、外部图片/脚本请求；所有 iGEM 资源来自允许的官方域名。

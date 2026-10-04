@@ -11,7 +11,7 @@ if (!rootElement) throw new Error('找不到 #root 挂载节点。');
 
 createRoot(rootElement).render(
   <StrictMode>
-    <BrowserRouter basename={import.meta.env.BASE_URL}>
+    <BrowserRouter basename={import.meta.env.VITE_ROUTER_BASE || import.meta.env.BASE_URL}>
       <AppProvider>
         <App />
       </AppProvider>

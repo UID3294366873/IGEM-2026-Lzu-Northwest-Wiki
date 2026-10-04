@@ -20,10 +20,10 @@ function normalizeTeamSlug(value: string): string {
  */
 export default defineConfig(({ mode }) => {
   const env = loadEnv(mode, process.cwd(), 'VITE_');
-  const slug = normalizeTeamSlug(env.VITE_TEAM_SLUG || 'example-team');
-
+  const slug = normalizeTeamSlug(env.VITE_TEAM_SLUG || 'lzu-northwest');
   return {
     base: mode === 'production' ? `/${slug}/` : '/',
+    publicDir: false,
     plugins: [react()],
     build: { outDir: 'dist', sourcemap: false },
   };

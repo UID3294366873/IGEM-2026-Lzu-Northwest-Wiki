@@ -1,15 +1,34 @@
-image: node:22-alpine
+image: node:22
+
+variables:
+  VITE_TEAM_SLUG: lzu-northwest
+  VITE_TEAM_NAME: LZU-Northwest
+  VITE_TEAM_YEAR: '2026'
 
 pages:
-  stage: deploy
+  stage: build
+  cache:
+    - key:
+        files:
+          - yarn.lock
+      paths:
+        - .yarn-cache/
   before_script:
-    - corepack enable
+    - echo 'yarn-offline-mirror ".yarn-cache/"' >> .yarnrc
+    - echo 'yarn-offline-mirror-pruning true' >> .yarnrc
     - yarn install --frozen-lockfile
   script:
-    - yarn run check
-    - mv dist public
+    - yarn lint
+    - yarn format:check
+    - yarn build
+    - yarn check:igem-dist
+    - cp -a dist/. public/
+    - echo '/* /index.html 200' > public/_redirects
   artifacts:
     paths:
       - public
   rules:
-    - if: '$CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH'
+    - if: $CI_COMMIT_BRANCH != $CI_DEFAULT_BRANCH
+      when: never
+    - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
+      when: always
