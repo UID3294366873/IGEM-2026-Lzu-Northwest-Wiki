@@ -1,0 +1,73 @@
+ .env.example                                |   6 [32m+[m[31m-[m
+ .gitignore                                  |   2 [32m+[m
+ .gitlab-ci.yml                              |  31 [32m++[m[31m-[m
+ LICENSE                                     | 404 [32m+++++++++++++++++++++++++++[m[31m-[m
+ README.md                                   |  53 [32m++[m[31m--[m
+ cloudbase-dist.zip                          | Bin [31m88274[m -> [32m0[m bytes
+ cloudbaserc.json                            |  14 [31m-[m
+ docs/DEVELOPER_GUIDE.zh-CN.md               |   8 [32m+[m[31m-[m
+ docs/IGEM_2026_RULES.zh-CN.md               |  15 [32m+[m[31m-[m
+ eslint.config.js                            |   4 [32m+[m
+ package.json                                |   3 [32m+[m
+ public/images/entrepreneurship/image1.png   | Bin [31m796185[m -> [32m0[m bytes
+ public/images/entrepreneurship/image10.png  | Bin [31m1817030[m -> [32m0[m bytes
+ public/images/entrepreneurship/image11.jpeg | Bin [31m177547[m -> [32m0[m bytes
+ public/images/entrepreneurship/image12.png  | Bin [31m66168[m -> [32m0[m bytes
+ public/images/entrepreneurship/image13.png  | Bin [31m72426[m -> [32m0[m bytes
+ public/images/entrepreneurship/image14.png  | Bin [31m48474[m -> [32m0[m bytes
+ public/images/entrepreneurship/image15.png  | Bin [31m51253[m -> [32m0[m bytes
+ public/images/entrepreneurship/image16.png  | Bin [31m29825[m -> [32m0[m bytes
+ public/images/entrepreneurship/image17.png  | Bin [31m16183[m -> [32m0[m bytes
+ public/images/entrepreneurship/image18.png  | Bin [31m35020[m -> [32m0[m bytes
+ public/images/entrepreneurship/image19.png  | Bin [31m105204[m -> [32m0[m bytes
+ public/images/entrepreneurship/image2.jpeg  | Bin [31m603707[m -> [32m0[m bytes
+ public/images/entrepreneurship/image20.png  | Bin [31m48223[m -> [32m0[m bytes
+ public/images/entrepreneurship/image21.png  | Bin [31m55498[m -> [32m0[m bytes
+ public/images/entrepreneurship/image22.png  | Bin [31m894781[m -> [32m0[m bytes
+ public/images/entrepreneurship/image23.jpeg | Bin [31m487548[m -> [32m0[m bytes
+ public/images/entrepreneurship/image24.jpeg | Bin [31m144149[m -> [32m0[m bytes
+ public/images/entrepreneurship/image25.jpeg | Bin [31m190675[m -> [32m0[m bytes
+ public/images/entrepreneurship/image26.png  | Bin [31m909369[m -> [32m0[m bytes
+ public/images/entrepreneurship/image27.jpeg | Bin [31m114156[m -> [32m0[m bytes
+ public/images/entrepreneurship/image28.png  | Bin [31m110201[m -> [32m0[m bytes
+ public/images/entrepreneurship/image29.jpeg | Bin [31m89708[m -> [32m0[m bytes
+ public/images/entrepreneurship/image3.png   | Bin [31m1213598[m -> [32m0[m bytes
+ public/images/entrepreneurship/image30.jpeg | Bin [31m94417[m -> [32m0[m bytes
+ public/images/entrepreneurship/image31.jpeg | Bin [31m435495[m -> [32m0[m bytes
+ public/images/entrepreneurship/image32.png  | Bin [31m190308[m -> [32m0[m bytes
+ public/images/entrepreneurship/image33.jpeg | Bin [31m106418[m -> [32m0[m bytes
+ public/images/entrepreneurship/image34.jpeg | Bin [31m103620[m -> [32m0[m bytes
+ public/images/entrepreneurship/image35.png  | Bin [31m329299[m -> [32m0[m bytes
+ public/images/entrepreneurship/image36.jpeg | Bin [31m77074[m -> [32m0[m bytes
+ public/images/entrepreneurship/image37.jpeg | Bin [31m28694[m -> [32m0[m bytes
+ public/images/entrepreneurship/image38.jpeg | Bin [31m85058[m -> [32m0[m bytes
+ public/images/entrepreneurship/image39.jpeg | Bin [31m51877[m -> [32m0[m bytes
+ public/images/entrepreneurship/image4.png   | Bin [31m380982[m -> [32m0[m bytes
+ public/images/entrepreneurship/image5.png   | Bin [31m377762[m -> [32m0[m bytes
+ public/images/entrepreneurship/image6.png   | Bin [31m184504[m -> [32m0[m bytes
+ public/images/entrepreneurship/image7.png   | Bin [31m97968[m -> [32m0[m bytes
+ public/images/entrepreneurship/image8.png   | Bin [31m1019175[m -> [32m0[m bytes
+ public/images/entrepreneurship/image9.png   | Bin [31m341827[m -> [32m0[m bytes
+ scripts/check-igem-dist.mjs                 |  40 [32m+++[m
+ scripts/validate-igem-assets.mjs            |  56 [32m++++[m
+ scripts/validate-igem-content.mjs           |  39 [32m+++[m
+ src/App.tsx                                 |  15 [32m+[m[31m-[m
+ src/components/layout/SiteFooter.tsx        |   6 [32m+[m[31m-[m
+ src/data/entrepreneurshipContent.json       |  78 [32m+++[m[31m---[m
+ src/data/igemAssetUrls.json                 |  41 [32m+++[m
+ src/data/team.ts                            |  11 [32m+[m[31m-[m
+ src/data/timeline.ts                        |  29 [32m+[m[31m-[m
+ src/hooks/useDocumentTitle.ts               |   2 [32m+[m[31m-[m
+ src/main.tsx                                |   2 [32m+[m[31m-[m
+ src/pages/DescriptionPage.tsx               |  20 [32m+[m[31m-[m
+ src/pages/EntrepreneurshipPage.tsx          |  33 [32m++[m[31m-[m
+ src/pages/HomePage.tsx                      |  11 [32m+[m[31m-[m
+ src/pages/NotebookPage.tsx                  |  44 [32m+[m[31m--[m
+ src/pages/TeamPage.tsx                      |  16 [32m+[m[31m-[m
+ src/routes/routeDefinitions.ts              |   8 [32m+[m[31m-[m
+ src/styles/components.css                   |  33 [32m++[m[31m-[m
+ src/vite-env.d.ts                           |   1 [32m+[m
+ vite.config.ts                              |   4 [32m+[m[31m-[m
+ wireframe-mobile-preview.png                | Bin [31m22807[m -> [32m0[m bytes
+ wireframe-preview.png                       | Bin [31m71925[m -> [32m0[m bytes
+ 72 files changed, 822 insertions(+), 207 deletions(-)

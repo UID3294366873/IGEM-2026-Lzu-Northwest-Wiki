@@ -2,6 +2,7 @@ import { Fragment, type ReactNode } from 'react';
 import { EntrepreneurshipTableOfContents } from '../components/navigation/EntrepreneurshipTableOfContents';
 import type { EntrepreneurshipTocItem } from '../components/navigation/EntrepreneurshipTableOfContents';
 import { PageLayout } from '../components/layout/PageLayout';
+import businessPlanPdfUrl from '../assets/documents/entrepreneurship/entrepreneurship-business-plan.pdf?url';
 import entrepreneurshipContent from '../data/entrepreneurshipContent.json';
 import igemAssetUrls from '../data/igemAssetUrls.json';
 
@@ -17,6 +18,8 @@ interface RichSegment {
 interface ContentImage {
   src: string;
   alt: string;
+  width: number;
+  height: number;
 }
 
 interface ParagraphBlock {
@@ -37,6 +40,7 @@ interface HeadingBlock {
 
 interface TableBlock {
   type: 'table';
+  mediaLayout?: 'equal-pair' | 'partners';
   rows: Array<{
     cells: Array<{
       paragraphs: ParagraphBlock[];
@@ -55,12 +59,14 @@ interface EntrepreneurshipContent {
 const content = entrepreneurshipContent as EntrepreneurshipContent;
 
 /**
- * 将内容文件中的逻辑文件名映射到 iGEM Uploads 返回的正式资源地址。
+ * 优先使用 iGEM Uploads 正式地址，未上传时回退到项目内的图片目录。
  * @param filename 资源清单中的逻辑文件名。
- * @returns 可直接用于 img src 的 static.igem.wiki 地址。
+ * @returns 可直接用于 img src 的正式或本地资源地址。
  */
 function imageUrl(filename: string): string {
-  return (igemAssetUrls as Record<string, string>)[filename] ?? '';
+  const hostedUrl = (igemAssetUrls as Record<string, string>)[filename];
+  const localUrl = `${import.meta.env.BASE_URL}images/entrepreneurship/${encodeURIComponent(filename)}`;
+  return hostedUrl || localUrl;
 }
 
 /**
@@ -98,7 +104,7 @@ function renderImages(images: ContentImage[] | undefined, keyPrefix: string): Re
         className="entrepreneurship-document__figure"
         key={`${keyPrefix}-${image.src}-${index}`}
       >
-        <img loading="lazy" src={src} alt={image.alt} />
+        <img loading="lazy" src={src} alt={image.alt} width={image.width} height={image.height} />
       </figure>
     );
   });
@@ -120,6 +126,37 @@ function renderCellContent(paragraphs: ParagraphBlock[], keyPrefix: string): Rea
 }
 
 /**
+ * 按 Word 中的四行双列结构渲染合作机构标识。
+ * @param block Figure 8 的媒体表格。
+ * @param blockIndex 正文中的块序号。
+ * @returns 保留行、列和单元格内组合关系的标识网格。
+ */
+function renderPartnersMediaTable(block: TableBlock, blockIndex: number): ReactNode {
+  return (
+    <div className="entrepreneurship-document__partners-grid">
+      {block.rows.map((row, rowIndex) => (
+        <div
+          className="entrepreneurship-document__partners-row"
+          key={`partners-row-${blockIndex}-${rowIndex}`}
+        >
+          {row.cells.map((cell, cellIndex) => {
+            const images = cell.paragraphs.flatMap((paragraph) => paragraph.images ?? []);
+            return (
+              <div
+                className="entrepreneurship-document__partners-cell"
+                key={`partners-cell-${blockIndex}-${rowIndex}-${cellIndex}`}
+              >
+                {renderImages(images, `partners-${blockIndex}-${rowIndex}-${cellIndex}`)}
+              </div>
+            );
+          })}
+        </div>
+      ))}
+    </div>
+  );
+}
+
+/**
  * 区分数据表与仅用于并排图片的 Word 表格并进行语义化渲染。
  * @param block 表格内容块。
  * @param blockIndex 正文中的块序号。
@@ -130,14 +167,14 @@ function renderTable(block: TableBlock, blockIndex: number): ReactNode {
   const images = cellParagraphs.flatMap((paragraph) => paragraph.images ?? []);
   const hasCellText = cellParagraphs.some((paragraph) => paragraph.text.length > 0);
 
+  if (!hasCellText && block.mediaLayout === 'partners') {
+    return renderPartnersMediaTable(block, blockIndex);
+  }
+
   if (!hasCellText && images.length > 0) {
-    const isCcicPair =
-      images.length === 2 &&
-      images.some((image) => image.src === 'entrepreneurship-image-36.jpeg') &&
-      images.some((image) => image.src === 'entrepreneurship-image-37.jpeg');
     return (
       <div
-        className={`entrepreneurship-document__media-grid${isCcicPair ? ' entrepreneurship-document__media-grid--equal-pair' : ''}`}
+        className={`entrepreneurship-document__media-grid${block.mediaLayout === 'equal-pair' ? ' entrepreneurship-document__media-grid--equal-pair' : ''}`}
       >
         {renderImages(images, `media-table-${blockIndex}`)}
       </div>
@@ -236,6 +273,20 @@ export function EntrepreneurshipPage() {
     >
       <div className="entrepreneurship-document">
         {content.blocks.map((block, index) => renderBlock(block, index))}
+        <section aria-labelledby="section-12">
+          <h2 className="entrepreneurship-document__h2" id="section-12">
+            12 Business Plan
+          </h2>
+          <p>
+            For the complete business plan, including detailed market analysis, financial
+            projections, and risk controls, download the PDF below.
+          </p>
+          <p>
+            <a href={businessPlanPdfUrl} download="entrepreneurship-business-plan.pdf">
+              Download the Full Business Plan (PDF, 2.2 MB)
+            </a>
+          </p>
+        </section>
       </div>
     </PageLayout>
   );

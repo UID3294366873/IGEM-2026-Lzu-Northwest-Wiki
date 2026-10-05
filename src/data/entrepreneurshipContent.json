@@ -27,7 +27,7 @@
     {
       "number": "2.3",
       "level": 2,
-      "label": "2.3 Bottlenecks of Existing Treatment Modalities",
+      "label": "2.3 Bottlenecks of Existing Therapeutic Approaches",
       "targetId": "section-2-3"
     },
     {
@@ -39,20 +39,26 @@
     {
       "number": "3",
       "level": 1,
-      "label": "3 Pain Points of Existing Protection and Intervention Solutions",
+      "label": "3 Pain Points of Existing Protection and Intervention Regimens",
       "targetId": "section-3"
     },
     {
       "number": "3.1",
       "level": 2,
-      "label": "3.1 Existing Radiation Protection and Medical Intervention Solutions",
+      "label": "3.1 Existing Radiation Protection and Medical Intervention Regimens",
       "targetId": "section-3-1"
     },
     {
       "number": "3.2",
       "level": 2,
-      "label": "3.2  Limitations of Existing Solutions and Unmet Needs",
+      "label": "3.2 Limitations of Existing Regimens and Unmet Needs",
       "targetId": "section-3-2"
+    },
+    {
+      "number": "3.3",
+      "level": 2,
+      "label": "3.3 Expert Interviews on Radiation Injury and Intestinal Protection",
+      "targetId": "section-3-3"
     },
     {
       "number": "4",
@@ -147,62 +153,68 @@
     {
       "number": "6.1",
       "level": 2,
-      "label": "6.1 Technology and Intellectual Property Protection",
-      "targetId": "section-6-2"
-    },
-    {
-      "number": "6.1.1",
-      "level": 3,
-      "label": "6.1.1 Intellectual Property",
-      "targetId": "section-6-2-1"
-    },
-    {
-      "number": "6.1.2",
-      "level": 3,
-      "label": "6.1.2 Confidentiality Measures",
-      "targetId": "section-6-2-2"
-    },
-    {
-      "number": "6.1.3",
-      "level": 3,
-      "label": "6.1.3 Rapid Commercialization",
-      "targetId": "section-6-2-3"
-    },
-    {
-      "number": "6.1.4",
-      "level": 3,
-      "label": "6.1.4 Disclaimer and Staged Statements",
-      "targetId": "section-6-2-4"
+      "label": "6.1 Innovative Drug Development Path",
+      "targetId": "section-6-1"
     },
     {
       "number": "6.2",
       "level": 2,
-      "label": "6.2 Value Chain Analysis",
-      "targetId": "section-6-3"
+      "label": "6.2 Technology and Intellectual Property Protection",
+      "targetId": "section-6-2"
+    },
+    {
+      "number": "6.2.1",
+      "level": 3,
+      "label": "6.2.1 Intellectual Property",
+      "targetId": "section-6-2-1"
+    },
+    {
+      "number": "6.2.2",
+      "level": 3,
+      "label": "6.2.2 Confidentiality Measures",
+      "targetId": "section-6-2-2"
+    },
+    {
+      "number": "6.2.3",
+      "level": 3,
+      "label": "6.2.3 Rapid Market Conversion",
+      "targetId": "section-6-2-3"
+    },
+    {
+      "number": "6.2.4",
+      "level": 3,
+      "label": "6.2.4 Disclaimer and Phased Statements",
+      "targetId": "section-6-2-4"
     },
     {
       "number": "6.3",
       "level": 2,
-      "label": "6.3 Commercialization Strategy",
+      "label": "6.3 Value Chain Analysis",
+      "targetId": "section-6-3"
+    },
+    {
+      "number": "6.4",
+      "level": 2,
+      "label": "6.4 Commercialization Strategy",
       "targetId": "section-6-4"
     },
     {
-      "number": "6.3.1",
+      "number": "6.4.1",
       "level": 3,
-      "label": "6.3.1 Commercialization Strategy Environment",
+      "label": "6.4.1 Commercialization Strategy Environment",
       "targetId": "section-6-4-1"
     },
     {
-      "number": "6.3.2",
+      "number": "6.4.2",
       "level": 3,
-      "label": "6.3.2 Partners and Resources",
+      "label": "6.4.2 Partners and Resources",
       "targetId": "section-6-4-2"
     },
     {
-      "number": "6.3.3",
+      "number": "6.4.3",
       "level": 3,
-      "label": "6.3.3 Steps for Advancing Commercialization",
-      "targetId": "section-6-3-3"
+      "label": "6.4.3 Commercialization Advancement Steps",
+      "targetId": "section-6-4-3"
     },
     {
       "number": "7",
@@ -213,7 +225,7 @@
     {
       "number": "7.1",
       "level": 2,
-      "label": "7.1STP Analysis—Market Segmentation",
+      "label": "7.1 STP Analysis—Market Segmentation",
       "targetId": "section-7-1"
     },
     {
@@ -283,6 +295,12 @@
       "targetId": "section-8-2"
     },
     {
+      "number": "8.3",
+      "level": 2,
+      "label": "8.3 Preliminary Cooperation Intentions",
+      "targetId": "section-8-3"
+    },
+    {
       "number": "9",
       "level": 1,
       "label": "9 Financial Planning",
@@ -315,13 +333,13 @@
     {
       "number": "9.3.2",
       "level": 3,
-      "label": "9.3.2 Financing Options",
+      "label": "9.3.2 Financing Proposal",
       "targetId": "section-9-3-2"
     },
     {
       "number": "9.3.3",
       "level": 3,
-      "label": "9.3.3 Company Valuation",
+      "label": "9.3.3 Corporate Valuation",
       "targetId": "section-9-3-3"
     },
     {
@@ -345,55 +363,61 @@
     {
       "number": "10.1",
       "level": 2,
-      "label": "10.1 Risk Identification and Assessment",
-      "targetId": "section-10-2"
+      "label": "10.1 Risk Interview",
+      "targetId": "section-10-1"
     },
     {
       "number": "10.2",
       "level": 2,
-      "label": "10.2 Risk Management Measures",
-      "targetId": "section-10-3"
+      "label": "10.2 Risk Identification and Assessment",
+      "targetId": "section-10-2"
     },
     {
       "number": "10.3",
       "level": 2,
-      "label": "10.3 Special Response Measures for High-Risk Matters",
+      "label": "10.3 Risk Management Measures",
+      "targetId": "section-10-3"
+    },
+    {
+      "number": "10.4",
+      "level": 2,
+      "label": "10.4 Special Response Measures for High-Risk Matters",
       "targetId": "section-10-4"
     },
     {
-      "number": "10.3.1",
+      "number": "10.4.1",
       "level": 3,
-      "label": "10.3.1 Development Window Risk",
+      "label": "10.4.1 Development Window Risk",
       "targetId": "section-10-4-1"
     },
     {
-      "number": "10.3.2",
+      "number": "10.4.2",
       "level": 3,
-      "label": "10.3.2 Approval Risk",
+      "label": "10.4.2 Approval Risk",
       "targetId": "section-10-4-2"
     },
     {
-      "number": "10.3.3",
+      "number": "10.4.3",
       "level": 3,
-      "label": "10.3.3 Product-Specific Risk",
+      "label": "10.4.3 Product-Specific Risk",
       "targetId": "section-10-4-3"
     },
     {
-      "number": "10.3.4",
+      "number": "10.4.4",
       "level": 3,
-      "label": "10.3.4 Cash Flow Risk",
+      "label": "10.4.4 Cash Flow Risk",
       "targetId": "section-10-4-4"
     },
     {
-      "number": "10.3.5",
+      "number": "10.4.5",
       "level": 3,
-      "label": "10.3.5 Ethical Risk",
+      "label": "10.4.5 Ethical Risk",
       "targetId": "section-10-4-5"
     },
     {
       "number": "11",
       "level": 1,
-      "label": "11 CCiC and Industrial Synergy",
+      "label": "11 CCiC and Industry Collaboration",
       "targetId": "section-11"
     },
     {
@@ -411,14 +435,20 @@
     {
       "number": "11.3",
       "level": 2,
-      "label": "11.3 The Role of CCiC in Advancing the Commercialization Path",
+      "label": "11.3 CCiC's Role in Advancing the Commercialization Path",
       "targetId": "section-11-3"
     },
     {
       "number": "11.4",
       "level": 2,
-      "label": "11.4 Future Industrial Cooperation and Development Prospects",
+      "label": "11.4 Future Industry Cooperation and Development Prospects",
       "targetId": "section-11-4"
+    },
+    {
+      "number": "12",
+      "level": 1,
+      "label": "12 Business Plan",
+      "targetId": "section-12"
     }
   ],
   "headingIds": [
@@ -457,7 +487,7 @@
     "section-6-4",
     "section-6-4-1",
     "section-6-4-2",
-    "section-6-3-3",
+    "section-6-4-3",
     "section-7",
     "section-7-1",
     "section-7-1-1",
@@ -495,7 +525,8 @@
     "section-11-1",
     "section-11-2",
     "section-11-3",
-    "section-11-4"
+    "section-11-4",
+    "section-12"
   ],
   "blocks": [
     {
@@ -511,36 +542,38 @@
       "segments": [],
       "images": [
         {
-          "src": "entrepreneurship-image-01.png",
-          "alt": "1 Project Overview"
+          "src": "entrepreneurship -1.png",
+          "alt": "Figure 1  Sybio-Gutweaver Project Overview",
+          "width": 1024,
+          "height": 1024
         }
       ]
     },
     {
       "type": "caption",
-      "text": "Figure 1 Sybio-Gutweaver Project Overview",
+      "text": "Figure 1  Sybio-Gutweaver Project Overview",
       "segments": [
         {
-          "text": "Figure 1 Sybio-Gutweaver Project Overview",
+          "text": "Figure 1  Sybio-Gutweaver Project Overview",
           "bold": true
         }
       ]
     },
     {
       "type": "paragraph",
-      "text": "Radiotherapy for abdominopelvic tumors can cause oxidative stress, mucosal injury, and intestinal barrier disruption, and clinical management remains primarily symptomatic and supportive. Sybio-Gutweaver is developing an oral live bacterial candidate formulation based on engineered Escherichia coli Nissle 1917 (EcN), targeting radiotherapy-related acute intestinal injury.",
+      "text": "Radiotherapy for abdominopelvic tumors can cause oxidative stress, mucosal injury, and intestinal barrier disruption, and clinical management remains predominantly symptomatic and supportive. Sybio-Gutweaver is developing an oral live bacterial candidate formulation based on engineered Escherichia coli Nissle 1917 (EcN), targeting radiotherapy-related acute intestinal injury.",
       "segments": [
         {
-          "text": "Radiotherapy for abdominopelvic tumors can cause oxidative stress, mucosal injury, and intestinal barrier disruption, and clinical management remains primarily symptomatic and supportive. Sybio-Gutweaver is developing an oral live bacterial candidate formulation based on engineered Escherichia coli Nissle 1917 (EcN), targeting radiotherapy-related acute intestinal injury."
+          "text": "Radiotherapy for abdominopelvic tumors can cause oxidative stress, mucosal injury, and intestinal barrier disruption, and clinical management remains predominantly symptomatic and supportive. Sybio-Gutweaver is developing an oral live bacterial candidate formulation based on engineered Escherichia coli Nissle 1917 (EcN), targeting radiotherapy-related acute intestinal injury."
         }
       ]
     },
     {
       "type": "paragraph",
-      "text": "The candidate product is intended to use lyophilized live bacteria and gut-release capsules, integrating a DHICA-component-optimized melanin antioxidant module, a lactate barrier-support module, an Ag43-based controllable adhesion module, and dual biosafety switches. Ag43 is used to enhance short-term retention in the target intestinal segment rather than to pursue long-term colonization. The dual safety mechanisms respectively use high-lactate-triggered Qwitch self-destruction and L-arabinose-dependent hok/sok survival licensing linked to Ag43 expression, reducing the risk of persistent output in abnormal microenvironments and dissemination after leaving predefined scenarios.",
+      "text": "The candidate product is intended to use lyophilized live bacteria and enteric-release capsules, integrating a DHICA component-optimized melanin antioxidant module, a lactate barrier support module, an Ag43-controlled adhesion module, and dual biosafety switches. Ag43 is used to enhance short-term retention in the target intestinal segment rather than to pursue long-term colonization; the dual safety mechanisms respectively employ high lactate-triggered Qwitch self-destruction and L-arabinose-dependent hok/sok survival licensing linked to Ag43 expression, reducing the risk of continuous output in abnormal microenvironments and dissemination after departure from the preset scenario.",
       "segments": [
         {
-          "text": "The candidate product is intended to use lyophilized live bacteria and gut-release capsules, integrating a DHICA-component-optimized melanin antioxidant module, a lactate barrier-support module, an Ag43-based controllable adhesion module, and dual biosafety switches. Ag43 is used to enhance short-term retention in the target intestinal segment rather than to pursue long-term colonization. The dual safety mechanisms respectively use high-lactate-triggered Qwitch self-destruction and L-arabinose-dependent hok/sok survival licensing linked to Ag43 expression, reducing the risk of persistent output in abnormal microenvironments and dissemination after leaving predefined scenarios."
+          "text": "The candidate product is intended to use lyophilized live bacteria and enteric-release capsules, integrating a DHICA component-optimized melanin antioxidant module, a lactate barrier support module, an Ag43-controlled adhesion module, and dual biosafety switches. Ag43 is used to enhance short-term retention in the target intestinal segment rather than to pursue long-term colonization; the dual safety mechanisms respectively employ high lactate-triggered Qwitch self-destruction and L-arabinose-dependent hok/sok survival licensing linked to Ag43 expression, reducing the risk of continuous output in abnormal microenvironments and dissemination after departure from the preset scenario."
         }
       ]
     },
@@ -556,29 +589,23 @@
     },
     {
       "type": "paragraph",
-      "text": "The project adopts an asset-light model of “independent R&D + co-development/technology licensing,” focusing on core strains, functional circuits, safety controls, delivery systems, and intellectual property. After key milestones, returns are realized through technology licensing, milestone payments, and sales revenue sharing.",
+      "text": "The project adopts an asset-light model of “independent R&D + joint development/technology licensing”, focusing on core strains, functional circuits, safety control, delivery systems, and intellectual property, and realizes returns through technology licensing, milestone payments, and sales royalties after key milestones.",
       "segments": [
         {
-          "text": "The project adopts an asset-light model of “independent R&D + co-development/technology licensing,” focusing on core strains, functional circuits, safety controls, delivery systems, and intellectual property. After key milestones, returns are realized through technology licensing, milestone payments, and sales revenue sharing."
+          "text": "The project adopts an asset-light model of “independent R&D + joint development/technology licensing”, focusing on core strains, functional circuits, safety control, delivery systems, and intellectual property, and realizes returns through technology licensing, milestone payments, and sales royalties after key milestones."
         }
       ]
     },
     {
       "type": "paragraph",
-      "text": "R&D and Regulatory Strategy",
+      "text": "R&D and Regulatory Strategy\n\tThe project adopts a regulatory strategy of “NMPA primary pathway, FDA parallel evaluation”:",
       "segments": [
         {
-          "text": "R&D and Regulatory Strategy",
+          "text": "R&D and Regulatory Strategy\n\t",
           "bold": true
-        }
-      ]
-    },
-    {
-      "type": "paragraph",
-      "text": "The project adopts a regulatory strategy of “NMPA as the primary pathway and FDA parallel assessment”：",
-      "segments": [
+        },
         {
-          "text": "The project adopts a regulatory strategy of “NMPA as the primary pathway and FDA parallel assessment”："
+          "text": "The project adopts a regulatory strategy of “NMPA primary pathway, FDA parallel evaluation”:"
         }
       ]
     },
@@ -629,19 +656,19 @@
     },
     {
       "type": "paragraph",
-      "text": "For late-stage clinical development, scale-up manufacturing, and commercialization rights, priority will be given to co-development or rights licensing with pharmaceutical companies that have biologics R&D and registration capabilities.",
+      "text": "Early-stage R&D phase: Relying on university research platforms to complete the construction of engineered EcN strains, functional validation, and product prototype development, laying the foundation for subsequent preclinical research.\n\tLater-stage translation phase: Collaborating with hospitals, research institutions, and pharmaceutical companies to advance clinical trials, formulation development, scale-up manufacturing, and regulatory submissions, and promoting product translation through joint development or technology licensing.",
       "segments": [
         {
-          "text": "For late-stage clinical development, scale-up manufacturing, and commercialization rights, priority will be given to co-development or rights licensing with pharmaceutical companies that have biologics R&D and registration capabilities."
+          "text": "Early-stage R&D phase: Relying on university research platforms to complete the construction of engineered EcN strains, functional validation, and product prototype development, laying the foundation for subsequent preclinical research.\n\tLater-stage translation phase: Collaborating with hospitals, research institutions, and pharmaceutical companies to advance clinical trials, formulation development, scale-up manufacturing, and regulatory submissions, and promoting product translation through joint development or technology licensing."
         }
       ]
     },
     {
       "type": "paragraph",
-      "text": "At the current stage, the project has completed preliminary validation of demand and product direction through interviews with hospitals, research institutions, and industry experts. Interviewees include Gansu Provincial Hospital, the Heavy Ion Center of Gansu Wuwei Tumor Hospital, the Institute of Modern Physics of the Chinese Academy of Sciences, and experts in the live bacterial formulation industry, among others, providing a demand basis for subsequently establishing clinical research, formulation process, regulatory translation, and industrial licensing cooperation.",
+      "text": "At the current stage, the project has completed preliminary demand and product direction validation through interviews with hospitals, research institutions, and industry experts. The interviewees include Gansu Provincial Hospital, the Heavy Ion Center of Wuwei Tumor Hospital of Gansu Province, the Institute of Modern Physics, Chinese Academy of Sciences, and industry experts in live bacterial formulations, among others, providing a demand basis for subsequently establishing clinical research, formulation process, regulatory translation, and industrial licensing collaborations.",
       "segments": [
         {
-          "text": "At the current stage, the project has completed preliminary validation of demand and product direction through interviews with hospitals, research institutions, and industry experts. Interviewees include Gansu Provincial Hospital, the Heavy Ion Center of Gansu Wuwei Tumor Hospital, the Institute of Modern Physics of the Chinese Academy of Sciences, and experts in the live bacterial formulation industry, among others, providing a demand basis for subsequently establishing clinical research, formulation process, regulatory translation, and industrial licensing cooperation."
+          "text": "At the current stage, the project has completed preliminary demand and product direction validation through interviews with hospitals, research institutions, and industry experts. The interviewees include Gansu Provincial Hospital, the Heavy Ion Center of Wuwei Tumor Hospital of Gansu Province, the Institute of Modern Physics, Chinese Academy of Sciences, and industry experts in live bacterial formulations, among others, providing a demand basis for subsequently establishing clinical research, formulation process, regulatory translation, and industrial licensing collaborations."
         }
       ]
     },
@@ -755,29 +782,19 @@
       "segments": [],
       "images": [
         {
-          "src": "entrepreneurship-image-02.jpeg",
-          "alt": "1 Project Overview"
+          "src": "entrepreneurship -2.jpeg",
+          "alt": "Figure 2  Financing and Development Plan",
+          "width": 1024,
+          "height": 1024
         }
       ]
     },
     {
       "type": "caption",
-      "text": "Figure 1  融资与发展规划",
+      "text": "Figure 2  Financing and Development Plan",
       "segments": [
         {
-          "text": "Figure",
-          "bold": true
-        },
-        {
-          "text": " ",
-          "bold": true
-        },
-        {
-          "text": "1",
-          "bold": true
-        },
-        {
-          "text": "  融资与发展规划",
+          "text": "Figure 2  Financing and Development Plan",
           "bold": true
         }
       ]
@@ -820,11 +837,7 @@
       "text": "Large patient base： In 2022, there were approximately 4.8247 million new cases of malignant tumors in China (Han et al., 2024). A national radiotherapy industry survey showed that in 2018, mainland China had 1,463 radiotherapy units, with approximately 1.2596 million patient visits treated annually, creating sustained demand for radiotherapy supportive care (Zhang Ye et al., 2020).",
       "segments": [
         {
-          "text": "Large patient base",
-          "bold": true
-        },
-        {
-          "text": "：",
+          "text": "Large patient base：",
           "bold": true
         },
         {
@@ -834,18 +847,14 @@
     },
     {
       "type": "paragraph",
-      "text": "Relatively high acute gastrointestinal toxicity：Approximately 60%–80% of patients receiving abdominal and pelvic radiotherapy may develop acute gastrointestinal toxicity, including diarrhea, abdominal pain, nausea, and abnormal defecation. Intestinal crypts and epithelial cells turn over rapidly and are highly sensitive to ionizing radiation; therefore, normal intestine is an important dose-limiting tissue in abdominopelvic radiotherapy.",
+      "text": "Relatively high acute gastrointestinal toxicity：Approximately 60%-80% of patients receiving abdominal and pelvic radiotherapy may develop acute gastrointestinal toxicity, including diarrhea, abdominal pain, nausea, and abnormal defecation. Intestinal crypts and epithelial cells turn over rapidly and are highly sensitive to ionizing radiation; therefore, normal intestine is an important dose-limiting tissue in abdominopelvic radiotherapy.",
       "segments": [
         {
-          "text": "Relatively high acute gastrointestinal toxicity",
+          "text": "Relatively high acute gastrointestinal toxicity：",
           "bold": true
         },
         {
-          "text": "：",
-          "bold": true
-        },
-        {
-          "text": "Approximately 60%–80% of patients receiving abdominal and pelvic radiotherapy may develop acute gastrointestinal toxicity, including diarrhea, abdominal pain, nausea, and abnormal defecation. Intestinal crypts and epithelial cells turn over rapidly and are highly sensitive to ionizing radiation; therefore, normal intestine is an important dose-limiting tissue in abdominopelvic radiotherapy."
+          "text": "Approximately 60%-80% of patients receiving abdominal and pelvic radiotherapy may develop acute gastrointestinal toxicity, including diarrhea, abdominal pain, nausea, and abnormal defecation. Intestinal crypts and epithelial cells turn over rapidly and are highly sensitive to ionizing radiation; therefore, normal intestine is an important dose-limiting tissue in abdominopelvic radiotherapy."
         }
       ]
     },
@@ -854,11 +863,7 @@
       "text": "Impact on treatment continuity：More severe acute intestinal injury can lead to dehydration, electrolyte imbalance, nutritional decline, and reduced treatment tolerance. Some patients need to suspend or adjust radiotherapy, which further affects quality of life and treatment completion. Some gastrointestinal functional abnormalities may also persist after treatment completion, making them part of full-cycle cancer management.",
       "segments": [
         {
-          "text": "Impact on treatment continuity",
-          "bold": true
-        },
-        {
-          "text": "：",
+          "text": "Impact on treatment continuity：",
           "bold": true
         },
         {
@@ -879,29 +884,19 @@
       "segments": [],
       "images": [
         {
-          "src": "entrepreneurship-image-03.png",
-          "alt": "2.2 Main Characteristics of Radiation-Related Intestinal Injury"
+          "src": "entrepreneurship -3.png",
+          "alt": "Figure 3  Schematic of the Pathological Process of Radiotherapy-Related Intestinal Injury",
+          "width": 1264,
+          "height": 848
         }
       ]
     },
     {
       "type": "caption",
-      "text": "Figure 2  放疗相关肠道损伤病理过程示意Figure",
+      "text": "Figure 3  Schematic of the Pathological Process of Radiotherapy-Related Intestinal Injury",
       "segments": [
         {
-          "text": "Figure",
-          "bold": true
-        },
-        {
-          "text": " ",
-          "bold": true
-        },
-        {
-          "text": "2",
-          "bold": true
-        },
-        {
-          "text": "  放疗相关肠道损伤病理过程示意Figure",
+          "text": "Figure 3  Schematic of the Pathological Process of Radiotherapy-Related Intestinal Injury",
           "bold": true
         }
       ]
@@ -911,11 +906,7 @@
       "text": "Oxidative and mucosal injury：Ionizing radiation can directly damage DNA and also induce large amounts of reactive oxygen species (ROS). After rapidly proliferating intestinal crypt stem cells and epithelial cells are damaged, villus renewal becomes insufficient, and changes such as mucosal inflammation and malabsorption occur (Hauer-Jensen et al., 2014).",
       "segments": [
         {
-          "text": "Oxidative and mucosal injury",
-          "bold": true
-        },
-        {
-          "text": "：",
+          "text": "Oxidative and mucosal injury：",
           "bold": true
         },
         {
@@ -928,11 +919,7 @@
       "text": "Barrier function disruption：Epithelial injury and disruption of intercellular junctions increase intestinal permeability and may promote the translocation of microorganisms and their products across the damaged barrier. Persistent inflammation further hinders barrier recovery, causing symptoms and local tissue injury to amplify each other.",
       "segments": [
         {
-          "text": "Barrier function disruption",
-          "bold": true
-        },
-        {
-          "text": "：",
+          "text": "Barrier function disruption：",
           "bold": true
         },
         {
@@ -945,11 +932,7 @@
       "text": "Microecological alterations：Pelvic radiotherapy may be accompanied by changes in gut microbiota diversity and composition, some of which are associated with diarrhea and radiation enteritis; however, different studies are affected by diet, concurrent chemotherapy, and patients’ baseline status, showing marked heterogeneity (Bai et al., 2021).",
       "segments": [
         {
-          "text": "Microecological alterations",
-          "bold": true
-        },
-        {
-          "text": "：",
+          "text": "Microecological alterations：",
           "bold": true
         },
         {
@@ -978,11 +961,7 @@
       "text": "1. Radiotherapy techniques cannot completely avoid normal intestinal exposure",
       "segments": [
         {
-          "text": "1. ",
-          "bold": true
-        },
-        {
-          "text": "Radiotherapy techniques cannot completely avoid normal intestinal exposure",
+          "text": "1. Radiotherapy techniques cannot completely avoid normal intestinal exposure",
           "bold": true
         }
       ]
@@ -1001,11 +980,7 @@
       "text": "2. Clinical intervention remains predominantly symptom control",
       "segments": [
         {
-          "text": "2. ",
-          "bold": true
-        },
-        {
-          "text": "Clinical intervention remains predominantly symptom control",
+          "text": "2. Clinical intervention remains predominantly symptom control",
           "bold": true
         }
       ]
@@ -1024,11 +999,7 @@
       "text": "3. Efficacy and controllability of microecological interventions remain inconsistent",
       "segments": [
         {
-          "text": "3. ",
-          "bold": true
-        },
-        {
-          "text": "Efficacy and controllability of microecological interventions remain inconsistent",
+          "text": "3. Efficacy and controllability of microecological interventions remain inconsistent",
           "bold": true
         }
       ]
@@ -1051,10 +1022,10 @@
     },
     {
       "type": "paragraph",
-      "text": "The Healthy China Action—Cancer Prevention and Control Action Implementation Plan (2023–2030) emphasizes standardized cancer diagnosis and treatment, quality control, and translation of scientific research achievements; China has also issued clinical practice guidelines for radiation-induced rectal injury to promote standardization of prevention, risk assessment, grading, and treatment of normal tissue injury. The policy direction is extending from “completing tumor treatment” further to treatment quality and full-cycle patient management.",
+      "text": "The Healthy China Action-Cancer Prevention and Control Action Implementation Plan (2023-2030) emphasizes standardized cancer diagnosis and treatment, quality control, and translation of scientific research achievements; China has also issued clinical practice guidelines for radiation-induced rectal injury to promote standardization of prevention, risk assessment, grading, and treatment of normal tissue injury. The policy direction is extending from “completing tumor treatment” further to treatment quality and full-cycle patient management.",
       "segments": [
         {
-          "text": "The Healthy China Action—Cancer Prevention and Control Action Implementation Plan (2023–2030) emphasizes standardized cancer diagnosis and treatment, quality control, and translation of scientific research achievements; China has also issued clinical practice guidelines for radiation-induced rectal injury to promote standardization of prevention, risk assessment, grading, and treatment of normal tissue injury. The policy direction is extending from “completing tumor treatment” further to treatment quality and full-cycle patient management."
+          "text": "The Healthy China Action-Cancer Prevention and Control Action Implementation Plan (2023-2030) emphasizes standardized cancer diagnosis and treatment, quality control, and translation of scientific research achievements; China has also issued clinical practice guidelines for radiation-induced rectal injury to promote standardization of prevention, risk assessment, grading, and treatment of normal tissue injury. The policy direction is extending from “completing tumor treatment” further to treatment quality and full-cycle patient management."
         }
       ]
     },
@@ -1078,14 +1049,14 @@
     },
     {
       "type": "heading",
-      "text": "3 Pain Points of Existing Protection and Intervention Solutions",
+      "text": "3 Pain Points of Existing Protection and Intervention Regimens",
       "number": "3",
       "level": 2,
       "id": "section-3"
     },
     {
       "type": "heading",
-      "text": "3.1 Existing Radiation Protection and Medical Intervention Solutions",
+      "text": "3.1 Existing Radiation Protection and Medical Intervention Regimens",
       "number": "3.1",
       "level": 3,
       "id": "section-3-1"
@@ -1101,7 +1072,7 @@
     },
     {
       "type": "heading",
-      "text": "3.2 Limitations of Existing Solutions and Unmet Needs",
+      "text": "3.2 Limitations of Existing Regimens and Unmet Needs",
       "number": "3.2",
       "level": 3,
       "id": "section-3-2"
@@ -1121,11 +1092,7 @@
       "text": "Representative solution：Intensity-Modulated Radiation Therapy（IMRT）",
       "segments": [
         {
-          "text": "Representative solution",
-          "bold": true
-        },
-        {
-          "text": "：",
+          "text": "Representative solution：",
           "bold": true
         },
         {
@@ -1138,11 +1105,7 @@
       "text": "Core limitation： NRG/RTOG 1203 enrolled 278 patients; at the end of treatment, 33.7% of the IMRT group still had frequent or persistent diarrhea, and 7.8% used antidiarrheal medication ≥4 times daily (Klopp et al., 2018).",
       "segments": [
         {
-          "text": "Core limitation",
-          "bold": true
-        },
-        {
-          "text": "：",
+          "text": "Core limitation：",
           "bold": true
         },
         {
@@ -1155,11 +1118,7 @@
       "text": "Clinical outcome：It can reduce normal tissue exposure but cannot completely avoid acute gastrointestinal injury.",
       "segments": [
         {
-          "text": "Clinical outcome",
-          "bold": true
-        },
-        {
-          "text": "：",
+          "text": "Clinical outcome：",
           "bold": true
         },
         {
@@ -1195,11 +1154,7 @@
       "text": "Core limitation：A Phase III randomized trial enrolled 162 patients with acute radiation enteritis; after 48 h, 86.4% had diarrhea reduced to grade 0–1, but rebound constipation occurred in 17.3% (Abhijith et al., 2024).",
       "segments": [
         {
-          "text": "Core limitation",
-          "bold": true
-        },
-        {
-          "text": "：",
+          "text": "Core limitation：",
           "bold": true
         },
         {
@@ -1212,11 +1167,7 @@
       "text": "Clinical outcome：It has a relatively rapid onset but mainly controls symptoms and does not directly intervene in oxidative injury or barrier recovery.",
       "segments": [
         {
-          "text": "Clinical outcome",
-          "bold": true
-        },
-        {
-          "text": "：",
+          "text": "Clinical outcome：",
           "bold": true
         },
         {
@@ -1239,11 +1190,7 @@
       "text": "Representative drug：Sucralfate",
       "segments": [
         {
-          "text": "Representative drug",
-          "bold": true
-        },
-        {
-          "text": "：",
+          "text": "Representative drug：",
           "bold": true
         },
         {
@@ -1256,11 +1203,7 @@
       "text": "Core limitation：In a Phase III double-blind trial of 123 patients, the incidence of moderate-to-severe diarrhea was 53% in the sucralfate group versus 41% in the placebo group; fecal incontinence was 34% vs 16% (Martenson et al., 2000).",
       "segments": [
         {
-          "text": "Core limitation",
-          "bold": true
-        },
-        {
-          "text": "：",
+          "text": "Core limitation：",
           "bold": true
         },
         {
@@ -1273,11 +1216,7 @@
       "text": "Clinical outcome：It did not show consistent preventive benefit, and some gastrointestinal symptoms actually increased.",
       "segments": [
         {
-          "text": "Clinical outcome",
-          "bold": true
-        },
-        {
-          "text": "：",
+          "text": "Clinical outcome：",
           "bold": true
         },
         {
@@ -1300,11 +1239,7 @@
       "text": "Representative solutions：Probiotics、Synbiotics",
       "segments": [
         {
-          "text": "Representative solutions",
-          "bold": true
-        },
-        {
-          "text": "：",
+          "text": "Representative solutions：",
           "bold": true
         },
         {
@@ -1317,11 +1252,7 @@
       "text": "Core limitation：A meta-analysis of 23 RCTs and 1,919 patients showed reduced diarrhea risk, but strains, doses, and intervention durations varied markedly (Bartsch et al., 2021).",
       "segments": [
         {
-          "text": "Core limitation",
-          "bold": true
-        },
-        {
-          "text": "：",
+          "text": "Core limitation：",
           "bold": true
         },
         {
@@ -1334,11 +1265,7 @@
       "text": "Clinical outcome：There is a efficacy signal, but standardization, local effective duration of action, and active safety control are insufficient.",
       "segments": [
         {
-          "text": "Clinical outcome",
-          "bold": true
-        },
-        {
-          "text": "：",
+          "text": "Clinical outcome：",
           "bold": true
         },
         {
@@ -1351,19 +1278,17 @@
       "text": "Representative randomized study results are as follows：",
       "segments": [
         {
-          "text": "Representative randomized study results are as follows"
-        },
-        {
-          "text": "："
+          "text": "Representative randomized study results are as follows："
         }
       ]
     },
     {
       "type": "paragraph",
-      "text": "Table 1 Representative Randomized Studies of Probiotics for Preventing Radiotherapy-Related Diarrhea",
+      "text": "Table 1  Representative Randomized Studies of Probiotics for Preventing Radiotherapy-Related Diarrhea",
       "segments": [
         {
-          "text": "Table 1 Representative Randomized Studies of Probiotics for Preventing Radiotherapy-Related Diarrhea"
+          "text": "Table 1  Representative Randomized Studies of Probiotics for Preventing Radiotherapy-Related Diarrhea",
+          "bold": true
         }
       ]
     },
@@ -1379,7 +1304,8 @@
                   "text": "Study",
                   "segments": [
                     {
-                      "text": "Study"
+                      "text": "Study",
+                      "bold": true
                     }
                   ]
                 }
@@ -1389,10 +1315,11 @@
               "paragraphs": [
                 {
                   "type": "paragraph",
-                  "text": "Sample size",
+                  "text": "Sample Size",
                   "segments": [
                     {
-                      "text": "Sample size"
+                      "text": "Sample Size",
+                      "bold": true
                     }
                   ]
                 }
@@ -1405,7 +1332,8 @@
                   "text": "Probiotic",
                   "segments": [
                     {
-                      "text": "Probiotic"
+                      "text": "Probiotic",
+                      "bold": true
                     }
                   ]
                 }
@@ -1418,7 +1346,8 @@
                   "text": "Placebo",
                   "segments": [
                     {
-                      "text": "Placebo"
+                      "text": "Placebo",
+                      "bold": true
                     }
                   ]
                 }
@@ -1431,10 +1360,8 @@
                   "text": "P value",
                   "segments": [
                     {
-                      "text": "P "
-                    },
-                    {
-                      "text": "value"
+                      "text": "P value",
+                      "bold": true
                     }
                   ]
                 }
@@ -1722,10 +1649,10 @@
     },
     {
       "type": "paragraph",
-      "text": "esults across different randomized studies are inconsistent, indicating that gut microecological intervention has potential clinical value, but its efficacy is still affected by factors such as strains, doses, and usage regimens. Therefore, existing solutions still find it difficult to simultaneously meet the needs for mechanistic intervention, local effective action, and active safety control.",
+      "text": "Results from different randomized studies are inconsistent, suggesting that gut microbiota intervention has potential clinical value, but its efficacy remains influenced by factors such as strain, dose, and administration regimen. Existing regimens therefore still struggle to simultaneously meet the requirements for mechanistic intervention, localized effective action, and active safety control.",
       "segments": [
         {
-          "text": "esults across different randomized studies are inconsistent, indicating that gut microecological intervention has potential clinical value, but its efficacy is still affected by factors such as strains, doses, and usage regimens. Therefore, existing solutions still find it difficult to simultaneously meet the needs for mechanistic intervention, local effective action, and active safety control."
+          "text": "Results from different randomized studies are inconsistent, suggesting that gut microbiota intervention has potential clinical value, but its efficacy remains influenced by factors such as strain, dose, and administration regimen. Existing regimens therefore still struggle to simultaneously meet the requirements for mechanistic intervention, localized effective action, and active safety control."
         }
       ]
     },
@@ -1758,8 +1685,10 @@
                   "segments": [],
                   "images": [
                     {
-                      "src": "entrepreneurship-image-04.png",
-                      "alt": "3.3 Expert Interviews on Radiation Injury and Intestinal Protection, row 1, column 1"
+                      "src": "entrepreneurship -4.png",
+                      "alt": "3.3 Expert Interviews on Radiation Injury and Intestinal Protection",
+                      "width": 708,
+                      "height": 392
                     }
                   ]
                 }
@@ -1773,8 +1702,10 @@
                   "segments": [],
                   "images": [
                     {
-                      "src": "entrepreneurship-image-05.png",
-                      "alt": "3.3 Expert Interviews on Radiation Injury and Intestinal Protection, row 1, column 2"
+                      "src": "entrepreneurship -5.png",
+                      "alt": "3.3 Expert Interviews on Radiation Injury and Intestinal Protection",
+                      "width": 635,
+                      "height": 395
                     }
                   ]
                 }
@@ -1813,10 +1744,10 @@
     },
     {
       "type": "paragraph",
-      "text": "Around this clinical need, we further discussed the possibility of using engineered probiotics for in situ intestinal intervention. Compared with relying solely on exogenous drugs, engineered bacteria can continuously produce functional molecules locally in the intestine, providing a new technical approach for radiation injury intervention. On the basis of the melanin antioxidant module, the team further introduced a lactate barrier-support module, hoping to form a synergistic effect of “reducing oxidative injury—supporting the mucosal barrier.” At the same time, practical application of engineered live bacteria must fully consider issues such as retention time, biosafety, and controllable clearance, which further prompted the team to improve the Ag43 controllable adhesion system and dual biosafety switches to enhance the controllability of engineered bacteria in the complex intestinal environment.",
+      "text": "Around this clinical need, we further discussed the possibility of using engineered probiotics for in situ intestinal intervention. Compared with relying solely on exogenous drugs, engineered bacteria can continuously produce functional molecules locally in the intestine, providing a new technical approach for radiation injury intervention. On the basis of the melanin antioxidant module, the team further introduced a lactate barrier-support module, hoping to form a synergistic effect of “reducing oxidative injury-supporting the mucosal barrier”. At the same time, practical application of engineered live bacteria must fully consider issues such as retention time, biosafety, and controllable clearance, which further prompted the team to improve the Ag43 controllable adhesion system and dual biosafety switches to enhance the controllability of engineered bacteria in the complex intestinal environment.",
       "segments": [
         {
-          "text": "Around this clinical need, we further discussed the possibility of using engineered probiotics for in situ intestinal intervention. Compared with relying solely on exogenous drugs, engineered bacteria can continuously produce functional molecules locally in the intestine, providing a new technical approach for radiation injury intervention. On the basis of the melanin antioxidant module, the team further introduced a lactate barrier-support module, hoping to form a synergistic effect of “reducing oxidative injury—supporting the mucosal barrier.” At the same time, practical application of engineered live bacteria must fully consider issues such as retention time, biosafety, and controllable clearance, which further prompted the team to improve the Ag43 controllable adhesion system and dual biosafety switches to enhance the controllability of engineered bacteria in the complex intestinal environment."
+          "text": "Around this clinical need, we further discussed the possibility of using engineered probiotics for in situ intestinal intervention. Compared with relying solely on exogenous drugs, engineered bacteria can continuously produce functional molecules locally in the intestine, providing a new technical approach for radiation injury intervention. On the basis of the melanin antioxidant module, the team further introduced a lactate barrier-support module, hoping to form a synergistic effect of “reducing oxidative injury-supporting the mucosal barrier”. At the same time, practical application of engineered live bacteria must fully consider issues such as retention time, biosafety, and controllable clearance, which further prompted the team to improve the Ag43 controllable adhesion system and dual biosafety switches to enhance the controllability of engineered bacteria in the complex intestinal environment."
         }
       ]
     },
@@ -1857,11 +1788,7 @@
       "text": "Table 2  Core Patient Estimates",
       "segments": [
         {
-          "text": "Table 2  ",
-          "bold": true
-        },
-        {
-          "text": "Core Patient Estimates",
+          "text": "Table 2  Core Patient Estimates",
           "bold": true
         }
       ]
@@ -2269,10 +2196,10 @@
     },
     {
       "type": "paragraph",
-      "text": "IARC GLOBOCAN 2024 shows that the above five core tumor types total approximately 4 million new cases per year globally. About 60%–80% of patients receiving abdominal and pelvic radiotherapy may develop acute gastrointestinal toxicity; extrapolated according to long-term global cancer patient growth trends, the 2025 Base Year corresponds to approximately 1.42–1.89 million people per year as the core clinical demand population.",
+      "text": "IARC GLOBOCAN 2024 shows that the above five core tumor types total approximately 4 million new cases per year globally. About 60%-80% of patients receiving abdominal and pelvic radiotherapy may develop acute gastrointestinal toxicity; extrapolated according to long-term global cancer patient growth trends, the 2025 Base Year corresponds to approximately 1.42-1.89 million people per year as the core clinical demand population.",
       "segments": [
         {
-          "text": "IARC GLOBOCAN 2024 shows that the above five core tumor types total approximately 4 million new cases per year globally. About 60%–80% of patients receiving abdominal and pelvic radiotherapy may develop acute gastrointestinal toxicity; extrapolated according to long-term global cancer patient growth trends, the 2025 Base Year corresponds to approximately 1.42–1.89 million people per year as the core clinical demand population."
+          "text": "IARC GLOBOCAN 2024 shows that the above five core tumor types total approximately 4 million new cases per year globally. About 60%-80% of patients receiving abdominal and pelvic radiotherapy may develop acute gastrointestinal toxicity; extrapolated according to long-term global cancer patient growth trends, the 2025 Base Year corresponds to approximately 1.42-1.89 million people per year as the core clinical demand population."
         }
       ]
     },
@@ -2281,11 +2208,7 @@
       "text": "Table 3  2025 Base Year Market Estimation",
       "segments": [
         {
-          "text": "Table 3  ",
-          "bold": true
-        },
-        {
-          "text": "2025 Base Year Market Estimation",
+          "text": "Table 3  2025 Base Year Market Estimation",
           "bold": true
         }
       ]
@@ -2399,10 +2322,10 @@
               "paragraphs": [
                 {
                   "type": "paragraph",
-                  "text": "3%–10%",
+                  "text": "3%-10%",
                   "segments": [
                     {
-                      "text": "3%–10%"
+                      "text": "3%-10%"
                     }
                   ]
                 }
@@ -2412,10 +2335,10 @@
               "paragraphs": [
                 {
                   "type": "paragraph",
-                  "text": "$300–1,800",
+                  "text": "$300-1,800",
                   "segments": [
                     {
-                      "text": "$300–1,800"
+                      "text": "$300-1,800"
                     }
                   ]
                 }
@@ -2468,10 +2391,10 @@
               "paragraphs": [
                 {
                   "type": "paragraph",
-                  "text": "5%–15%",
+                  "text": "5%-15%",
                   "segments": [
                     {
-                      "text": "5%–15%"
+                      "text": "5%-15%"
                     }
                   ]
                 }
@@ -2481,10 +2404,10 @@
               "paragraphs": [
                 {
                   "type": "paragraph",
-                  "text": "$700–2,400",
+                  "text": "$700-2,400",
                   "segments": [
                     {
-                      "text": "$700–2,400"
+                      "text": "$700-2,400"
                     }
                   ]
                 }
@@ -2521,11 +2444,7 @@
       "text": "Table 4  Optimistic Estimate",
       "segments": [
         {
-          "text": "Table 4  ",
-          "bold": true
-        },
-        {
-          "text": "Optimistic Estimate",
+          "text": "Table 4  Optimistic Estimate",
           "bold": true
         }
       ]
@@ -2542,7 +2461,8 @@
                   "text": "2026E",
                   "segments": [
                     {
-                      "text": "2026E"
+                      "text": "2026E",
+                      "bold": true
                     }
                   ]
                 }
@@ -2555,7 +2475,8 @@
                   "text": "2030E",
                   "segments": [
                     {
-                      "text": "2030E"
+                      "text": "2030E",
+                      "bold": true
                     }
                   ]
                 }
@@ -2568,7 +2489,8 @@
                   "text": "2034E",
                   "segments": [
                     {
-                      "text": "2034E"
+                      "text": "2034E",
+                      "bold": true
                     }
                   ]
                 }
@@ -2581,7 +2503,8 @@
                   "text": "CAGR",
                   "segments": [
                     {
-                      "text": "CAGR"
+                      "text": "CAGR",
+                      "bold": true
                     }
                   ]
                 }
@@ -2668,10 +2591,10 @@
     },
     {
       "type": "paragraph",
-      "text": "2.About 60%–80% of abdominopelvic radiotherapy patients may develop acute gastrointestinal symptoms, creating sustained demand for supportive care.",
+      "text": "2.About 60%-80% of abdominopelvic radiotherapy patients may develop acute gastrointestinal symptoms, creating sustained demand for supportive care.",
       "segments": [
         {
-          "text": "2.About 60%–80% of abdominopelvic radiotherapy patients may develop acute gastrointestinal symptoms, creating sustained demand for supportive care."
+          "text": "2.About 60%-80% of abdominopelvic radiotherapy patients may develop acute gastrointestinal symptoms, creating sustained demand for supportive care."
         }
       ]
     },
@@ -2689,11 +2612,8 @@
       "text": "Table 5  Conservative Estimate",
       "segments": [
         {
-          "text": "Table 5  ",
+          "text": "Table 5  Conservative Estimate",
           "bold": true
-        },
-        {
-          "text": "Conservative Estimate"
         }
       ]
     },
@@ -2860,7 +2780,8 @@
       "text": "Risk Disclosure",
       "segments": [
         {
-          "text": "Risk Disclosure"
+          "text": "Risk Disclosure",
+          "bold": true
         }
       ]
     },
@@ -2897,29 +2818,19 @@
       "segments": [],
       "images": [
         {
-          "src": "entrepreneurship-image-06.png",
-          "alt": "4.1 Global Market Size"
+          "src": "entrepreneurship -6.png",
+          "alt": "Figure 4  Global Market Growth Forecast, 2026-2034",
+          "width": 1269,
+          "height": 769
         }
       ]
     },
     {
       "type": "caption",
-      "text": "Figure 3  Global Market Growth Forecast, 2026–2034",
+      "text": "Figure 4  Global Market Growth Forecast, 2026-2034",
       "segments": [
         {
-          "text": "Figure",
-          "bold": true
-        },
-        {
-          "text": " ",
-          "bold": true
-        },
-        {
-          "text": "3",
-          "bold": true
-        },
-        {
-          "text": "  Global Market Growth Forecast, 2026–2034",
+          "text": "Figure 4  Global Market Growth Forecast, 2026-2034",
           "bold": true
         }
       ]
@@ -2936,11 +2847,7 @@
       "text": "Table 6  2025 Base Year Market Conditions",
       "segments": [
         {
-          "text": "Table 6  ",
-          "bold": true
-        },
-        {
-          "text": "2025 Base Year Market Conditions",
+          "text": "Table 6  2025 Base Year Market Conditions",
           "bold": true
         }
       ]
@@ -3444,29 +3351,19 @@
       "segments": [],
       "images": [
         {
-          "src": "entrepreneurship-image-07.png",
-          "alt": "4.2 Regional Market Size Analysis"
+          "src": "entrepreneurship -7.png",
+          "alt": "Figure 5  2025 Regional Market Distribution",
+          "width": 1269,
+          "height": 683
         }
       ]
     },
     {
       "type": "caption",
-      "text": "Figure 4  2025 Regional Market Distribution",
+      "text": "Figure 5  2025 Regional Market Distribution",
       "segments": [
         {
-          "text": "Figure",
-          "bold": true
-        },
-        {
-          "text": " ",
-          "bold": true
-        },
-        {
-          "text": "4",
-          "bold": true
-        },
-        {
-          "text": "  2025 Regional Market Distribution",
+          "text": "Figure 5  2025 Regional Market Distribution",
           "bold": true
         }
       ]
@@ -3476,13 +3373,7 @@
       "text": "The 2025 Base Year uses the conservative commercialization scenario. Asia-Pacific has the largest potential patient population, while North America and Europe account for a larger share of market value due to higher payment capacity.",
       "segments": [
         {
-          "text": "The 2025 Base Year uses the conservative commercialization scenario. Asia-Pacific has the largest potential patient population, while North America and Europe account"
-        },
-        {
-          "text": " "
-        },
-        {
-          "text": "for a larger share of market value due to higher payment capacity."
+          "text": "The 2025 Base Year uses the conservative commercialization scenario. Asia-Pacific has the largest potential patient population, while North America and Europe account for a larger share of market value due to higher payment capacity."
         }
       ]
     },
@@ -3491,11 +3382,7 @@
       "text": "Table 7  North American Market",
       "segments": [
         {
-          "text": "Table 7  ",
-          "bold": true
-        },
-        {
-          "text": "North American Market",
+          "text": "Table 7  North American Market",
           "bold": true
         }
       ]
@@ -3759,10 +3646,10 @@
     },
     {
       "type": "paragraph",
-      "text": "United States： In 2026, an estimated 2,114,850 new cancer cases are expected; including 333,830 prostate cancer, 49,990 rectal cancer, 84,530 bladder cancer, 13,490 cervical cancer, and 68,270 corpus uteri cancer cases, with the five core cancer types totaling about 550,000 cases.",
+      "text": "United States: In 2026, an estimated 2,114,850 new cancer cases are expected; including 333,830 prostate cancer, 49,990 rectal cancer, 84,530 bladder cancer, 13,490 cervical cancer, and 68,270 corpus uteri cancer cases, with the five core cancer types totaling about 550,000 cases.",
       "segments": [
         {
-          "text": "United States： In 2026, an estimated 2,114,850 new cancer cases are expected; including 333,830 prostate cancer, 49,990 rectal cancer, 84,530 bladder cancer, 13,490 cervical cancer, and 68,270 corpus uteri cancer cases, with the five core cancer types totaling about 550,000 cases."
+          "text": "United States: In 2026, an estimated 2,114,850 new cancer cases are expected; including 333,830 prostate cancer, 49,990 rectal cancer, 84,530 bladder cancer, 13,490 cervical cancer, and 68,270 corpus uteri cancer cases, with the five core cancer types totaling about 550,000 cases."
         }
       ],
       "list": {
@@ -3772,10 +3659,10 @@
     },
     {
       "type": "paragraph",
-      "text": "Canada： In 2026, an estimated 254,100 new cancer cases and 87,900 deaths are expected; public health insurance coverage is broad, but drug price negotiations limit premiums for innovative treatments.",
+      "text": "Canada: In 2026, an estimated 254,100 new cancer cases and 87,900 deaths are expected; public health insurance coverage is broad, but drug price negotiations limit premiums for innovative treatments.",
       "segments": [
         {
-          "text": "Canada： In 2026, an estimated 254,100 new cancer cases and 87,900 deaths are expected; public health insurance coverage is broad, but drug price negotiations limit premiums for innovative treatments."
+          "text": "Canada: In 2026, an estimated 254,100 new cancer cases and 87,900 deaths are expected; public health insurance coverage is broad, but drug price negotiations limit premiums for innovative treatments."
         }
       ],
       "list": {
@@ -3788,11 +3675,7 @@
       "text": "Table 8  European Market",
       "segments": [
         {
-          "text": "Table 8  ",
-          "bold": true
-        },
-        {
-          "text": "European Market",
+          "text": "Table 8  European Market",
           "bold": true
         }
       ]
@@ -4056,10 +3939,10 @@
     },
     {
       "type": "paragraph",
-      "text": "EU-27： In 2024, there were about 2.7 million new cancer cases and 1.27–1.30 million cancer deaths; compared with 2022 estimates, new cases decreased by about 1.7%.",
+      "text": "EU-27: In 2024, there were about 2.7 million new cancer cases and 1.27-1.30 million cancer deaths; compared with 2022 estimates, new cases decreased by about 1.7%.",
       "segments": [
         {
-          "text": "EU-27： In 2024, there were about 2.7 million new cancer cases and 1.27–1.30 million cancer deaths; compared with 2022 estimates, new cases decreased by about 1.7%."
+          "text": "EU-27: In 2024, there were about 2.7 million new cancer cases and 1.27-1.30 million cancer deaths; compared with 2022 estimates, new cases decreased by about 1.7%."
         }
       ],
       "list": {
@@ -4069,10 +3952,10 @@
     },
     {
       "type": "paragraph",
-      "text": "Germany： Radiotherapy and oncology diagnosis and treatment systems are mature, but innovative therapies require strong clinical and pharmacoeconomic evidence.",
+      "text": "Germany: Radiotherapy and oncology diagnosis and treatment systems are mature, but innovative therapies require strong clinical and pharmacoeconomic evidence.",
       "segments": [
         {
-          "text": "Germany： Radiotherapy and oncology diagnosis and treatment systems are mature, but innovative therapies require strong clinical and pharmacoeconomic evidence."
+          "text": "Germany: Radiotherapy and oncology diagnosis and treatment systems are mature, but innovative therapies require strong clinical and pharmacoeconomic evidence."
         }
       ],
       "list": {
@@ -4082,10 +3965,10 @@
     },
     {
       "type": "paragraph",
-      "text": "United Kingdom： NICE cost-effectiveness assessment and NHS budget constraints affect product access and actual net prices.",
+      "text": "United Kingdom: NICE cost-effectiveness assessment and NHS budget constraints affect product access and actual net prices.",
       "segments": [
         {
-          "text": "United Kingdom： NICE cost-effectiveness assessment and NHS budget constraints affect product access and actual net prices."
+          "text": "United Kingdom: NICE cost-effectiveness assessment and NHS budget constraints affect product access and actual net prices."
         }
       ],
       "list": {
@@ -4098,11 +3981,7 @@
       "text": "Table 9  Asia-Pacific Market",
       "segments": [
         {
-          "text": "Table 9  ",
-          "bold": true
-        },
-        {
-          "text": "Asia-Pacific Market",
+          "text": "Table 9  Asia-Pacific Market",
           "bold": true
         }
       ]
@@ -4366,10 +4245,10 @@
     },
     {
       "type": "paragraph",
-      "text": "China：In 2024, an estimated 5.151 million new cancer cases and about 2.58 million deaths; the large patient base makes it the first commercial market for Sybio-Gutweaver.",
+      "text": "China: In 2024, an estimated 5.151 million new cancer cases and about 2.58 million deaths; the large patient base makes it the first commercial market for Sybio-Gutweaver.",
       "segments": [
         {
-          "text": "China：In 2024, an estimated 5.151 million new cancer cases and about 2.58 million deaths; the large patient base makes it the first commercial market for Sybio-Gutweaver."
+          "text": "China: In 2024, an estimated 5.151 million new cancer cases and about 2.58 million deaths; the large patient base makes it the first commercial market for Sybio-Gutweaver."
         }
       ],
       "list": {
@@ -4379,10 +4258,10 @@
     },
     {
       "type": "paragraph",
-      "text": "Japan：In 2024, about 1.067 million new cancer cases; including about 167,000 colorectal cancer and 100,000 prostate cancer cases; the mature healthcare system supports relatively high treatment accessibility.",
+      "text": "Japan: In 2024, about 1.067 million new cancer cases; including about 167,000 colorectal cancer and 100,000 prostate cancer cases; the mature healthcare system supports relatively high treatment accessibility.",
       "segments": [
         {
-          "text": "Japan：In 2024, about 1.067 million new cancer cases; including about 167,000 colorectal cancer and 100,000 prostate cancer cases; the mature healthcare system supports relatively high treatment accessibility."
+          "text": "Japan: In 2024, about 1.067 million new cancer cases; including about 167,000 colorectal cancer and 100,000 prostate cancer cases; the mature healthcare system supports relatively high treatment accessibility."
         }
       ],
       "list": {
@@ -4392,10 +4271,10 @@
     },
     {
       "type": "paragraph",
-      "text": "India：In 2024, about 1.563 million new cancer cases, including about 79,400 cervical cancer cases; patient demand is large, but payment capacity and distribution of radiotherapy resources vary markedly.",
+      "text": "India: In 2024, about 1.563 million new cancer cases, including about 79,400 cervical cancer cases; patient demand is large, but payment capacity and distribution of radiotherapy resources vary markedly.",
       "segments": [
         {
-          "text": "India：In 2024, about 1.563 million new cancer cases, including about 79,400 cervical cancer cases; patient demand is large, but payment capacity and distribution of radiotherapy resources vary markedly."
+          "text": "India: In 2024, about 1.563 million new cancer cases, including about 79,400 cervical cancer cases; patient demand is large, but payment capacity and distribution of radiotherapy resources vary markedly."
         }
       ],
       "list": {
@@ -4408,11 +4287,7 @@
       "text": "Table 10  Latin American Market",
       "segments": [
         {
-          "text": "Table 10  ",
-          "bold": true
-        },
-        {
-          "text": "Latin American Market",
+          "text": "Table 10  Latin American Market",
           "bold": true
         }
       ]
@@ -4636,10 +4511,10 @@
     },
     {
       "type": "paragraph",
-      "text": "Latin America & Caribbean：In 2024, there were about 1.581 million new cancer cases and 760,000 cancer deaths; prostate, colorectal, and cervical cancers all constitute important disease burdens.",
+      "text": "Latin America & Caribbean: In 2024, there were about 1.581 million new cancer cases and 760,000 cancer deaths; prostate, colorectal, and cervical cancers all constitute important disease burdens.",
       "segments": [
         {
-          "text": "Latin America & Caribbean：In 2024, there were about 1.581 million new cancer cases and 760,000 cancer deaths; prostate, colorectal, and cervical cancers all constitute important disease burdens."
+          "text": "Latin America & Caribbean: In 2024, there were about 1.581 million new cancer cases and 760,000 cancer deaths; prostate, colorectal, and cervical cancers all constitute important disease burdens."
         }
       ],
       "list": {
@@ -4649,10 +4524,10 @@
     },
     {
       "type": "paragraph",
-      "text": "Brazil：One of the region’s large oncology treatment markets, but public healthcare payment pressure limits net prices for innovative therapies.",
+      "text": "Brazil: One of the region’s large oncology treatment markets, but public healthcare payment pressure limits net prices for innovative therapies.",
       "segments": [
         {
-          "text": "Brazil：One of the region’s large oncology treatment markets, but public healthcare payment pressure limits net prices for innovative therapies."
+          "text": "Brazil: One of the region’s large oncology treatment markets, but public healthcare payment pressure limits net prices for innovative therapies."
         }
       ],
       "list": {
@@ -4662,10 +4537,10 @@
     },
     {
       "type": "paragraph",
-      "text": "Mexico：The patient base is relatively large; private healthcare and out-of-pocket payments create some market space, but payment capacity varies markedly.",
+      "text": "Mexico: The patient base is relatively large; private healthcare and out-of-pocket payments create some market space, but payment capacity varies markedly.",
       "segments": [
         {
-          "text": "Mexico：The patient base is relatively large; private healthcare and out-of-pocket payments create some market space, but payment capacity varies markedly."
+          "text": "Mexico: The patient base is relatively large; private healthcare and out-of-pocket payments create some market space, but payment capacity varies markedly."
         }
       ],
       "list": {
@@ -4678,11 +4553,7 @@
       "text": "Table 11  African Market",
       "segments": [
         {
-          "text": "Table 11  ",
-          "bold": true
-        },
-        {
-          "text": "African Market",
+          "text": "Table 11  African Market",
           "bold": true
         }
       ]
@@ -4906,10 +4777,10 @@
     },
     {
       "type": "paragraph",
-      "text": "Africa： GLOBOCAN 2024 shows about 124,600 cervical cancer cases and 111,500 prostate cancer cases, which are the main patient sources relevant to this project in the region.",
+      "text": "Africa: GLOBOCAN 2024 shows about 124,600 cervical cancer cases and 111,500 prostate cancer cases, which are the main patient sources relevant to this project in the region.",
       "segments": [
         {
-          "text": "Africa： GLOBOCAN 2024 shows about 124,600 cervical cancer cases and 111,500 prostate cancer cases, which are the main patient sources relevant to this project in the region."
+          "text": "Africa: GLOBOCAN 2024 shows about 124,600 cervical cancer cases and 111,500 prostate cancer cases, which are the main patient sources relevant to this project in the region."
         }
       ],
       "list": {
@@ -4919,10 +4790,10 @@
     },
     {
       "type": "paragraph",
-      "text": "Sub-Saharan Africa：Among the 42 countries with data in the WHO survey, 16 countries have no radiotherapy equipment; insufficient radiotherapy infrastructure is a major constraint on near-term market conversion.",
+      "text": "Sub-Saharan Africa: Among the 42 countries with data in the WHO survey, 16 countries have no radiotherapy equipment; insufficient radiotherapy infrastructure is a major constraint on near-term market conversion.",
       "segments": [
         {
-          "text": "Sub-Saharan Africa：Among the 42 countries with data in the WHO survey, 16 countries have no radiotherapy equipment; insufficient radiotherapy infrastructure is a major constraint on near-term market conversion."
+          "text": "Sub-Saharan Africa: Among the 42 countries with data in the WHO survey, 16 countries have no radiotherapy equipment; insufficient radiotherapy infrastructure is a major constraint on near-term market conversion."
         }
       ],
       "list": {
@@ -4953,14 +4824,14 @@
     },
     {
       "type": "paragraph",
-      "text": "National cancer prevention and control policy： The Healthy China Action—Cancer Prevention and Control Action Implementation Plan (2023–2030) was jointly issued by the National Health Commission and 13 other departments. It proposes that China’s overall cancer 5-year survival rate reach 46.6% by 2030 and emphasizes standardized diagnosis and treatment, full-course management, and translation of cancer research achievements. Sybio-Gutweaver targets radiotherapy-related normal tissue injury, aligning with the policy direction of cancer treatment shifting from “prolonging survival” to “placing equal emphasis on efficacy and quality of life.”",
+      "text": "National cancer prevention and control policy: The Healthy China Action-Cancer Prevention and Control Action Implementation Plan (2023-2030) was jointly issued by the National Health Commission and 13 other departments. It proposes that China’s overall cancer 5-year survival rate reach 46.6% by 2030 and emphasizes standardized diagnosis and treatment, full-course management, and translation of cancer research achievements. Sybio-Gutweaver targets radiotherapy-related normal tissue injury, aligning with the policy direction of cancer treatment shifting from “prolonging survival” to “placing equal emphasis on efficacy and quality of life”.",
       "segments": [
         {
           "text": "National cancer prevention and control policy",
           "bold": true
         },
         {
-          "text": "： The Healthy China Action—Cancer Prevention and Control Action Implementation Plan (2023–2030) was jointly issued by the National Health Commission and 13 other departments. It proposes that China’s overall cancer 5-year survival rate reach 46.6% by 2030 and emphasizes standardized diagnosis and treatment, full-course management, and translation of cancer research achievements. Sybio-Gutweaver targets radiotherapy-related normal tissue injury, aligning with the policy direction of cancer treatment shifting from “prolonging survival” to “placing equal emphasis on efficacy and quality of life.”"
+          "text": ": The Healthy China Action-Cancer Prevention and Control Action Implementation Plan (2023-2030) was jointly issued by the National Health Commission and 13 other departments. It proposes that China’s overall cancer 5-year survival rate reach 46.6% by 2030 and emphasizes standardized diagnosis and treatment, full-course management, and translation of cancer research achievements. Sybio-Gutweaver targets radiotherapy-related normal tissue injury, aligning with the policy direction of cancer treatment shifting from “prolonging survival” to “placing equal emphasis on efficacy and quality of life”."
         }
       ],
       "list": {
@@ -4984,28 +4855,28 @@
     },
     {
       "type": "paragraph",
-      "text": "- The 14th Five-Year Plan for the Development of the Bioeconomy lists synthetic biology, new drug creation, and biosafety as frontier priority areas;",
+      "text": "-The 14th Five-Year Plan for the Development of the Bioeconomy lists synthetic biology, new drug creation, and biosafety as frontier priority areas;",
       "segments": [
         {
-          "text": "- The 14th Five-Year Plan for the Development of the Bioeconomy lists synthetic biology, new drug creation, and biosafety as frontier priority areas;"
+          "text": "-The 14th Five-Year Plan for the Development of the Bioeconomy lists synthetic biology, new drug creation, and biosafety as frontier priority areas;"
         }
       ]
     },
     {
       "type": "paragraph",
-      "text": "- It explicitly proposes breakthroughs in key technologies such as computational strain design, high-throughput screening, efficient expression, and precise regulation;",
+      "text": "-It explicitly proposes breakthroughs in key technologies such as computational strain design, high-throughput screening, efficient expression, and precise regulation;",
       "segments": [
         {
-          "text": "- It explicitly proposes breakthroughs in key technologies such as computational strain design, high-throughput screening, efficient expression, and precise regulation;"
+          "text": "-It explicitly proposes breakthroughs in key technologies such as computational strain design, high-throughput screening, efficient expression, and precise regulation;"
         }
       ]
     },
     {
       "type": "paragraph",
-      "text": "- It promotes the application of synthetic biology in new drug development and disease treatment, providing a policy foundation for the technological translation of engineered EcN.",
+      "text": "-It promotes the application of synthetic biology in new drug development and disease treatment, providing a policy foundation for the technological translation of engineered EcN.",
       "segments": [
         {
-          "text": "- It promotes the application of synthetic biology in new drug development and disease treatment, providing a policy foundation for the technological translation of engineered EcN."
+          "text": "-It promotes the application of synthetic biology in new drug development and disease treatment, providing a policy foundation for the technological translation of engineered EcN."
         }
       ]
     },
@@ -5025,19 +4896,19 @@
     },
     {
       "type": "paragraph",
-      "text": "- The 2025 edition of the Chinese Pharmacopoeia was implemented on October 1, 2025. Volume III continues to include the General Chapter on Microecological Live Bacterial Products, and viable count, stability, and strain quality control already have a national drug standard basis;",
+      "text": "-The 2025 edition of the Chinese Pharmacopoeia was implemented on October 1, 2025. Volume III continues to include the General Chapter on Microecological Live Bacterial Products, and viable count, stability, and strain quality control already have a national drug standard basis;",
       "segments": [
         {
-          "text": "- The 2025 edition of the Chinese Pharmacopoeia was implemented on October 1, 2025. Volume III continues to include the General Chapter on Microecological Live Bacterial Products, and viable count, stability, and strain quality control already have a national drug standard basis;"
+          "text": "-The 2025 edition of the Chinese Pharmacopoeia was implemented on October 1, 2025. Volume III continues to include the General Chapter on Microecological Live Bacterial Products, and viable count, stability, and strain quality control already have a national drug standard basis;"
         }
       ]
     },
     {
       "type": "paragraph",
-      "text": "- The U.S. FDA has issued guidance specifically for early clinical CMC for INDs of Live Biotherapeutic Products (LBPs), setting clear requirements for strain identification, manufacturing, quality, and stability, providing an international regulatory interface for the project’s “NMPA primary pathway, FDA parallel assessment” strategy.",
+      "text": "-The U.S. FDA has issued guidance specifically for early clinical CMC for INDs of Live Biotherapeutic Products (LBPs), setting clear requirements for strain identification, manufacturing, quality, and stability, providing an international regulatory interface for the project’s “NMPA primary pathway, FDA parallel assessment” strategy.",
       "segments": [
         {
-          "text": "- The U.S. FDA has issued guidance specifically for early clinical CMC for INDs of Live Biotherapeutic Products (LBPs), setting clear requirements for strain identification, manufacturing, quality, and stability, providing an international regulatory interface for the project’s “NMPA primary pathway, FDA parallel assessment” strategy."
+          "text": "-The U.S. FDA has issued guidance specifically for early clinical CMC for INDs of Live Biotherapeutic Products (LBPs), setting clear requirements for strain identification, manufacturing, quality, and stability, providing an international regulatory interface for the project’s “NMPA primary pathway, FDA parallel assessment” strategy."
         }
       ]
     },
@@ -5057,28 +4928,28 @@
     },
     {
       "type": "paragraph",
-      "text": "- During the 14th Five-Year Plan period, the output value of Gansu’s biopharmaceutical industry increased by 83.5%, and the industrial base continued to expand;",
+      "text": "-During the 14th Five-Year Plan period, the output value of Gansu’s biopharmaceutical industry increased by 83.5%, and the industrial base continued to expand;",
       "segments": [
         {
-          "text": "- During the 14th Five-Year Plan period, the output value of Gansu’s biopharmaceutical industry increased by 83.5%, and the industrial base continued to expand;"
+          "text": "-During the 14th Five-Year Plan period, the output value of Gansu’s biopharmaceutical industry increased by 83.5%, and the industrial base continued to expand;"
         }
       ]
     },
     {
       "type": "paragraph",
-      "text": "- The latest industrial policy proposes forming a RMB 50 billion-level biopharmaceutical industry by 2028;",
+      "text": "-The latest industrial policy proposes forming a RMB 50 billion-level biopharmaceutical industry by 2028;",
       "segments": [
         {
-          "text": "- The latest industrial policy proposes forming a RMB 50 billion-level biopharmaceutical industry by 2028;"
+          "text": "-The latest industrial policy proposes forming a RMB 50 billion-level biopharmaceutical industry by 2028;"
         }
       ]
     },
     {
       "type": "paragraph",
-      "text": "- The 15th Five-Year Plan further focuses on vaccines, antibody drugs, recombinant proteins, and cell and gene therapies, and promotes the miniaturization and scaled development of medical heavy ion accelerators.",
+      "text": "-The 15th Five-Year Plan further focuses on vaccines, antibody drugs, recombinant proteins, and cell and gene therapies, and promotes the miniaturization and scaled development of medical heavy ion accelerators.",
       "segments": [
         {
-          "text": "- The 15th Five-Year Plan further focuses on vaccines, antibody drugs, recombinant proteins, and cell and gene therapies, and promotes the miniaturization and scaled development of medical heavy ion accelerators."
+          "text": "-The 15th Five-Year Plan further focuses on vaccines, antibody drugs, recombinant proteins, and cell and gene therapies, and promotes the miniaturization and scaled development of medical heavy ion accelerators."
         }
       ]
     },
@@ -5104,10 +4975,11 @@
     },
     {
       "type": "paragraph",
-      "text": "Table 12 Representative Commercial Cases of Live Bacterial/Microbial Therapeutics",
+      "text": "Table 12  Representative Commercial Cases of Live Bacterial/Microbial Therapeutics",
       "segments": [
         {
-          "text": "Table 12 Representative Commercial Cases of Live Bacterial/Microbial Therapeutics"
+          "text": "Table 12  Representative Commercial Cases of Live Bacterial/Microbial Therapeutics",
+          "bold": true
         }
       ]
     },
@@ -5123,7 +4995,8 @@
                   "text": "Enterprise / Product",
                   "segments": [
                     {
-                      "text": "Enterprise / Product"
+                      "text": "Enterprise / Product",
+                      "bold": true
                     }
                   ]
                 }
@@ -5136,7 +5009,8 @@
                   "text": "Core Product",
                   "segments": [
                     {
-                      "text": "Core Product"
+                      "text": "Core Product",
+                      "bold": true
                     }
                   ]
                 }
@@ -5149,7 +5023,8 @@
                   "text": "Commercial Performance",
                   "segments": [
                     {
-                      "text": "Commercial Performance"
+                      "text": "Commercial Performance",
+                      "bold": true
                     }
                   ]
                 }
@@ -5342,28 +5217,28 @@
     },
     {
       "type": "paragraph",
-      "text": "- Fermentation manufacturing: microbial expansion is suitable for scaled manufacturing;",
+      "text": "-Fermentation manufacturing: microbial expansion is suitable for scaled manufacturing;",
       "segments": [
         {
-          "text": "- Fermentation manufacturing: microbial expansion is suitable for scaled manufacturing;"
+          "text": "-Fermentation manufacturing: microbial expansion is suitable for scaled manufacturing;"
         }
       ]
     },
     {
       "type": "paragraph",
-      "text": "- Oral delivery: reduces invasive administration and occupation of medical resources;",
+      "text": "-Oral delivery: reduces invasive administration and occupation of medical resources;",
       "segments": [
         {
-          "text": "- Oral delivery: reduces invasive administration and occupation of medical resources;"
+          "text": "-Oral delivery: reduces invasive administration and occupation of medical resources;"
         }
       ]
     },
     {
       "type": "paragraph",
-      "text": "- Asset-light model: transfers late-stage clinical and commercialization costs through milestone payments and license-out.",
+      "text": "-Asset-light model: transfers late-stage clinical and commercialization costs through milestone payments and license-out.",
       "segments": [
         {
-          "text": "- Asset-light model: transfers late-stage clinical and commercialization costs through milestone payments and license-out."
+          "text": "-Asset-light model: transfers late-stage clinical and commercialization costs through milestone payments and license-out."
         }
       ]
     },
@@ -5385,7 +5260,7 @@
       "text": "- The 2025 medical insurance catalog added 114 drugs, 50 of which are Class 1 innovative drugs;",
       "segments": [
         {
-          "text": "    - The 2025 medical insurance catalog added 114 drugs, 50 of which are Class 1 innovative drugs;"
+          "text": "- The 2025 medical insurance catalog added 114 drugs, 50 of which are Class 1 innovative drugs;"
         }
       ]
     },
@@ -5482,10 +5357,10 @@
     },
     {
       "type": "paragraph",
-      "text": "- About 60%–80% of patients receiving abdominal and pelvic radiotherapy may develop acute gastrointestinal toxicity;",
+      "text": "- About 60%-80% of patients receiving abdominal and pelvic radiotherapy may develop acute gastrointestinal toxicity;",
       "segments": [
         {
-          "text": "- About 60%–80% of patients receiving abdominal and pelvic radiotherapy may develop acute gastrointestinal toxicity;"
+          "text": "- About 60%-80% of patients receiving abdominal and pelvic radiotherapy may develop acute gastrointestinal toxicity;"
         }
       ]
     },
@@ -5532,7 +5407,8 @@
       "text": "Core advantages:",
       "segments": [
         {
-          "text": "Core advantages:"
+          "text": "Core advantages:",
+          "bold": true
         }
       ]
     },
@@ -5548,7 +5424,8 @@
                   "text": "Functional Module",
                   "segments": [
                     {
-                      "text": "Functional Module"
+                      "text": "Functional Module",
+                      "bold": true
                     }
                   ]
                 }
@@ -5561,7 +5438,8 @@
                   "text": "Innovation",
                   "segments": [
                     {
-                      "text": "Innovation"
+                      "text": "Innovation",
+                      "bold": true
                     }
                   ]
                 }
@@ -5574,7 +5452,8 @@
                   "text": "Industrial Value",
                   "segments": [
                     {
-                      "text": "Industrial Value"
+                      "text": "Industrial Value",
+                      "bold": true
                     }
                   ]
                 }
@@ -5805,29 +5684,19 @@
       "segments": [],
       "images": [
         {
-          "src": "entrepreneurship-image-08.png",
-          "alt": "5.1.4 Technological Analysis"
+          "src": "entrepreneurship -8.png",
+          "alt": "Figure 6  Multi-module synergistic mechanism of Sybio-Gutweaver",
+          "width": 1024,
+          "height": 1024
         }
       ]
     },
     {
       "type": "caption",
-      "text": "Figure 5  Multi-module synergistic mechanism of Sybio-Gutweaver",
+      "text": "Figure 6  Multi-module synergistic mechanism of Sybio-Gutweaver",
       "segments": [
         {
-          "text": "Figure",
-          "bold": true
-        },
-        {
-          "text": " ",
-          "bold": true
-        },
-        {
-          "text": "5",
-          "bold": true
-        },
-        {
-          "text": "  Multi-module synergistic mechanism of Sybio-Gutweaver",
+          "text": "Figure 6  Multi-module synergistic mechanism of Sybio-Gutweaver",
           "bold": true
         }
       ]
@@ -5880,29 +5749,19 @@
       "segments": [],
       "images": [
         {
-          "src": "entrepreneurship-image-09.png",
-          "alt": "5.2 SWOT Analysis"
+          "src": "entrepreneurship -9.png",
+          "alt": "Figure 7  Sybio-Gutweaver SWOT Analysis",
+          "width": 1267,
+          "height": 764
         }
       ]
     },
     {
       "type": "caption",
-      "text": "Figure 6  Sybio-Gutweaver SWOT Analysis",
+      "text": "Figure 7  Sybio-Gutweaver SWOT Analysis",
       "segments": [
         {
-          "text": "Figure",
-          "bold": true
-        },
-        {
-          "text": " ",
-          "bold": true
-        },
-        {
-          "text": "6",
-          "bold": true
-        },
-        {
-          "text": "  Sybio-Gutweaver SWOT Analysis",
+          "text": "Figure 7  Sybio-Gutweaver SWOT Analysis",
           "bold": true
         }
       ]
@@ -6109,10 +5968,10 @@
     },
     {
       "type": "paragraph",
-      "text": "About 60%–80% of abdominopelvic radiotherapy patients develop acute gastrointestinal toxicity",
+      "text": "About 60%-80% of abdominopelvic radiotherapy patients develop acute gastrointestinal toxicity",
       "segments": [
         {
-          "text": "About 60%–80% of abdominopelvic radiotherapy patients develop acute gastrointestinal toxicity"
+          "text": "About 60%-80% of abdominopelvic radiotherapy patients develop acute gastrointestinal toxicity"
         }
       ],
       "list": {
@@ -6251,8 +6110,10 @@
       "segments": [],
       "images": [
         {
-          "src": "entrepreneurship-image-10.png",
-          "alt": "6.1 Innovative Drug Development Path"
+          "src": "entrepreneurship -10.png",
+          "alt": "6.1 Innovative Drug Development Path",
+          "width": 1269,
+          "height": 952
         }
       ]
     },
@@ -6369,7 +6230,7 @@
     },
     {
       "type": "heading",
-      "text": "6.2.3 Rapid Market Translation",
+      "text": "6.2.3 Rapid Market Conversion",
       "number": "6.2.3",
       "level": 4,
       "id": "section-6-2-3"
@@ -6385,10 +6246,10 @@
     },
     {
       "type": "paragraph",
-      "text": "At the current stage, the team will prioritize completing core strain convergence, functional validation, biosafety switches, genetic stability, and optimization of the lyophilization–intestinal release system; subsequently, it will gradually enter animal efficacy and safety evaluation, manufacturing process development, quality standard establishment, and registration preparation.",
+      "text": "At the current stage, the team will prioritize completing core strain convergence, functional validation, biosafety switches, genetic stability, and optimization of the lyophilization-intestinal release system; subsequently, it will gradually enter animal efficacy and safety evaluation, manufacturing process development, quality standard establishment, and registration preparation.",
       "segments": [
         {
-          "text": "At the current stage, the team will prioritize completing core strain convergence, functional validation, biosafety switches, genetic stability, and optimization of the lyophilization–intestinal release system; subsequently, it will gradually enter animal efficacy and safety evaluation, manufacturing process development, quality standard establishment, and registration preparation."
+          "text": "At the current stage, the team will prioritize completing core strain convergence, functional validation, biosafety switches, genetic stability, and optimization of the lyophilization-intestinal release system; subsequently, it will gradually enter animal efficacy and safety evaluation, manufacturing process development, quality standard establishment, and registration preparation."
         }
       ]
     },
@@ -6412,7 +6273,7 @@
     },
     {
       "type": "heading",
-      "text": "6.2.4 Disclaimer and Staged Statement",
+      "text": "6.2.4 Disclaimer and Phased Statements",
       "number": "6.2.4",
       "level": 4,
       "id": "section-6-2-4"
@@ -6496,10 +6357,10 @@
     },
     {
       "type": "paragraph",
-      "text": "Based on the value chain analysis, Sybio-Gutweaver will adopt an asset-light model of “independent R&D + co-development/technology licensing.” The team will maintain R&D advantages in core strains, functional circuits, and intellectual property, and after key technical and clinical milestones, introduce industrial partners to undertake subsequent manufacturing, registration, and market promotion.",
+      "text": "Based on the value chain analysis, Sybio-Gutweaver will adopt an asset-light model of “independent R&D + co-development/technology licensing”. The team will maintain R&D advantages in core strains, functional circuits, and intellectual property, and after key technical and clinical milestones, introduce industrial partners to undertake subsequent manufacturing, registration, and market promotion.",
       "segments": [
         {
-          "text": "Based on the value chain analysis, Sybio-Gutweaver will adopt an asset-light model of “independent R&D + co-development/technology licensing.” The team will maintain R&D advantages in core strains, functional circuits, and intellectual property, and after key technical and clinical milestones, introduce industrial partners to undertake subsequent manufacturing, registration, and market promotion."
+          "text": "Based on the value chain analysis, Sybio-Gutweaver will adopt an asset-light model of “independent R&D + co-development/technology licensing”. The team will maintain R&D advantages in core strains, functional circuits, and intellectual property, and after key technical and clinical milestones, introduce industrial partners to undertake subsequent manufacturing, registration, and market promotion."
         }
       ]
     },
@@ -6516,17 +6377,19 @@
       "segments": [],
       "images": [
         {
-          "src": "entrepreneurship-image-11.jpeg",
-          "alt": "6.4.1 Commercialization Strategy Environment"
+          "src": "entrepreneurship -11.jpeg",
+          "alt": "6.4.1 Commercialization Strategy Environment",
+          "width": 1268,
+          "height": 1691
         }
       ]
     },
     {
       "type": "paragraph",
-      "text": "Through an interview with Gao Rencheng, CEO of Jiyin Chuangwu (Shanghai) Technology Co., Ltd., we found that Sybio-Gutweaver is currently in the early stage of translating laboratory technology into a candidate product. The project adopts a phased commercialization strategy of “ground-based radiotherapy first, long-term extension to space scenarios.” At the current stage, priority is given to completing product validation, clinical development, and market access around abdominopelvic radiotherapy-related intestinal injury. The team has currently formed a multi-functional engineered EcN live bacterial scheme, but key complementary assets such as scaled manufacturing, clinical development, and regulatory submission still need to be supplemented.",
+      "text": "Through an interview with Gao Rencheng, CEO of Jiyin Chuangwu (Shanghai) Technology Co., Ltd., we found that Sybio-Gutweaver is currently in the early stage of translating laboratory technology into a candidate product. The project adopts a phased commercialization strategy of “ground-based radiotherapy first, long-term extension to space scenarios”. At the current stage, priority is given to completing product validation, clinical development, and market access around abdominopelvic radiotherapy-related intestinal injury. The team has currently formed a multi-functional engineered EcN live bacterial scheme, but key complementary assets such as scaled manufacturing, clinical development, and regulatory submission still need to be supplemented.",
       "segments": [
         {
-          "text": "Through an interview with Gao Rencheng, CEO of Jiyin Chuangwu (Shanghai) Technology Co., Ltd., we found that Sybio-Gutweaver is currently in the early stage of translating laboratory technology into a candidate product. The project adopts a phased commercialization strategy of “ground-based radiotherapy first, long-term extension to space scenarios.” At the current stage, priority is given to completing product validation, clinical development, and market access around abdominopelvic radiotherapy-related intestinal injury. The team has currently formed a multi-functional engineered EcN live bacterial scheme, but key complementary assets such as scaled manufacturing, clinical development, and regulatory submission still need to be supplemented."
+          "text": "Through an interview with Gao Rencheng, CEO of Jiyin Chuangwu (Shanghai) Technology Co., Ltd., we found that Sybio-Gutweaver is currently in the early stage of translating laboratory technology into a candidate product. The project adopts a phased commercialization strategy of “ground-based radiotherapy first, long-term extension to space scenarios”. At the current stage, priority is given to completing product validation, clinical development, and market access around abdominopelvic radiotherapy-related intestinal injury. The team has currently formed a multi-functional engineered EcN live bacterial scheme, but key complementary assets such as scaled manufacturing, clinical development, and regulatory submission still need to be supplemented."
         }
       ]
     },
@@ -6596,6 +6459,7 @@
     },
     {
       "type": "table",
+      "mediaLayout": "partners",
       "rows": [
         {
           "cells": [
@@ -6607,8 +6471,10 @@
                   "segments": [],
                   "images": [
                     {
-                      "src": "entrepreneurship-image-12.png",
-                      "alt": "6.4.2 Partners and Resources, row 1, column 1"
+                      "src": "entrepreneurship -12.png",
+                      "alt": "Figure 8  Partners",
+                      "width": 655,
+                      "height": 109
                     }
                   ]
                 }
@@ -6622,8 +6488,10 @@
                   "segments": [],
                   "images": [
                     {
-                      "src": "entrepreneurship-image-13.png",
-                      "alt": "6.4.2 Partners and Resources, row 1, column 2"
+                      "src": "entrepreneurship -13.png",
+                      "alt": "Figure 8  Partners",
+                      "width": 502,
+                      "height": 92
                     }
                   ]
                 }
@@ -6641,8 +6509,10 @@
                   "segments": [],
                   "images": [
                     {
-                      "src": "entrepreneurship-image-14.png",
-                      "alt": "6.4.2 Partners and Resources, row 2, column 1"
+                      "src": "entrepreneurship -14.png",
+                      "alt": "Figure 8  Partners",
+                      "width": 682,
+                      "height": 124
                     }
                   ]
                 }
@@ -6656,8 +6526,10 @@
                   "segments": [],
                   "images": [
                     {
-                      "src": "entrepreneurship-image-15.png",
-                      "alt": "6.4.2 Partners and Resources, row 2, column 2"
+                      "src": "entrepreneurship -15.png",
+                      "alt": "Figure 8  Partners",
+                      "width": 402,
+                      "height": 114
                     }
                   ]
                 }
@@ -6675,8 +6547,10 @@
                   "segments": [],
                   "images": [
                     {
-                      "src": "entrepreneurship-image-16.png",
-                      "alt": "6.4.2 Partners and Resources, row 3, column 1"
+                      "src": "entrepreneurship -16.png",
+                      "alt": "Figure 8  Partners",
+                      "width": 720,
+                      "height": 73
                     }
                   ]
                 }
@@ -6690,8 +6564,10 @@
                   "segments": [],
                   "images": [
                     {
-                      "src": "entrepreneurship-image-17.png",
-                      "alt": "6.4.2 Partners and Resources, row 3, column 2"
+                      "src": "entrepreneurship -17.png",
+                      "alt": "Figure 8  Partners",
+                      "width": 413,
+                      "height": 60
                     }
                   ]
                 }
@@ -6709,12 +6585,16 @@
                   "segments": [],
                   "images": [
                     {
-                      "src": "entrepreneurship-image-18.png",
-                      "alt": "6.4.2 Partners and Resources, row 4, column 1 1"
+                      "src": "entrepreneurship -18.png",
+                      "alt": "Figure 8  Partners",
+                      "width": 164,
+                      "height": 183
                     },
                     {
-                      "src": "entrepreneurship-image-19.png",
-                      "alt": "6.4.2 Partners and Resources, row 4, column 1 2"
+                      "src": "entrepreneurship -19.png",
+                      "alt": "Figure 8  Partners",
+                      "width": 531,
+                      "height": 137
                     }
                   ]
                 }
@@ -6728,12 +6608,16 @@
                   "segments": [],
                   "images": [
                     {
-                      "src": "entrepreneurship-image-20.png",
-                      "alt": "6.4.2 Partners and Resources, row 4, column 2 1"
+                      "src": "entrepreneurship -20.png",
+                      "alt": "Figure 8  Partners",
+                      "width": 512,
+                      "height": 96
                     },
                     {
-                      "src": "entrepreneurship-image-21.png",
-                      "alt": "6.4.2 Partners and Resources, row 4, column 2 2"
+                      "src": "entrepreneurship -21.png",
+                      "alt": "Figure 8  Partners",
+                      "width": 498,
+                      "height": 73
                     }
                   ]
                 }
@@ -6745,22 +6629,10 @@
     },
     {
       "type": "caption",
-      "text": "Figure 7  Partners",
+      "text": "Figure 8  Partners",
       "segments": [
         {
-          "text": "Figure",
-          "bold": true
-        },
-        {
-          "text": " ",
-          "bold": true
-        },
-        {
-          "text": "7",
-          "bold": true
-        },
-        {
-          "text": "  Partners",
+          "text": "Figure 8  Partners",
           "bold": true
         }
       ]
@@ -6775,7 +6647,7 @@
       ]
     },
     {
-      "type": "caption",
+      "type": "paragraph",
       "text": "R&D stage: School of Stomatology, Lanzhou University; Gansu Provincial Hospital; Gansu Wuwei Tumor Hospital; Institute of Modern Physics, Chinese Academy of Sciences, etc., providing scientific research and clinical resource support for radiation injury mechanisms, clinical needs, biosafety, and product evaluation.",
       "segments": [
         {
@@ -6821,10 +6693,10 @@
     },
     {
       "type": "heading",
-      "text": "6.3.3 Commercialization Advancement Steps",
-      "number": "6.3.3",
+      "text": "6.4.3 Commercialization Advancement Steps",
+      "number": "6.4.3",
       "level": 4,
-      "id": "section-6-3-3"
+      "id": "section-6-4-3"
     },
     {
       "type": "paragraph",
@@ -6832,39 +6704,29 @@
       "segments": [],
       "images": [
         {
-          "src": "entrepreneurship-image-22.png",
-          "alt": "6.3.3 Commercialization Advancement Steps"
+          "src": "entrepreneurship -22.png",
+          "alt": "Figure 9  Commercialization Steps",
+          "width": 1267,
+          "height": 845
         }
       ]
     },
     {
       "type": "caption",
-      "text": "Figure 8  Commercialization Steps",
+      "text": "Figure 9  Commercialization Steps",
       "segments": [
         {
-          "text": "Figure",
-          "bold": true
-        },
-        {
-          "text": " ",
-          "bold": true
-        },
-        {
-          "text": "8",
-          "bold": true
-        },
-        {
-          "text": "  Commercialization Steps",
+          "text": "Figure 9  Commercialization Steps",
           "bold": true
         }
       ]
     },
     {
       "type": "paragraph",
-      "text": "1.  Initial contact and NDA signing",
+      "text": "1. Initial contact and NDA signing",
       "segments": [
         {
-          "text": "1.  Initial contact and NDA signing"
+          "text": "1. Initial contact and NDA signing"
         }
       ]
     },
@@ -7034,20 +6896,20 @@
     },
     {
       "type": "paragraph",
-      "text": "India and other emerging markets: long-term reserve markets.   Such markets have relatively large patient bases, but price accessibility, supply chains, cold-chain storage and transportation, and distribution of radiotherapy resources still require separate assessment, and they are not currently prioritized for early entry.",
+      "text": "India and other emerging markets: long-term reserve markets. Such markets have relatively large patient bases, but price accessibility, supply chains, cold-chain storage and transportation, and distribution of radiotherapy resources still require separate assessment, and they are not currently prioritized for early entry.",
       "segments": [
         {
           "text": "India and other emerging markets: long-term reserve markets. ",
           "bold": true
         },
         {
-          "text": "  Such markets have relatively large patient bases, but price accessibility, supply chains, cold-chain storage and transportation, and distribution of radiotherapy resources still require separate assessment, and they are not currently prioritized for early entry."
+          "text": "Such markets have relatively large patient bases, but price accessibility, supply chains, cold-chain storage and transportation, and distribution of radiotherapy resources still require separate assessment, and they are not currently prioritized for early entry."
         }
       ]
     },
     {
       "type": "heading",
-      "text": "7.1.2  North American Market",
+      "text": "7.1.2 North American Market",
       "number": "7.1.2",
       "level": 4,
       "id": "section-7-1-2"
@@ -7119,10 +6981,10 @@
     },
     {
       "type": "paragraph",
-      "text": "United Kingdom: independent assessment market.  The United Kingdom needs separate assessment according to its own regulatory, payment, and hospital access processes. The project will not separately invest commercialization resources in the early stage, and will advance only after the continental EU market access strategy and clinical value evidence mature.",
+      "text": "United Kingdom: independent assessment market. The United Kingdom needs separate assessment according to its own regulatory, payment, and hospital access processes. The project will not separately invest commercialization resources in the early stage, and will advance only after the continental EU market access strategy and clinical value evidence mature.",
       "segments": [
         {
-          "text": "United Kingdom: independent assessment market. ",
+          "text": "United Kingdom: independent assessment market.",
           "bold": true
         },
         {
@@ -7144,11 +7006,7 @@
       "text": "Table 13  Screening Criteria for First-Batch Clinical Partner Centers",
       "segments": [
         {
-          "text": "Table 13 ",
-          "bold": true
-        },
-        {
-          "text": " Screening Criteria for First-Batch Clinical Partner Centers",
+          "text": "Table 13  Screening Criteria for First-Batch Clinical Partner Centers",
           "bold": true
         }
       ]
@@ -7444,29 +7302,19 @@
       "segments": [],
       "images": [
         {
-          "src": "entrepreneurship-image-23.jpeg",
-          "alt": "7.2 STP Analysis—Target Market Selection"
+          "src": "entrepreneurship -23.jpeg",
+          "alt": "Figure 10  Sybio-Gutweaver Market Entry and Development Roadmap",
+          "width": 1216,
+          "height": 880
         }
       ]
     },
     {
       "type": "caption",
-      "text": "Figure 9  Sybio-Gutweaver Market Entry and Development Roadmap",
+      "text": "Figure 10  Sybio-Gutweaver Market Entry and Development Roadmap",
       "segments": [
         {
-          "text": "Figure",
-          "bold": true
-        },
-        {
-          "text": " ",
-          "bold": true
-        },
-        {
-          "text": "9",
-          "bold": true
-        },
-        {
-          "text": "  Sybio-Gutweaver Market Entry and Development Roadmap",
+          "text": "Figure 10  Sybio-Gutweaver Market Entry and Development Roadmap",
           "bold": true
         }
       ]
@@ -7497,8 +7345,10 @@
       ],
       "images": [
         {
-          "src": "entrepreneurship-image-24.jpeg",
-          "alt": "7.3 STP Analysis—Market Positioning"
+          "src": "entrepreneurship -24.jpeg",
+          "alt": "7.3 STP Analysis—Market Positioning",
+          "width": 1269,
+          "height": 951
         }
       ]
     },
@@ -7556,8 +7406,10 @@
       "segments": [],
       "images": [
         {
-          "src": "entrepreneurship-image-25.jpeg",
-          "alt": "7.4.2 Marketing Strategies"
+          "src": "entrepreneurship -25.jpeg",
+          "alt": "7.4.2 Marketing Strategies",
+          "width": 1154,
+          "height": 1154
         }
       ]
     },
@@ -7575,10 +7427,7 @@
       "text": "1.Brand positioning: clarify target audience, brand value proposition, and core communication messages, establish a unified external expression, avoid fragmentation of content across multiple channels, and gradually build stable brand awareness.",
       "segments": [
         {
-          "text": "1."
-        },
-        {
-          "text": "Brand positioning: clarify target audience, brand value proposition, and core communication messages, establish a unified external expression, avoid fragmentation of content across multiple channels, and gradually build stable brand awareness."
+          "text": "1.Brand positioning: clarify target audience, brand value proposition, and core communication messages, establish a unified external expression, avoid fragmentation of content across multiple channels, and gradually build stable brand awareness."
         }
       ]
     },
@@ -7587,10 +7436,7 @@
       "text": "2.Content operation: naturally integrate brand information into content that users follow through knowledge sharing, scenario expression, and viewpoint output. Compared with simple product promotion, content operation emphasizes the match between brand value and user needs to enhance user awareness and trust.",
       "segments": [
         {
-          "text": "2."
-        },
-        {
-          "text": "Content operation: naturally integrate brand information into content that users follow through knowledge sharing, scenario expression, and viewpoint output. Compared with simple product promotion, content operation emphasizes the match between brand value and user needs to enhance user awareness and trust."
+          "text": "2.Content operation: naturally integrate brand information into content that users follow through knowledge sharing, scenario expression, and viewpoint output. Compared with simple product promotion, content operation emphasizes the match between brand value and user needs to enhance user awareness and trust."
         }
       ]
     },
@@ -7599,10 +7445,7 @@
       "text": "3.Community/circle communication: select suitable bloggers, industry experts, and opinion leaders based on target audience profiles, and achieve circle diffusion through interviews, content co-creation, and thematic sharing. The selection of partners focuses on audience match, content quality, and interaction performance, rather than simply referring to follower size.",
       "segments": [
         {
-          "text": "3."
-        },
-        {
-          "text": "Community/circle communication: select suitable bloggers, industry experts, and opinion leaders based on target audience profiles, and achieve circle diffusion through interviews, content co-creation, and thematic sharing. The selection of partners focuses on audience match, content quality, and interaction performance, rather than simply referring to follower size."
+          "text": "3.Community/circle communication: select suitable bloggers, industry experts, and opinion leaders based on target audience profiles, and achieve circle diffusion through interviews, content co-creation, and thematic sharing. The selection of partners focuses on audience match, content quality, and interaction performance, rather than simply referring to follower size."
         }
       ]
     },
@@ -7611,10 +7454,7 @@
       "text": "4.Effect evaluation: set brand building, user reach, and actual conversion goals according to different marketing stages, comprehensively examine brand exposure, content interaction, user search, cooperation leads, and conversion effects, and adjust content direction and resource investment in a timely manner through data review.",
       "segments": [
         {
-          "text": "4."
-        },
-        {
-          "text": "Effect evaluation: set brand building, user reach, and actual conversion goals according to different marketing stages, comprehensively examine brand exposure, content interaction, user search, cooperation leads, and conversion effects, and adjust content direction and resource investment in a timely manner through data review."
+          "text": "4.Effect evaluation: set brand building, user reach, and actual conversion goals according to different marketing stages, comprehensively examine brand exposure, content interaction, user search, cooperation leads, and conversion effects, and adjust content direction and resource investment in a timely manner through data review."
         }
       ]
     },
@@ -7642,29 +7482,19 @@
       "segments": [],
       "images": [
         {
-          "src": "entrepreneurship-image-26.png",
-          "alt": "7.4.2 Marketing Strategies"
+          "src": "entrepreneurship -26.png",
+          "alt": "Figure 11  Medical-led Market Growth Strategy",
+          "width": 1266,
+          "height": 1013
         }
       ]
     },
     {
       "type": "caption",
-      "text": "Figure 10  Medical-led Market Growth Strategy",
+      "text": "Figure 11  Medical-led Market Growth Strategy",
       "segments": [
         {
-          "text": "Figure",
-          "bold": true
-        },
-        {
-          "text": " ",
-          "bold": true
-        },
-        {
-          "text": "10",
-          "bold": true
-        },
-        {
-          "text": "  Medical-led Market Growth Strategy",
+          "text": "Figure 11  Medical-led Market Growth Strategy",
           "bold": true
         }
       ]
@@ -7716,8 +7546,10 @@
       "segments": [],
       "images": [
         {
-          "src": "entrepreneurship-image-27.jpeg",
-          "alt": "8.1 MVP Design"
+          "src": "entrepreneurship -27.jpeg",
+          "alt": "8.1 MVP Design",
+          "width": 1269,
+          "height": 951
         }
       ]
     },
@@ -7791,16 +7623,16 @@
       "text": "The LZU-Northwest team currently has 28 members. Combined with post-incorporation position needs, approximately 12 core members are expected to participate full-time in subsequent R&D and commercial translation, covering functions such as strain R&D, formulation and CMC, regulatory quality, clinical cooperation, intellectual property, business development, and operations.",
       "segments": [
         {
-          "text": "    The LZU-Northwest team currently has 28 members. Combined with post-incorporation position needs, approximately 12 core members are expected to participate full-time in subsequent R&D and commercial translation, covering functions such as strain R&D, formulation and CMC, regulatory quality, clinical cooperation, intellectual property, business development, and operations."
+          "text": "The LZU-Northwest team currently has 28 members. Combined with post-incorporation position needs, approximately 12 core members are expected to participate full-time in subsequent R&D and commercial translation, covering functions such as strain R&D, formulation and CMC, regulatory quality, clinical cooperation, intellectual property, business development, and operations."
         }
       ]
     },
     {
       "type": "paragraph",
-      "text": "Data from the National Bureau of Statistics show that in 2025, the average wage of employees in “scientific research and technical services” in urban non-private units nationwide was RMB 182,064 per year. Considering that the project is in an early entrepreneurial stage and adopts a compensation model of “cash compensation + long-term equity incentives,” this project uses RMB 180,000 per person per year as the average cash compensation of the core team. Including social insurance, housing provident fund, and other employee benefits, and estimating actual employer cost at 1.30 times cash wages, annual human resource expenditure is about RMB 2.81 million.",
+      "text": "Data from the National Bureau of Statistics show that in 2025, the average wage of employees in “scientific research and technical services” in urban non-private units nationwide was RMB 182,064 per year. Considering that the project is in an early entrepreneurial stage and adopts a compensation model of “cash compensation + long-term equity incentives”, this project uses RMB 180,000 per person per year as the average cash compensation of the core team. Including social insurance, housing provident fund, and other employee benefits, and estimating actual employer cost at 1.30 times cash wages, annual human resource expenditure is about RMB 2.81 million.",
       "segments": [
         {
-          "text": "    Data from the National Bureau of Statistics show that in 2025, the average wage of employees in “scientific research and technical services” in urban non-private units nationwide was RMB 182,064 per year. Considering that the project is in an early entrepreneurial stage and adopts a compensation model of “cash compensation + long-term equity incentives,” this project uses RMB 180,000 per person per year as the average cash compensation of the core team. Including social insurance, housing provident fund, and other employee benefits, and estimating actual employer cost at 1.30 times cash wages, annual human resource expenditure is about RMB 2.81 million."
+          "text": "Data from the National Bureau of Statistics show that in 2025, the average wage of employees in “scientific research and technical services” in urban non-private units nationwide was RMB 182,064 per year. Considering that the project is in an early entrepreneurial stage and adopts a compensation model of “cash compensation + long-term equity incentives”, this project uses RMB 180,000 per person per year as the average cash compensation of the core team. Including social insurance, housing provident fund, and other employee benefits, and estimating actual employer cost at 1.30 times cash wages, annual human resource expenditure is about RMB 2.81 million."
         }
       ]
     },
@@ -7847,7 +7679,14 @@
       "text": "(1) Legal, regulatory, and quality systems. The project involves matters such as engineered live bacterial R&D, biosafety, drug registration, clinical research, and license-out, requiring continuous support for registration strategy, submission materials, quality systems, third-party testing audits, and legal contracts. At present, the registration fee for a drug clinical trial application for a new drug produced domestically is RMB 192,000 per product. Including registration, quality, and legal compliance expenditures, the six-year regulatory and quality system budget is accrued at RMB 6 million, which includes related legal and professional consulting fees and is not calculated separately again.",
       "segments": [
         {
-          "text": "(1) Legal, regulatory, and quality systems. The project involves matters such as engineered live bacterial R&D, biosafety, drug registration, clinical research, and license-out, requiring continuous support for registration strategy, submission materials, quality systems, third-party testing audits, and legal contracts. At present, the registration fee for a drug clinical trial application for a new drug produced domestically is RMB 192,000 per product. Including registration, quality, and legal compliance expenditures, the six-year regulatory and quality system budget is accrued at RMB 6 million, which includes related legal and professional consulting fees and is not calculated separately again."
+          "text": "(1) "
+        },
+        {
+          "text": "Legal, regulatory, and quality systems.",
+          "bold": true
+        },
+        {
+          "text": " The project involves matters such as engineered live bacterial R&D, biosafety, drug registration, clinical research, and license-out, requiring continuous support for registration strategy, submission materials, quality systems, third-party testing audits, and legal contracts. At present, the registration fee for a drug clinical trial application for a new drug produced domestically is RMB 192,000 per product. Including registration, quality, and legal compliance expenditures, the six-year regulatory and quality system budget is accrued at RMB 6 million, which includes related legal and professional consulting fees and is not calculated separately again."
         }
       ]
     },
@@ -7856,7 +7695,14 @@
       "text": "(2) CMC and formulation development. Sybio-Gutweaver uses “lyophilized engineered EcN + gut-release capsules” and needs to complete strain banks, fermentation, lyophilization, viable bacterial potency, genetic stability, release performance, quality control, stability, and clinical sample manufacturing. Product validation also explicitly includes moisture content, lyophilization recovery rate, survival in simulated gastric fluid, release in simulated intestinal fluid, and functional recovery after release.",
       "segments": [
         {
-          "text": "(2) CMC and formulation development. Sybio-Gutweaver uses “lyophilized engineered EcN + gut-release capsules” and needs to complete strain banks, fermentation, lyophilization, viable bacterial potency, genetic stability, release performance, quality control, stability, and clinical sample manufacturing. Product validation also explicitly includes moisture content, lyophilization recovery rate, survival in simulated gastric fluid, release in simulated intestinal fluid, and functional recovery after release."
+          "text": "(2) "
+        },
+        {
+          "text": "CMC and formulation development.",
+          "bold": true
+        },
+        {
+          "text": " Sybio-Gutweaver uses “lyophilized engineered EcN + gut-release capsules” and needs to complete strain banks, fermentation, lyophilization, viable bacterial potency, genetic stability, release performance, quality control, stability, and clinical sample manufacturing. Product validation also explicitly includes moisture content, lyophilization recovery rate, survival in simulated gastric fluid, release in simulated intestinal fluid, and functional recovery after release."
         }
       ]
     },
@@ -7871,37 +7717,49 @@
     },
     {
       "type": "paragraph",
-      "text": "(3) Preclinical safety evaluation.In addition to conventional toxicology, engineered live bacteria also require evaluation of in vivo distribution, bacterial shedding and clearance, genetic stability, safety switch escape, and potential environmental release. In government procurement, the budget for a nonclinical pharmacokinetic, toxicokinetic, and safety evaluation project supporting IND submission was about RMB 3.4 million, with a winning bid of RMB 3.36 million. Considering the live bacterial-specific evaluation of Sybio-Gutweaver, the preclinical safety evaluation budget for this project is about RMB 6 million.",
+      "text": "(3) Preclinical safety evaluation. In addition to conventional toxicology, engineered live bacteria also require evaluation of in vivo distribution, bacterial shedding and clearance, genetic stability, safety switch escape, and potential environmental release. In government procurement, the budget for a nonclinical pharmacokinetic, toxicokinetic, and safety evaluation project supporting IND submission was about RMB 3.4 million, with a winning bid of RMB 3.36 million. Considering the live bacterial-specific evaluation of Sybio-Gutweaver, the preclinical safety evaluation budget for this project is about RMB 6 million.",
       "segments": [
         {
-          "text": "(3) Preclinical safety evaluation.In addition to conventional toxicology, engineered live bacteria also require evaluation of in vivo distribution, bacterial shedding and clearance, genetic stability, safety switch escape, and potential environmental release. In government procurement, the budget for a nonclinical pharmacokinetic, toxicokinetic, and safety evaluation project supporting IND submission was about RMB 3.4 million, with a winning bid of RMB 3.36 million. Considering the live bacterial-specific evaluation of Sybio-Gutweaver, the preclinical safety evaluation budget for this project is about RMB 6 million."
+          "text": "(3) "
+        },
+        {
+          "text": "Preclinical safety evaluation.",
+          "bold": true
+        },
+        {
+          "text": " In addition to conventional toxicology, engineered live bacteria also require evaluation of in vivo distribution, bacterial shedding and clearance, genetic stability, safety switch escape, and potential environmental release. In government procurement, the budget for a nonclinical pharmacokinetic, toxicokinetic, and safety evaluation project supporting IND submission was about RMB 3.4 million, with a winning bid of RMB 3.36 million. Considering the live bacterial-specific evaluation of Sybio-Gutweaver, the preclinical safety evaluation budget for this project is about RMB 6 million."
         }
       ]
     },
     {
       "type": "paragraph",
-      "text": "(4) Clinical trials.A first-in-human (FIH) Phase I clinical study publicly disclosed in 2026 had a budget of RMB 9 million. Sybio-Gutweaver also needs additional testing for bacterial shedding, strain recovery and clearance, and abnormal colonization; therefore, the Phase I/early human study budget for this project is estimated at RMB 12 million. Phase II/III will in principle be jointly undertaken by subsequent co-development or license-out partners and is not included in the base budget at this stage.",
+      "text": "(4) Clinical trials. A first-in-human (FIH) Phase I clinical study publicly disclosed in 2026 had a budget of RMB 9 million. Sybio-Gutweaver also needs additional testing for bacterial shedding, strain recovery and clearance, and abnormal colonization; therefore, the Phase I/early human study budget for this project is estimated at RMB 12 million. Phase II/III will in principle be jointly undertaken by subsequent co-development or license-out partners and is not included in the base budget at this stage.",
       "segments": [
         {
-          "text": "(4) Clinical trials.A first-in-human (FIH) Phase I clinical study publicly disclosed in 2026 had a budget of RMB 9 million. Sybio-Gutweaver also needs additional testing for bacterial shedding, strain recovery and clearance, and abnormal colonization; therefore, the Phase I/early human study budget for this project is estimated at RMB 12 million. Phase II/III will in principle be jointly undertaken by subsequent co-development or license-out partners and is not included in the base budget at this stage."
+          "text": "(4) "
+        },
+        {
+          "text": "Clinical trials.",
+          "bold": true
+        },
+        {
+          "text": " A first-in-human (FIH) Phase I clinical study publicly disclosed in 2026 had a budget of RMB 9 million. Sybio-Gutweaver also needs additional testing for bacterial shedding, strain recovery and clearance, and abnormal colonization; therefore, the Phase I/early human study budget for this project is estimated at RMB 12 million. Phase II/III will in principle be jointly undertaken by subsequent co-development or license-out partners and is not included in the base budget at this stage."
         }
       ]
     },
     {
       "type": "paragraph",
-      "text": "(5) Professional consulting and financial services.",
+      "text": "(5) Professional consulting and financial services. The project will engage external professional institutions as needed for registration strategy, industrial translation, financing, and fiscal and tax management, with related costs arranged annually according to R&D and financing stages. Among these, registration and industrial consulting expenditures are included in the regulatory and quality system budget, while fiscal, tax, and basic accounting services are included in daily operating expenditures and are not separately set as cost items.",
       "segments": [
         {
-          "text": "(5) Professional consulting and financial services. "
-        }
-      ]
-    },
-    {
-      "type": "paragraph",
-      "text": "The project will engage external professional institutions as needed for registration strategy, industrial translation, financing, and fiscal and tax management, with related costs arranged annually according to R&D and financing stages. Among these, registration and industrial consulting expenditures are included in the regulatory and quality system budget, while fiscal, tax, and basic accounting services are included in daily operating expenditures and are not separately set as cost items.",
-      "segments": [
+          "text": "(5) "
+        },
         {
-          "text": "The project will engage external professional institutions as needed for registration strategy, industrial translation, financing, and fiscal and tax management, with related costs arranged annually according to R&D and financing stages. Among these, registration and industrial consulting expenditures are included in the regulatory and quality system budget, while fiscal, tax, and basic accounting services are included in daily operating expenditures and are not separately set as cost items."
+          "text": "Professional consulting and financial services.",
+          "bold": true
+        },
+        {
+          "text": " The project will engage external professional institutions as needed for registration strategy, industrial translation, financing, and fiscal and tax management, with related costs arranged annually according to R&D and financing stages. Among these, registration and industrial consulting expenditures are included in the regulatory and quality system budget, while fiscal, tax, and basic accounting services are included in daily operating expenditures and are not separately set as cost items."
         }
       ]
     },
@@ -7945,10 +7803,10 @@
     },
     {
       "type": "paragraph",
-      "text": "The project will form portfolio intellectual property around the engineered EcN chassis, DHICA-optimized circuit, lactate module, Ag43 controllable adhesion, Qwitch + hok/sok dual safety mechanism, and lyophilization–intestinal release system, and will advance PCT, FTO, and subsequent patent layout according to commercial value, with a six-year intellectual property budget accrued at RMB 4 million.",
+      "text": "The project will form portfolio intellectual property around the engineered EcN chassis, DHICA-optimized circuit, lactate module, Ag43 controllable adhesion, Qwitch + hok/sok dual safety mechanism, and lyophilization-intestinal release system, and will advance PCT, FTO, and subsequent patent layout according to commercial value, with a six-year intellectual property budget accrued at RMB 4 million.",
       "segments": [
         {
-          "text": "The project will form portfolio intellectual property around the engineered EcN chassis, DHICA-optimized circuit, lactate module, Ag43 controllable adhesion, Qwitch + hok/sok dual safety mechanism, and lyophilization–intestinal release system, and will advance PCT, FTO, and subsequent patent layout according to commercial value, with a six-year intellectual property budget accrued at RMB 4 million."
+          "text": "The project will form portfolio intellectual property around the engineered EcN chassis, DHICA-optimized circuit, lactate module, Ag43 controllable adhesion, Qwitch + hok/sok dual safety mechanism, and lyophilization-intestinal release system, and will advance PCT, FTO, and subsequent patent layout according to commercial value, with a six-year intellectual property budget accrued at RMB 4 million."
         }
       ]
     },
@@ -7982,10 +7840,11 @@
     },
     {
       "type": "paragraph",
-      "text": "Table 14 2026–2031 Budget Summary",
+      "text": "Table 14  2026-2031 Budget Summary",
       "segments": [
         {
-          "text": "Table 14 2026–2031 Budget Summary"
+          "text": "Table 14  2026-2031 Budget Summary",
+          "bold": true
         }
       ]
     },
@@ -8217,10 +8076,11 @@
     },
     {
       "type": "paragraph",
-      "text": "Table 15 2026–2031 Annual Expenditure Budget",
+      "text": "Table 15  2026-2031 Annual Expenditure Budget",
       "segments": [
         {
-          "text": "Table 15 2026–2031 Annual Expenditure Budget"
+          "text": "Table 15  2026-2031 Annual Expenditure Budget",
+          "bold": true
         }
       ]
     },
@@ -8306,11 +8166,7 @@
                   "text": "Hospital/Industrial Cooperation",
                   "segments": [
                     {
-                      "text": "Hospital/Industrial Cooperation",
-                      "bold": true
-                    },
-                    {
-                      "text": "\t",
+                      "text": "Hospital/Industrial Cooperation\t",
                       "bold": true
                     }
                   ]
@@ -9006,17 +8862,19 @@
       "segments": [],
       "images": [
         {
-          "src": "entrepreneurship-image-28.png",
-          "alt": "9.1 Cost Assumptions"
+          "src": "entrepreneurship -28.png",
+          "alt": "Figure 12  2026-2031 Cost Summary",
+          "width": 1269,
+          "height": 820
         }
       ]
     },
     {
       "type": "caption",
-      "text": "Figure 11 2026–2031 Cost Summary",
+      "text": "Figure 12  2026-2031 Cost Summary",
       "segments": [
         {
-          "text": "Figure 11 2026–2031 Cost Summary",
+          "text": "Figure 12  2026-2031 Cost Summary",
           "bold": true
         }
       ]
@@ -9057,10 +8915,11 @@
     },
     {
       "type": "paragraph",
-      "text": "Table 16 Internal Revenue Assumptions",
+      "text": "Table 16  Internal Revenue Assumptions",
       "segments": [
         {
-          "text": "Table 16 Internal Revenue Assumptions"
+          "text": "Table 16  Internal Revenue Assumptions",
+          "bold": true
         }
       ]
     },
@@ -9360,7 +9219,7 @@
       "text": "Innovative drug projects have long R&D cycles and lack stable revenue and fixed assets usable for large loans in the early stage; therefore, this project mainly relies on equity financing, supplemented by scientific research project funds and industrial cooperation income. Professional life science investment institutions can provide not only funds but also CMC, clinical, regulatory, and subsequent industrial cooperation resources.",
       "segments": [
         {
-          "text": "  Innovative drug projects have long R&D cycles and lack stable revenue and fixed assets usable for large loans in the early stage; therefore, this project mainly relies on equity financing, supplemented by scientific research project funds and industrial cooperation income. Professional life science investment institutions can provide not only funds but also CMC, clinical, regulatory, and subsequent industrial cooperation resources."
+          "text": "Innovative drug projects have long R&D cycles and lack stable revenue and fixed assets usable for large loans in the early stage; therefore, this project mainly relies on equity financing, supplemented by scientific research project funds and industrial cooperation income. Professional life science investment institutions can provide not only funds but also CMC, clinical, regulatory, and subsequent industrial cooperation resources."
         }
       ]
     },
@@ -9391,7 +9250,7 @@
     },
     {
       "type": "heading",
-      "text": "9.3.2 Financing Plan",
+      "text": "9.3.2 Financing Proposal",
       "number": "9.3.2",
       "level": 4,
       "id": "section-9-3-2"
@@ -9407,10 +9266,10 @@
     },
     {
       "type": "paragraph",
-      "text": "Angel round: RMB 10 million. Used for integration of core functional modules, validation of Ag43 and dual safety switches, lyophilized–gut-release capsule MVP, and core intellectual property layout.",
+      "text": "Angel round: RMB 10 million. Used for integration of core functional modules, validation of Ag43 and dual safety switches, lyophilized-gut-release capsule MVP, and core intellectual property layout.",
       "segments": [
         {
-          "text": "Angel round: RMB 10 million. Used for integration of core functional modules, validation of Ag43 and dual safety switches, lyophilized–gut-release capsule MVP, and core intellectual property layout."
+          "text": "Angel round: RMB 10 million. Used for integration of core functional modules, validation of Ag43 and dual safety switches, lyophilized-gut-release capsule MVP, and core intellectual property layout."
         }
       ]
     },
@@ -9439,39 +9298,34 @@
         {
           "text": "The three rounds total RMB 90 million. Of this, RMB 83 million is used for baseline R&D and operating expenditures, and the remaining about RMB 7 million serves as a cash safety reserve to address extended R&D cycles, supplementary studies, and financing delays."
         }
-      ],
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "",
+      "segments": [],
       "images": [
         {
-          "src": "entrepreneurship-image-29.jpeg",
-          "alt": "9.3.2 Financing Plan"
+          "src": "entrepreneurship -29.jpeg",
+          "alt": "Figure 13  Proportion of Fund Usage",
+          "width": 1268,
+          "height": 708
         }
       ]
     },
     {
       "type": "caption",
-      "text": "Figure 11  Proportion of Fund Usage",
+      "text": "Figure 13  Proportion of Fund Usage",
       "segments": [
         {
-          "text": "Figure",
-          "bold": true
-        },
-        {
-          "text": " ",
-          "bold": true
-        },
-        {
-          "text": "11",
-          "bold": true
-        },
-        {
-          "text": "  Proportion of Fund Usage",
+          "text": "Figure 13  Proportion of Fund Usage",
           "bold": true
         }
       ]
     },
     {
       "type": "heading",
-      "text": "9.3.3 Company Valuation",
+      "text": "9.3.3 Corporate Valuation",
       "number": "9.3.3",
       "level": 4,
       "id": "section-9-3-3"
@@ -9482,8 +9336,10 @@
       "segments": [],
       "images": [
         {
-          "src": "entrepreneurship-image-30.jpeg",
-          "alt": "9.3.3 Company Valuation"
+          "src": "entrepreneurship -30.jpeg",
+          "alt": "9.3.3 Corporate Valuation",
+          "width": 1081,
+          "height": 811
         }
       ]
     },
@@ -9590,13 +9446,7 @@
                   "text": "RMB10milion",
                   "segments": [
                     {
-                      "text": "RMB"
-                    },
-                    {
-                      "text": "10"
-                    },
-                    {
-                      "text": "milion"
+                      "text": "RMB10milion"
                     }
                   ]
                 }
@@ -9755,7 +9605,7 @@
     },
     {
       "type": "heading",
-      "text": "9.3.4  Target Financing Capital",
+      "text": "9.3.4 Target Financing Capital",
       "number": "9.3.4",
       "level": 4,
       "id": "section-9-3-4"
@@ -9787,10 +9637,10 @@
     },
     {
       "type": "paragraph",
-      "text": "Based on the above cost and financing plans, this project conducts annual cash flow forecasts for 2026–2031. The baseline scenario includes only planned equity financing and does not recognize uncertain government subsidies, license-out, or milestone revenue in advance.",
+      "text": "Based on the above cost and financing plans, this project conducts annual cash flow forecasts for 2026-2031. The baseline scenario includes only planned equity financing and does not recognize uncertain government subsidies, license-out, or milestone revenue in advance.",
       "segments": [
         {
-          "text": "Based on the above cost and financing plans, this project conducts annual cash flow forecasts for 2026–2031. The baseline scenario includes only planned equity financing and does not recognize uncertain government subsidies, license-out, or milestone revenue in advance."
+          "text": "Based on the above cost and financing plans, this project conducts annual cash flow forecasts for 2026-2031. The baseline scenario includes only planned equity financing and does not recognize uncertain government subsidies, license-out, or milestone revenue in advance."
         }
       ]
     },
@@ -9800,29 +9650,19 @@
       "segments": [],
       "images": [
         {
-          "src": "entrepreneurship-image-31.jpeg",
-          "alt": "9.4 Cash Flow Forecast"
+          "src": "entrepreneurship -31.jpeg",
+          "alt": "Figure 14  Cash Flow under Normal Financing Scenario",
+          "width": 1264,
+          "height": 843
         }
       ]
     },
     {
       "type": "caption",
-      "text": "Figure 13 Cash Flow under Normal Financing Scenario",
+      "text": "Figure 14  Cash Flow under Normal Financing Scenario",
       "segments": [
         {
-          "text": "Figure",
-          "bold": true
-        },
-        {
-          "text": " ",
-          "bold": true
-        },
-        {
-          "text": "13 ",
-          "bold": true
-        },
-        {
-          "text": "Cash Flow under Normal Financing Scenario",
+          "text": "Figure 14  Cash Flow under Normal Financing Scenario",
           "bold": true
         }
       ]
@@ -9842,17 +9682,19 @@
       "segments": [],
       "images": [
         {
-          "src": "entrepreneurship-image-32.png",
-          "alt": "9.4 Cash Flow Forecast"
+          "src": "entrepreneurship -32.png",
+          "alt": "Figure 15  Cash Flow under 80% Financing Stress Scenario",
+          "width": 1269,
+          "height": 803
         }
       ]
     },
     {
-      "type": "paragraph",
-      "text": "Figure 14 Cash Flow under 80% Financing Stress Scenario",
+      "type": "caption",
+      "text": "Figure 15  Cash Flow under 80% Financing Stress Scenario",
       "segments": [
         {
-          "text": "Figure 14 Cash Flow under 80% Financing Stress Scenario",
+          "text": "Figure 15  Cash Flow under 80% Financing Stress Scenario",
           "bold": true
         }
       ]
@@ -9895,8 +9737,10 @@
       "segments": [],
       "images": [
         {
-          "src": "entrepreneurship-image-33.jpeg",
-          "alt": "10.1 Risk Interview"
+          "src": "entrepreneurship -33.jpeg",
+          "alt": "10.1 Risk Interview",
+          "width": 1269,
+          "height": 951
         }
       ]
     },
@@ -9906,8 +9750,10 @@
       "segments": [],
       "images": [
         {
-          "src": "entrepreneurship-image-34.jpeg",
-          "alt": "10.1 Risk Interview"
+          "src": "entrepreneurship -34.jpeg",
+          "alt": "10.1 Risk Interview",
+          "width": 1269,
+          "height": 951
         }
       ]
     },
@@ -9922,10 +9768,10 @@
     },
     {
       "type": "paragraph",
-      "text": "First, Professor Liu Zhaoyang emphasized the importance of risk quantification. Different risks differ markedly in their impact on enterprise development and probability of occurrence, and qualitative judgment alone makes it difficult to determine management priorities. Therefore, risks such as R&D delays, approval progress, market changes, and cash flow can be quantified through risk assessment models and scenario analysis. Based on this suggestion, Sybio-Gutweaver conducts risk assessment from three dimensions—impact, probability, and uncontrollability—to identify key risks requiring priority monitoring and intervention.",
+      "text": "First, Professor Liu Zhaoyang emphasized the importance of risk quantification. Different risks differ markedly in their impact on enterprise development and probability of occurrence, and qualitative judgment alone makes it difficult to determine management priorities. Therefore, risks such as R&D delays, approval progress, market changes, and cash flow can be quantified through risk assessment models and scenario analysis. Based on this suggestion, Sybio-Gutweaver conducts risk assessment from three dimensions-impact, probability, and uncontrollability-to identify key risks requiring priority monitoring and intervention.",
       "segments": [
         {
-          "text": "First, Professor Liu Zhaoyang emphasized the importance of risk quantification. Different risks differ markedly in their impact on enterprise development and probability of occurrence, and qualitative judgment alone makes it difficult to determine management priorities. Therefore, risks such as R&D delays, approval progress, market changes, and cash flow can be quantified through risk assessment models and scenario analysis. Based on this suggestion, Sybio-Gutweaver conducts risk assessment from three dimensions—impact, probability, and uncontrollability—to identify key risks requiring priority monitoring and intervention."
+          "text": "First, Professor Liu Zhaoyang emphasized the importance of risk quantification. Different risks differ markedly in their impact on enterprise development and probability of occurrence, and qualitative judgment alone makes it difficult to determine management priorities. Therefore, risks such as R&D delays, approval progress, market changes, and cash flow can be quantified through risk assessment models and scenario analysis. Based on this suggestion, Sybio-Gutweaver conducts risk assessment from three dimensions-impact, probability, and uncontrollability-to identify key risks requiring priority monitoring and intervention."
         }
       ]
     },
@@ -9958,7 +9804,7 @@
     },
     {
       "type": "heading",
-      "text": "10.2  Risk Identification and Assessment",
+      "text": "10.2 Risk Identification and Assessment",
       "number": "10.2",
       "level": 3,
       "id": "section-10-2"
@@ -9974,10 +9820,10 @@
     },
     {
       "type": "paragraph",
-      "text": "This project classifies a risk index ≥64 as high risk, 27–63 as medium risk, and <27 as low risk. The higher the risk index, the more the risk requires priority monitoring and management.",
+      "text": "This project classifies a risk index ≥64 as high risk, 27-63 as medium risk, and <27 as low risk. The higher the risk index, the more the risk requires priority monitoring and management.",
       "segments": [
         {
-          "text": "This project classifies a risk index ≥64 as high risk, 27–63 as medium risk, and <27 as low risk. The higher the risk index, the more the risk requires priority monitoring and management."
+          "text": "This project classifies a risk index ≥64 as high risk, 27-63 as medium risk, and <27 as low risk. The higher the risk index, the more the risk requires priority monitoring and management."
         }
       ]
     },
@@ -9987,17 +9833,19 @@
       "segments": [],
       "images": [
         {
-          "src": "entrepreneurship-image-35.png",
-          "alt": "10.2  Risk Identification and Assessment"
+          "src": "entrepreneurship -35.png",
+          "alt": "Figure 16  Risk Identification and Assessment",
+          "width": 1214,
+          "height": 1600
         }
       ]
     },
     {
       "type": "caption",
-      "text": "Figure 15 Risk Identification and Assessment",
+      "text": "Figure 16  Risk Identification and Assessment",
       "segments": [
         {
-          "text": "Figure 15 Risk Identification and Assessment",
+          "text": "Figure 16  Risk Identification and Assessment",
           "bold": true
         }
       ]
@@ -10020,10 +9868,10 @@
     },
     {
       "type": "paragraph",
-      "text": "Tiered management system.  High-risk matters undergo monthly management review and immediate intervention upon reaching preset trigger conditions; medium- and low-risk matters are updated quarterly. Risk management is also linked to Go/No-Go decisions at key nodes such as Lead Strain, CMC, and registration preparation.",
+      "text": "Tiered management system. High-risk matters undergo monthly management review and immediate intervention upon reaching preset trigger conditions; medium- and low-risk matters are updated quarterly. Risk management is also linked to Go/No-Go decisions at key nodes such as Lead Strain, CMC, and registration preparation.",
       "segments": [
         {
-          "text": "Tiered management system. ",
+          "text": "Tiered management system.",
           "bold": true
         },
         {
@@ -10033,43 +9881,40 @@
     },
     {
       "type": "paragraph",
-      "text": "Segregation of duties strategy.Strain R&D, CMC and quality, regulatory and biosafety, and business and finance are respectively responsible for R&D, quality, compliance, and financing translation; key safety and quality conclusions undergo cross-review to reduce judgment bias from a single department.",
+      "text": "Segregation of duties strategy. Strain R&D, CMC and quality, regulatory and biosafety, and business and finance are respectively responsible for R&D, quality, compliance, and financing translation; key safety and quality conclusions undergo cross-review to reduce judgment bias from a single department.",
       "segments": [
         {
           "text": "Segregation of duties strategy.",
           "bold": true
         },
         {
-          "text": "Strain R&D, CMC and quality, regulatory and biosafety, and business and finance are respectively responsible for R&D, quality, compliance, and financing translation; key safety and quality conclusions undergo cross-review to reduce judgment bias from a single department."
+          "text": " Strain R&D, CMC and quality, regulatory and biosafety, and business and finance are respectively responsible for R&D, quality, compliance, and financing translation; key safety and quality conclusions undergo cross-review to reduce judgment bias from a single department."
         }
       ]
     },
     {
       "type": "paragraph",
-      "text": "Collaborative risk-sharing strategy. The project conducts demand validation, quality systems, and subsequent translation jointly with hospitals, research institutions, and professional service agencies; in intellectual property, it establishes a management chain of “NDA—MTA—joint R&D—achievement ownership—License,” and after evidence matures, shares late-stage risks with pharmaceutical companies through co-development or license-out. In industrial consulting, Ge Yin and Qi Xiaoyu of Lanzhou Science and Technology Market pointed out that investors and industrial partners focus more on stability, safety, batch consistency, and intellectual property boundaries than on single best experimental data or the number of modules.",
+      "text": "Collaborative risk-sharing strategy. The project conducts demand validation, quality systems, and subsequent translation jointly with hospitals, research institutions, and professional service agencies; in intellectual property, it establishes a management chain of “NDA-MTA-joint R&D-achievement ownership-License”, and after evidence matures, shares late-stage risks with pharmaceutical companies through co-development or license-out. In industrial consulting, Ge Yin and Qi Xiaoyu of Lanzhou Science and Technology Market pointed out that investors and industrial partners focus more on stability, safety, batch consistency, and intellectual property boundaries than on single best experimental data or the number of modules.",
       "segments": [
         {
           "text": "Collaborative risk-sharing strategy.",
           "bold": true
         },
         {
-          "text": " "
-        },
-        {
-          "text": "The project conducts demand validation, quality systems, and subsequent translation jointly with hospitals, research institutions, and professional service agencies; in intellectual property, it establishes a management chain of “NDA—MTA—joint R&D—achievement ownership—License,” and after evidence matures, shares late-stage risks with pharmaceutical companies through co-development or license-out. In industrial consulting, Ge Yin and Qi Xiaoyu of Lanzhou Science and Technology Market pointed out that investors and industrial partners focus more on stability, safety, batch consistency, and intellectual property boundaries than on single best experimental data or the number of modules."
+          "text": " The project conducts demand validation, quality systems, and subsequent translation jointly with hospitals, research institutions, and professional service agencies; in intellectual property, it establishes a management chain of “NDA-MTA-joint R&D-achievement ownership-License”, and after evidence matures, shares late-stage risks with pharmaceutical companies through co-development or license-out. In industrial consulting, Ge Yin and Qi Xiaoyu of Lanzhou Science and Technology Market pointed out that investors and industrial partners focus more on stability, safety, batch consistency, and intellectual property boundaries than on single best experimental data or the number of modules."
         }
       ]
     },
     {
       "type": "paragraph",
-      "text": "Policy and strategic utilization. The project adopts “NMPA primary pathway, FDA parallel assessment,” conducts regulatory communication at key nodes, and reserves an FDA LBP registration interface.",
+      "text": "Policy and strategic utilization. The project adopts “NMPA primary pathway, FDA parallel assessment”, conducts regulatory communication at key nodes, and reserves an FDA LBP registration interface.",
       "segments": [
         {
           "text": "Policy and strategic utilization.",
           "bold": true
         },
         {
-          "text": " The project adopts “NMPA primary pathway, FDA parallel assessment,” conducts regulatory communication at key nodes, and reserves an FDA LBP registration interface."
+          "text": " The project adopts “NMPA primary pathway, FDA parallel assessment”, conducts regulatory communication at key nodes, and reserves an FDA LBP registration interface."
         }
       ]
     },
@@ -10289,10 +10134,7 @@
           "bold": true
         },
         {
-          "text": " When future human research is involved, the properties of engin"
-        },
-        {
-          "text": "eered live bacteria, abnormal persistence, bacterial shedding, and potential unknown risks should be fully explained, and informed consent, privacy protection, and voluntary withdrawal systems should be strictly implemented."
+          "text": " When future human research is involved, the properties of engineered live bacteria, abnormal persistence, bacterial shedding, and potential unknown risks should be fully explained, and informed consent, privacy protection, and voluntary withdrawal systems should be strictly implemented."
         }
       ]
     },
@@ -10311,20 +10153,20 @@
     },
     {
       "type": "paragraph",
-      "text": "Independent ethics and conflict-of-interest management. Establish a three-line management system of “biosafety—science and technology ethics—human research ethics,” implement staged review for in vitro research, sample research, and future human research, and establish systems for original records, version management, and conflict-of-interest declaration. In project consulting, Mao Jian, a biosafety and ethics lawyer at Lanzhou Leinuo Law Firm, pointed out that biosafety and ethics management of engineered live bacteria should not intervene only at the clinical stage but should run through the entire process of R&D, registration, and subsequent translation.",
+      "text": "Independent ethics and conflict-of-interest management. Establish a three-line management system of “biosafety-science and technology ethics—human research ethics,” implement staged review for in vitro research, sample research, and future human research, and establish systems for original records, version management, and conflict-of-interest declaration. In project consulting, Mao Jian, a biosafety and ethics lawyer at Lanzhou Leinuo Law Firm, pointed out that biosafety and ethics management of engineered live bacteria should not intervene only at the clinical stage but should run through the entire process of R&D, registration, and subsequent translation.",
       "segments": [
         {
           "text": "Independent ethics and conflict-of-interest management.",
           "bold": true
         },
         {
-          "text": " Establish a three-line management system of “biosafety—science and technology ethics—human research ethics,” implement staged review for in vitro research, sample research, and future human research, and establish systems for original records, version management, and conflict-of-interest declaration. In project consulting, Mao Jian, a biosafety and ethics lawyer at Lanzhou Leinuo Law Firm, pointed out that biosafety and ethics management of engineered live bacteria should not intervene only at the clinical stage but should run through the entire process of R&D, registration, and subsequent translation."
+          "text": " Establish a three-line management system of “biosafety-science and technology ethics—human research ethics,” implement staged review for in vitro research, sample research, and future human research, and establish systems for original records, version management, and conflict-of-interest declaration. In project consulting, Mao Jian, a biosafety and ethics lawyer at Lanzhou Leinuo Law Firm, pointed out that biosafety and ethics management of engineered live bacteria should not intervene only at the clinical stage but should run through the entire process of R&D, registration, and subsequent translation."
         }
       ]
     },
     {
       "type": "heading",
-      "text": "11 CCiC and Industrial Synergy",
+      "text": "11 CCiC and Industry Collaboration",
       "number": "11",
       "level": 2,
       "id": "section-11"
@@ -10338,10 +10180,10 @@
     },
     {
       "type": "paragraph",
-      "text": "CCiC (Conference of China iGEMer Community) is an important annual exchange platform for Chinese iGEM teams. For Sybio-Gutweaver, its core value lies in testing application assumptions easily overlooked in engineering design through external exchange. On July 25–26, 2026, the LZU-Northwest team went to Dalian University of Technology to participate in SynBioPunk-CCiC 2026 and won the Best Roadshow Award.",
+      "text": "CCiC (Conference of China iGEMer Community) is an important annual exchange platform for Chinese iGEM teams. For Sybio-Gutweaver, its core value lies in testing application assumptions easily overlooked in engineering design through external exchange. On July 25-26, 2026, the LZU-Northwest team went to Dalian University of Technology to participate in SynBioPunk-CCiC 2026 and won the Best Roadshow Award.",
       "segments": [
         {
-          "text": "CCiC (Conference of China iGEMer Community) is an important annual exchange platform for Chinese iGEM teams. For Sybio-Gutweaver, its core value lies in testing application assumptions easily overlooked in engineering design through external exchange. On July 25–26, 2026, the LZU-Northwest team went to Dalian University of Technology to participate in SynBioPunk-CCiC 2026 and won the Best Roadshow Award."
+          "text": "CCiC (Conference of China iGEMer Community) is an important annual exchange platform for Chinese iGEM teams. For Sybio-Gutweaver, its core value lies in testing application assumptions easily overlooked in engineering design through external exchange. On July 25-26, 2026, the LZU-Northwest team went to Dalian University of Technology to participate in SynBioPunk-CCiC 2026 and won the Best Roadshow Award."
         }
       ]
     },
@@ -10367,8 +10209,10 @@
                   "segments": [],
                   "images": [
                     {
-                      "src": "entrepreneurship-image-36.jpeg",
-                      "alt": "11.1 CCiC Background and Project Participation Positioning, row 1, column 1"
+                      "src": "entrepreneurship -36.jpeg",
+                      "alt": "11.1 CCiC Background and Project Participation Positioning",
+                      "width": 825,
+                      "height": 568
                     }
                   ]
                 }
@@ -10382,8 +10226,10 @@
                   "segments": [],
                   "images": [
                     {
-                      "src": "entrepreneurship-image-37.jpeg",
-                      "alt": "11.1 CCiC Background and Project Participation Positioning, row 1, column 2"
+                      "src": "entrepreneurship -37.jpeg",
+                      "alt": "11.1 CCiC Background and Project Participation Positioning",
+                      "width": 440,
+                      "height": 577
                     }
                   ]
                 }
@@ -10391,7 +10237,8 @@
             }
           ]
         }
-      ]
+      ],
+      "mediaLayout": "equal-pair"
     },
     {
       "type": "heading",
@@ -10440,11 +10287,11 @@
       "text": "Front-loading of safety boundaries: Further analysis found that higher adhesion does not necessarily represent a better product. Ag43 may prolong local action time but may also increase unintended persistence; therefore, the project goal was adjusted from “enhanced colonization” to “controllable short-term retention,” and it is required to be linked with a safety exit mechanism.",
       "segments": [
         {
-          "text": "Front-loading of safety boundaries: ",
+          "text": "Front-loading of safety boundaries:",
           "bold": true
         },
         {
-          "text": "Further analysis found that higher adhesion does not necessarily represent a better product. Ag43 may prolong local action time but may also increase unintended persistence; therefore, the project goal was adjusted from “enhanced colonization” to “controllable short-term retention,” and it is required to be linked with a safety exit mechanism."
+          "text": " Further analysis found that higher adhesion does not necessarily represent a better product. Ag43 may prolong local action time but may also increase unintended persistence; therefore, the project goal was adjusted from “enhanced colonization” to “controllable short-term retention,” and it is required to be linked with a safety exit mechanism."
         }
       ]
     },
@@ -10463,14 +10310,16 @@
       "segments": [],
       "images": [
         {
-          "src": "entrepreneurship-image-38.jpeg",
-          "alt": "11.2 Value of Project Participation in CCiC"
+          "src": "entrepreneurship -38.jpeg",
+          "alt": "11.2 Value of Project Participation in CCiC",
+          "width": 1039,
+          "height": 730
         }
       ]
     },
     {
       "type": "heading",
-      "text": "11.3 The Role of CCiC in Advancing the Commercialization Path",
+      "text": "11.3 CCiC's Role in Advancing the Commercialization Path",
       "number": "11.3",
       "level": 3,
       "id": "section-11-3"
@@ -10515,17 +10364,17 @@
       "text": "Clear cooperation interfaces. CCiC enabled the team to further clarify that subsequent external cooperation should focus on specific tasks such as intestinal model validation, live bacterial formulation development, and safety evaluation, rather than remaining at general project exchanges, thereby preparing data interfaces in advance for preclinical research, CMC processes, and subsequent technical due diligence.",
       "segments": [
         {
-          "text": "Clear cooperation interfaces. ",
+          "text": "Clear cooperation interfaces.",
           "bold": true
         },
         {
-          "text": "CCiC enabled the team to further clarify that subsequent external cooperation should focus on specific tasks such as intestinal model validation, live bacterial formulation development, and safety evaluation, rather than remaining at general project exchanges, thereby preparing data interfaces in advance for preclinical research, CMC processes, and subsequent technical due diligence."
+          "text": " CCiC enabled the team to further clarify that subsequent external cooperation should focus on specific tasks such as intestinal model validation, live bacterial formulation development, and safety evaluation, rather than remaining at general project exchanges, thereby preparing data interfaces in advance for preclinical research, CMC processes, and subsequent technical due diligence."
         }
       ]
     },
     {
       "type": "heading",
-      "text": "11.4 Future Industrial Cooperation and Development Prospects",
+      "text": "11.4 Future Industry Cooperation and Development Prospects",
       "number": "11.4",
       "level": 3,
       "id": "section-11-4"
@@ -10572,8 +10421,10 @@
       "segments": [],
       "images": [
         {
-          "src": "entrepreneurship-image-39.jpeg",
-          "alt": "11.4 Future Industrial Cooperation and Development Prospects"
+          "src": "entrepreneurship -39.jpeg",
+          "alt": "11.4 Future Industry Cooperation and Development Prospects",
+          "width": 1027,
+          "height": 1371
         }
       ]
     }

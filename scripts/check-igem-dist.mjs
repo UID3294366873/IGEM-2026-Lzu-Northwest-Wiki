@@ -2,7 +2,6 @@ import { readdir, stat } from 'node:fs/promises';
 import { fileURLToPath } from 'node:url';
 
 const distDirectory = fileURLToPath(new URL('../dist/', import.meta.url));
-const maximumArtifactBytes = 5 * 1024 * 1024;
 
 /**
  * Return all files below a directory.
@@ -28,13 +27,10 @@ const bundledLocalImages = files.filter((file) => file.includes('/images/'));
 if (!files.some((file) => file.endsWith('/index.html'))) {
   throw new Error('dist/index.html is missing.');
 }
-if (bundledLocalImages.length) {
-  throw new Error(`Official build contains local images: ${bundledLocalImages.join(', ')}`);
-}
-if (totalBytes > maximumArtifactBytes) {
-  throw new Error(
-    `Official build is ${(totalBytes / 1024 / 1024).toFixed(2)} MB; iGEM Pages allows 5 MB.`,
-  );
+if (!bundledLocalImages.length) {
+  throw new Error('CloudBase build is missing local images from the public directory.');
 }
 
-console.log(`Official build size: ${(totalBytes / 1024 / 1024).toFixed(2)} MB.`);
+console.log(
+  `CloudBase build size: ${(totalBytes / 1024 / 1024).toFixed(2)} MB; bundled images: ${bundledLocalImages.length}.`,
+);

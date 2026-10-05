@@ -25,6 +25,9 @@ export function useActiveSection(sectionIds: string[]): string {
         if (elementTop > readingLine) break;
         nextId = element.id;
       }
+      const reachedDocumentEnd =
+        window.scrollY + window.innerHeight >= document.documentElement.scrollHeight - 2;
+      if (reachedDocumentEnd) nextId = elements.at(-1)?.id ?? nextId;
       setActiveId((currentId) => (currentId === nextId ? currentId : nextId));
     };
 

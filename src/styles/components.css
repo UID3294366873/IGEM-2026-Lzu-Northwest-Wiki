@@ -1126,6 +1126,9 @@ a {
   position: sticky;
   top: var(--space-5);
 }
+.wiki-page--entrepreneurship .project-page__body {
+  grid-template-columns: 15rem minmax(0, 46.1875rem);
+}
 .project-page__article {
   min-width: 0;
   padding: 2rem;
@@ -1297,6 +1300,47 @@ a {
   height: 18rem;
   object-fit: contain;
 }
+.entrepreneurship-document__partners-grid {
+  display: grid;
+  gap: var(--space-3);
+  margin-block: var(--space-5);
+}
+.entrepreneurship-document__partners-row {
+  display: grid;
+  grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr);
+  gap: var(--space-4);
+  align-items: center;
+}
+.entrepreneurship-document__partners-cell {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  min-width: 0;
+}
+.entrepreneurship-document__partners-cell .entrepreneurship-document__figure {
+  flex: 1 1 0;
+  min-width: 0;
+  margin: 0;
+}
+.entrepreneurship-document__partners-row:last-child
+  .entrepreneurship-document__partners-cell:first-child {
+  flex-direction: row-reverse;
+}
+.entrepreneurship-document__partners-row:last-child
+  .entrepreneurship-document__partners-cell:first-child
+  .entrepreneurship-document__figure:first-child {
+  flex-basis: 28%;
+}
+.entrepreneurship-document__partners-row:last-child
+  .entrepreneurship-document__partners-cell:first-child
+  .entrepreneurship-document__figure:last-child {
+  flex-basis: 72%;
+}
+.entrepreneurship-document__partners-row:last-child
+  .entrepreneurship-document__partners-cell:last-child {
+  flex-direction: column-reverse;
+  align-items: stretch;
+}
 .entrepreneurship-document__table-wrap {
   max-width: 100%;
   margin-block: var(--space-5);
@@ -1343,6 +1387,9 @@ a {
   }
   .project-page__body,
   .project-page__body--single {
+    grid-template-columns: 1fr;
+  }
+  .wiki-page--entrepreneurship .project-page__body {
     grid-template-columns: 1fr;
   }
   .project-page__aside {
@@ -1485,6 +1532,9 @@ a {
   .entrepreneurship-document__media-grid--equal-pair img {
     width: 100%;
     height: auto;
+  }
+  .entrepreneurship-document__partners-row {
+    grid-template-columns: 1fr;
   }
   .breadcrumbs {
     margin-inline: calc(var(--space-4) * -1);
