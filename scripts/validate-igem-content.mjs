@@ -1,14 +1,9 @@
 import { readFile } from 'node:fs/promises';
 
 const files = [
-  'src/pages/ContactPage.tsx',
-  'src/pages/ContributionPage.tsx',
-  'src/pages/DescriptionPage.tsx',
-  'src/pages/NotebookPage.tsx',
   'src/pages/TeamPage.tsx',
   'src/components/layout/PageLayout.tsx',
   'src/data/team.ts',
-  'src/data/timeline.ts',
 ];
 const draftMarkers = [
   '内容核验中',

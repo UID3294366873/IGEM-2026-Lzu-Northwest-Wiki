@@ -16,7 +16,7 @@ export function HomePage() {
         <p className="home-hero__lead">
           面向放疗相关急性肠损伤的工程化口服活菌候选方案，将抗氧化、屏障支持、可控黏附与双重生物安全机制整合到同一系统中。
         </p>
-        <Link className="home-hero__action" to="/description">
+        <Link className="home-hero__action" to="/entrepreneurship">
           了解项目方案 →
         </Link>
       </section>
@@ -49,9 +49,9 @@ export function HomePage() {
         <h2 id="pathways-title">我们具体做了什么？</h2>
         <div className="home-pathways__grid">
           {[
-            ['Project', '问题与方案', '/description'],
-            ['Lab', '实验与工程记录', '/notebook'],
-            ['Engagement', '贡献、影响与协作', '/contribution'],
+            ['Project', '商业化路径', '/entrepreneurship'],
+            ['Practice', '整合式人类实践', '/human-practices'],
+            ['Engagement', '教育与公众参与', '/Education'],
             ['Team', '成员与分工', '/team'],
           ].map(([eyebrow, title, path]) => (
             <Link className="home-pathway-card" to={path} key={path}>

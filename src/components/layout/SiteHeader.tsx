@@ -1,15 +1,35 @@
 import { NavLink, useLocation } from 'react-router-dom';
-import { routeMetadata } from '../../data/navigation';
 import { useDisclosure } from '../../hooks/useDisclosure';
 
+interface NavigationGroup {
+  label: string;
+  items?: Array<{ label: string; path: string }>;
+}
+
+const navigationGroups: NavigationGroup[] = [
+  { label: 'Home' },
+  { label: 'Projects' },
+  { label: 'Lab' },
+  {
+    label: 'Human Practices',
+    items: [
+      { label: 'Education', path: '/Education' },
+      { label: 'Integrated HP', path: '/human-practices' },
+      { label: 'Entrepreneurship', path: '/entrepreneurship' },
+    ],
+  },
+  { label: 'Team', items: [{ label: 'Members', path: '/team' }] },
+];
+
 /**
- * 渲染全站语义化导航，NavLink 自动处理当前页面高亮与 aria-current。
+ * 渲染全站导航。顶层栏目仅作为下拉菜单标签，只有下拉菜单项提供页面路由。
  * @returns 网站页眉。
  */
 export function SiteHeader() {
   const teamName = import.meta.env.VITE_TEAM_NAME || 'LZU-Northwest';
   const menu = useDisclosure();
   const location = useLocation();
+
   return (
     <header className="site-header">
       <a className="site-header__skip-link" href="#main-content">
@@ -44,96 +64,45 @@ export function SiteHeader() {
           aria-label="主导航"
         >
           <ul className="site-header__list">
-            {routeMetadata
-              .filter((route) => route.showInNavigation !== false)
-              .map((route) => {
-                const isHumanPractices = route.path === '/contribution';
-                const isTeam = route.path === '/team';
-                const hasSubmenu = isHumanPractices || isTeam;
-                const isHumanPracticesActive =
-                  location.pathname === '/contribution' ||
-                  location.pathname === '/entrepreneurship' ||
-                  location.pathname === '/Education' ||
-                  location.pathname === '/human-practices';
-                return (
-                  <li
-                    className={`site-header__item${hasSubmenu ? ' site-header__item--dropdown' : ''}`}
-                    key={route.path}
+            {navigationGroups.map((group) => {
+              const hasSubmenu = Boolean(group.items?.length);
+              const isActive = group.items?.some((item) => item.path === location.pathname) ?? false;
+
+              return (
+                <li
+                  className={`site-header__item${hasSubmenu ? ' site-header__item--dropdown' : ''}`}
+                  key={group.label}
+                >
+                  <span
+                    className={`site-header__link${isActive ? ' site-header__link--active' : ''}`}
+                    aria-haspopup={hasSubmenu ? 'true' : undefined}
+                    tabIndex={hasSubmenu ? 0 : undefined}
                   >
-                    <NavLink
-                      className={({ isActive }) =>
-                        `site-header__link${isActive || (isHumanPractices && isHumanPracticesActive) ? ' site-header__link--active' : ''}`
-                      }
-                      end={route.path === '/'}
-                      to={route.path}
-                      onClick={menu.close}
-                      aria-haspopup={hasSubmenu ? 'true' : undefined}
-                    >
-                      {route.label}
-                    </NavLink>
-                    {isHumanPractices ? (
-                      <ul className="site-header__submenu" aria-label="Human Practices submenu">
-                        <li>
+                    {group.label}
+                  </span>
+                  {hasSubmenu ? (
+                    <ul className="site-header__submenu" aria-label={`${group.label} submenu`}>
+                      {group.items?.map((item) => (
+                        <li key={item.path}>
                           <NavLink
-                            className={({ isActive }) =>
-                              `site-header__submenu-link${isActive ? ' site-header__submenu-link--active' : ''}`
+                            className={({ isActive: isItemActive }) =>
+                              `site-header__submenu-link${isItemActive ? ' site-header__submenu-link--active' : ''}`
                             }
-                            to="/Education"
-                            onClick={menu.close}
+                            to={item.path}
+                            onClick={(event) => {
+                              event.currentTarget.blur();
+                              menu.close();
+                            }}
                           >
-                            Education
+                            {item.label}
                           </NavLink>
                         </li>
-                        <li>
-                          <NavLink
-                            className={({ isActive }) =>
-                              `site-header__submenu-link${isActive ? ' site-header__submenu-link--active' : ''}`
-                            }
-                            to="/human-practices"
-                            onClick={menu.close}
-                          >
-                            Integrated HP
-                          </NavLink>
-                        </li>
-                        <li>
-                          <NavLink
-                            className={({ isActive }) =>
-                              `site-header__submenu-link${isActive ? ' site-header__submenu-link--active' : ''}`
-                            }
-                            to="/entrepreneurship"
-                            onClick={menu.close}
-                          >
-                            Entrepreneurship
-                          </NavLink>
-                        </li>
-                      </ul>
-                    ) : null}
-                    {isTeam ? (
-                      <ul className="site-header__submenu" aria-label="Team submenu">
-                        <li>
-                          <NavLink
-                            className={({ isActive }) =>
-                              `site-header__submenu-link${isActive ? ' site-header__submenu-link--active' : ''}`
-                            }
-                            to="/team"
-                            onClick={menu.close}
-                          >
-                            Members
-                          </NavLink>
-                        </li>
-                        <li>
-                          <span
-                            className="site-header__submenu-link site-header__submenu-link--disabled"
-                            aria-disabled="true"
-                          >
-                            Attributions
-                          </span>
-                        </li>
-                      </ul>
-                    ) : null}
-                  </li>
-                );
-              })}
+                      ))}
+                    </ul>
+                  ) : null}
+                </li>
+              );
+            })}
           </ul>
         </nav>
       </div>

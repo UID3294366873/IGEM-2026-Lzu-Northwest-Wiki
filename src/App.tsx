@@ -3,6 +3,7 @@ import { Route, Routes } from 'react-router-dom';
 import { BackToTop } from './components/common/BackToTop';
 import { SiteFooter } from './components/layout/SiteFooter';
 import { SiteHeader } from './components/layout/SiteHeader';
+import { HomePage } from './pages/HomePage';
 import { NotFoundPage } from './pages/NotFoundPage';
 import { routeDefinitions } from './routes/routeDefinitions';
 
@@ -16,6 +17,7 @@ export default function App() {
       <SiteHeader />
       <Suspense fallback={<main className="async-state">正在加载页面…</main>}>
         <Routes>
+          <Route path="/" element={<HomePage />} />
           {routeDefinitions.map(({ path, component: Page }) => (
             <Route key={path} path={path} element={<Page />} />
           ))}
