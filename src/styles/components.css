@@ -847,11 +847,20 @@ a {
 }
 .site-header__mark {
   display: block;
-  width: 3.75rem;
-  height: 3.75rem;
+  width: 4rem;
+  height: 3.625rem;
   flex: 0 0 auto;
-  border-radius: 50%;
-  background: var(--color-subtle);
+  object-fit: contain;
+}
+.site-header__wordmark {
+  font-size: clamp(1.25rem, 2.2vw, 2rem);
+  line-height: 1;
+}
+.site-header__wordmark span:first-child {
+  color: #006fa0;
+}
+.site-header__wordmark span:last-child {
+  color: #09acc6;
 }
 .site-header__navigation {
   border: 0;
@@ -865,8 +874,10 @@ a {
 }
 .site-header__link {
   padding: var(--space-2) 0;
+  color: #006fa0;
   font-family: var(--font-body);
   font-size: var(--font-size-sm);
+  font-weight: var(--weight-bold);
   text-transform: none;
 }
 .site-header__link:hover,
@@ -908,6 +919,11 @@ a {
   background: var(--color-subtle);
   text-decoration: underline;
   text-decoration-thickness: var(--border-strong);
+}
+.site-header__submenu-link--disabled {
+  color: var(--color-muted);
+  cursor: not-allowed;
+  opacity: 0.55;
 }
 
 .home-page {
@@ -1255,20 +1271,25 @@ a {
   content: '•';
 }
 .entrepreneurship-document__figure {
-  margin: var(--space-5) 0;
+  margin: var(--space-5) auto;
 }
-.entrepreneurship-document__figure img {
-  display: block;
+.entrepreneurship-document__image-frame {
+  position: relative;
   width: 100%;
-  height: auto;
+  overflow: hidden;
   transition:
     transform 0.2s,
     box-shadow 0.2s;
 }
-.entrepreneurship-document__figure img:hover {
+.entrepreneurship-document__image-frame:hover {
   transform: scale(1.01);
   box-shadow: 0 4px 12px rgb(0 0 0 / 15%);
   cursor: pointer;
+}
+.entrepreneurship-document__image-frame img {
+  position: absolute;
+  display: block;
+  max-width: none;
 }
 .entrepreneurship-document__caption {
   margin-top: calc(var(--space-3) * -1) !important;
@@ -1285,20 +1306,15 @@ a {
 .entrepreneurship-document__media-grid .entrepreneurship-document__figure {
   margin: 0;
 }
+.entrepreneurship-document__media-grid--equal-height {
+  align-items: start;
+}
 .entrepreneurship-document__media-grid--equal-pair {
-  grid-template-columns: minmax(0, 1.55fr) minmax(0, 1fr);
-  align-items: center;
+  grid-template-columns: minmax(0, 2fr) minmax(0, 1fr);
+  align-items: start;
 }
 .entrepreneurship-document__media-grid--equal-pair .entrepreneurship-document__figure {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.entrepreneurship-document__media-grid--equal-pair img {
-  width: auto;
-  max-width: 100%;
-  height: 18rem;
-  object-fit: contain;
+  width: 100%;
 }
 .entrepreneurship-document__partners-grid {
   display: grid;
@@ -1307,7 +1323,7 @@ a {
 }
 .entrepreneurship-document__partners-row {
   display: grid;
-  grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr);
+  grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr);
   gap: var(--space-4);
   align-items: center;
 }
@@ -1329,12 +1345,12 @@ a {
 .entrepreneurship-document__partners-row:last-child
   .entrepreneurship-document__partners-cell:first-child
   .entrepreneurship-document__figure:first-child {
-  flex-basis: 28%;
+  flex-basis: 24%;
 }
 .entrepreneurship-document__partners-row:last-child
   .entrepreneurship-document__partners-cell:first-child
   .entrepreneurship-document__figure:last-child {
-  flex-basis: 72%;
+  flex-basis: 76%;
 }
 .entrepreneurship-document__partners-row:last-child
   .entrepreneurship-document__partners-cell:last-child {
@@ -1371,12 +1387,373 @@ a {
   margin: 0;
 }
 
+.wiki-page--education .project-page__body {
+  grid-template-columns: 15rem minmax(0, 46.1875rem);
+}
+.wiki-page--ihp .project-page__body {
+  grid-template-columns: 15rem minmax(0, 46.1875rem);
+}
+.education-toc {
+  max-height: calc(100vh - var(--space-7));
+  overflow-y: auto;
+}
+.education-toc__title {
+  margin: 0 0 var(--space-4);
+  font-family: var(--font-mono);
+  font-size: var(--font-size-xs);
+  font-weight: var(--weight-bold);
+  text-transform: uppercase;
+}
+.education-toc__list,
+.education-toc__sublist {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.education-toc__sublist {
+  margin-left: var(--space-3);
+  padding-left: var(--space-3);
+  border-left: var(--border-thin) var(--border-style) var(--color-subtle);
+}
+.education-toc__item + .education-toc__item {
+  margin-top: var(--space-1);
+}
+.education-toc__link {
+  display: block;
+  padding: var(--space-2) var(--space-3);
+  font-size: var(--font-size-sm);
+  line-height: 1.35;
+  text-decoration: none;
+}
+.education-toc__link--child {
+  font-size: var(--font-size-xs);
+}
+.education-toc__link:hover,
+.education-toc__link--active {
+  background: var(--color-subtle);
+  text-decoration: underline;
+}
+.education-toc__branch {
+  display: grid;
+  grid-template-rows: 0fr;
+  opacity: 0;
+  transition:
+    grid-template-rows 240ms ease,
+    opacity 180ms ease;
+}
+.education-toc__branch--expanded {
+  grid-template-rows: 1fr;
+  opacity: 1;
+}
+.education-toc__branch-inner {
+  min-height: 0;
+  overflow: hidden;
+}
+.education-document > :first-child {
+  margin-top: 0;
+}
+.education-document__h2,
+.education-document__h3,
+.education-document__h4 {
+  scroll-margin-top: var(--space-5);
+}
+.education-document__h2 {
+  margin: var(--space-8) 0 var(--space-5);
+  font-size: var(--font-size-h2);
+}
+.education-document__h3 {
+  margin: var(--space-7) 0 var(--space-4);
+  font-size: var(--font-size-h3);
+}
+.education-document__h4 {
+  margin: var(--space-6) 0 var(--space-3);
+  font-size: var(--font-size-base);
+}
+.ihp-document a {
+  overflow-wrap: anywhere;
+}
+.education-document p {
+  margin: 0 0 var(--space-4);
+}
+.education-document__figure {
+  min-width: 0;
+  margin: var(--space-5) auto;
+}
+.education-document__image-frame {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  transition:
+    transform 0.2s,
+    box-shadow 0.2s;
+}
+.education-document__image-frame:hover {
+  transform: scale(1.01);
+  box-shadow: 0 4px 12px rgb(0 0 0 / 15%);
+}
+.education-document__image-frame img {
+  position: absolute;
+  display: block;
+  max-width: none;
+}
+.education-document__media-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-4);
+  align-items: flex-start;
+  margin-block: var(--space-5);
+}
+.education-document__media-group .education-document__figure {
+  margin: 0;
+}
+.education-document__figure[data-image-src='Education -11.jpeg'] {
+  width: 100%;
+  flex: 0 1 22rem !important;
+  max-width: min(100%, 22rem);
+  margin-inline: auto !important;
+}
+.education-document__media-group--equal-height {
+  display: grid;
+}
+.education-document__caption {
+  margin-top: calc(var(--space-3) * -1) !important;
+  color: var(--color-muted);
+  font-size: var(--font-size-sm);
+  text-align: center;
+}
+
+/* Team / Members — implemented from Figma node 103:5 and its attached notes. */
+.team-page {
+  --team-blue: #006fa0;
+  --team-cyan: #caf0f8;
+  --team-pink: #f39a9d;
+  min-height: 100vh;
+  padding-bottom: 8rem;
+  overflow: clip;
+  background: var(--team-blue);
+  color: var(--color-surface);
+}
+.team-page__hero {
+  display: grid;
+  grid-template-columns: minmax(0, 0.8fr) minmax(22rem, 1.2fr);
+  width: min(calc(100% - 8rem), 82rem);
+  min-height: 40rem;
+  margin-inline: auto;
+  align-items: center;
+  gap: var(--space-7);
+}
+.team-page__hero h1 {
+  margin: -5rem 0 0 -5.375rem;
+  color: var(--team-pink);
+  font-family: var(--font-heading);
+  font-size: clamp(5rem, 9vw, 8rem);
+  font-style: italic;
+  letter-spacing: -0.045em;
+  line-height: 1;
+  white-space: nowrap;
+}
+.team-page__group-photo {
+  width: 100%;
+  min-height: 18rem;
+}
+.team-page__group-photo span {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+}
+.team-page__shell {
+  display: grid;
+  grid-template-columns: 18.75rem minmax(0, 58.25rem);
+  width: min(calc(100% - 8rem), 82rem);
+  margin-inline: auto;
+  justify-content: space-between;
+  gap: 4.6875rem;
+  align-items: start;
+}
+.team-page__aside {
+  position: sticky;
+  top: 8rem;
+  display: flex;
+  padding-top: 12rem;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+.team-page__aside a {
+  width: fit-content;
+  color: var(--color-surface);
+  font-size: 1.5rem;
+  font-style: italic;
+  font-weight: var(--weight-bold);
+  line-height: 1.2;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: color var(--transition-fast);
+}
+.team-page__aside a:first-child {
+  text-transform: none;
+}
+.team-page__aside a:hover,
+.team-page__aside .team-page__aside-link--active {
+  color: var(--team-pink);
+}
+.team-page__groups {
+  min-width: 0;
+}
+.team-group {
+  margin-bottom: 4.5rem;
+  scroll-margin-top: 7rem;
+}
+.team-group h2 {
+  display: flex;
+  align-items: baseline;
+  gap: var(--space-4);
+  margin: 0 0 2rem;
+  font-style: italic;
+  line-height: 1.1;
+}
+.team-group h2 span {
+  color: var(--team-pink);
+  font-size: 2.25rem;
+}
+.team-group h2 strong {
+  color: var(--color-surface);
+  font-size: 2rem;
+}
+.team-group__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 13.0625rem);
+  gap: 3.625rem 2rem;
+}
+.team-member-card {
+  display: flex;
+  width: 13.0625rem;
+  height: 21.6875rem;
+  min-height: 0;
+  padding: 1.4375rem 0 1rem;
+  overflow: hidden;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  border: 0;
+  border-radius: 1rem;
+  background: var(--color-surface);
+  color: var(--team-blue);
+  cursor: pointer;
+}
+.team-member-card:hover,
+.team-member-card:focus-visible {
+  transform: translateY(calc(var(--space-1) * -1));
+  box-shadow: 0 0.75rem 1.5rem rgb(0 0 0 / 18%);
+}
+.team-member-card__portrait {
+  display: block;
+  width: 11.75rem;
+  height: 15.125rem;
+  overflow: hidden;
+  flex: 0 0 auto;
+  border-radius: 1rem;
+  background: var(--team-cyan);
+}
+.team-member-card__portrait img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.team-member-card__divider {
+  width: 9.4375rem;
+  height: 1px;
+  margin: 0.9375rem 0 0.875rem;
+}
+.team-member-card strong {
+  width: 100%;
+  padding-inline: var(--space-2);
+  font-size: 1.125rem;
+  line-height: 1.2;
+  text-align: center;
+}
+.team-member-card--placeholder strong {
+  opacity: 0.55;
+}
+.team-member-dialog {
+  width: min(calc(100% - 2rem), 35rem);
+  min-height: 20rem;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: var(--team-blue);
+}
+.team-member-dialog::backdrop {
+  background: rgb(0 43 65 / 64%);
+}
+.team-member-dialog article {
+  position: relative;
+  min-height: 20rem;
+  padding: 2.125rem 3rem;
+  background: var(--color-surface);
+}
+.team-member-dialog h2 {
+  width: fit-content;
+  margin: 0;
+  font-size: 1.5rem;
+}
+.team-member-dialog article > img {
+  display: block;
+  width: 3rem;
+  height: 1px;
+  margin: 0.75rem 0 0.875rem;
+}
+.team-member-dialog p {
+  max-width: 28.6875rem;
+  margin: 0;
+  font-size: var(--font-size-sm);
+  line-height: 1.35;
+}
+.team-member-dialog__close {
+  position: absolute;
+  top: var(--space-3);
+  right: var(--space-3);
+  display: grid;
+  width: 2.25rem;
+  min-height: 2.25rem;
+  padding: 0;
+  place-items: center;
+  border: 0;
+  background: transparent;
+  color: var(--team-blue);
+  font-size: 1.75rem;
+  cursor: pointer;
+}
+
 @media (max-width: 64rem) {
   .site-header__inner {
     width: 100%;
   }
   .site-header__list {
     gap: var(--space-5);
+  }
+  .team-page__hero,
+  .team-page__shell {
+    width: min(calc(100% - 3rem), 58rem);
+  }
+  .team-page__shell {
+    grid-template-columns: 13rem minmax(0, 1fr);
+    gap: var(--space-6);
+  }
+  .team-page__aside a {
+    font-size: var(--font-size-base);
+  }
+  .team-group__grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: var(--space-6) var(--space-4);
+  }
+  .team-member-card {
+    width: 100%;
+  }
+  .team-member-card__portrait {
+    width: calc(100% - 1.25rem);
   }
   .home-pathways__grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -1392,10 +1769,19 @@ a {
   .wiki-page--entrepreneurship .project-page__body {
     grid-template-columns: 1fr;
   }
+  .wiki-page--education .project-page__body {
+    grid-template-columns: 1fr;
+  }
+  .wiki-page--ihp .project-page__body {
+    grid-template-columns: 1fr;
+  }
   .project-page__aside {
     position: static;
   }
   .entrepreneurship-toc {
+    max-height: none;
+  }
+  .education-toc {
     max-height: none;
   }
   .page__layout {
@@ -1445,8 +1831,11 @@ a {
     gap: 0;
   }
   .site-header__mark {
-    width: 2.75rem;
+    width: 3rem;
     height: 2.75rem;
+  }
+  .site-header__wordmark {
+    font-size: 1rem;
   }
   .site-header__edition {
     display: none;
@@ -1490,6 +1879,48 @@ a {
     padding: var(--space-2) 0;
     font-size: var(--font-size-xs);
   }
+  .team-page {
+    padding-bottom: var(--space-8);
+  }
+  .team-page__hero {
+    grid-template-columns: 1fr;
+    min-height: 30rem;
+    padding-block: var(--space-8);
+  }
+  .team-page__hero h1 {
+    margin: 0;
+    font-size: clamp(4rem, 18vw, 6rem);
+    white-space: normal;
+  }
+  .team-page__group-photo {
+    min-height: 8rem;
+  }
+  .team-page__shell {
+    grid-template-columns: 1fr;
+  }
+  .team-page__aside {
+    position: sticky;
+    z-index: 5;
+    top: 0;
+    display: flex;
+    padding: var(--space-3) 0;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: var(--space-3) var(--space-5);
+    background: var(--team-blue);
+  }
+  .team-group h2 span {
+    font-size: 1.75rem;
+  }
+  .team-group h2 strong {
+    font-size: 1.5rem;
+  }
+  .team-group__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .team-member-dialog article {
+    padding: 2.5rem var(--space-5);
+  }
   .home-hero {
     min-height: 34rem;
   }
@@ -1516,6 +1947,14 @@ a {
     overflow-wrap: anywhere;
     font-size: clamp(2.25rem, 9.5vw, 4.8rem);
   }
+  .wiki-page--education .project-hero h1 {
+    overflow-wrap: anywhere;
+    font-size: clamp(2.25rem, 9.5vw, 4.8rem);
+  }
+  .wiki-page--ihp .project-hero h1 {
+    overflow-wrap: anywhere;
+    font-size: clamp(2.25rem, 9.5vw, 4.8rem);
+  }
   .project-hero__media {
     max-width: 26.5rem;
   }
@@ -1527,11 +1966,14 @@ a {
     padding: var(--space-4);
   }
   .entrepreneurship-document__media-grid {
+    grid-template-columns: 1fr !important;
+  }
+  .education-document__media-group {
+    display: grid;
     grid-template-columns: 1fr;
   }
-  .entrepreneurship-document__media-grid--equal-pair img {
-    width: 100%;
-    height: auto;
+  .education-document__media-group--equal-height {
+    grid-template-columns: 1fr !important;
   }
   .entrepreneurship-document__partners-row {
     grid-template-columns: 1fr;

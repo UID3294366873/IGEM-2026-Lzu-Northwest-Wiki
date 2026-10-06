@@ -1,98 +1,176 @@
-import { useCallback } from 'react';
-import { AsyncStateView } from '../components/common/AsyncStateView';
-import { Badge } from '../components/common/Badge';
-import { Card } from '../components/common/Card';
-import { SectionHeading } from '../components/common/SectionHeading';
-import { Callout } from '../components/common/Callout';
-import { PageLayout } from '../components/layout/PageLayout';
+import { useEffect, useRef, useState } from 'react';
 import { teamMembers } from '../data/team';
-import { useAsyncData } from '../hooks/useAsyncData';
-import type { TeamMember } from '../types/content';
+import { useActiveSection } from '../hooks/useActiveSection';
+import { useDocumentTitle } from '../hooks/useDocumentTitle';
+import type { TeamGroupId, TeamMember } from '../types/content';
 
-const sections = [
-  { id: 'team-overview', label: '团队概览' },
-  { id: 'members', label: '成员' },
-  { id: 'collaboration', label: '协作方式' },
+interface TeamGroupDefinition {
+  id: TeamGroupId;
+  eyebrow: string;
+  title: string;
+  slots: number;
+}
+
+const teamGroups: TeamGroupDefinition[] = [
+  { id: 'primary-pis', eyebrow: 'Team PIs', title: 'PRIMARY PIs', slots: 1 },
+  { id: 'secondary-pis', eyebrow: 'Team PIs', title: 'SECONDARY PIs', slots: 4 },
+  { id: 'student-leaders', eyebrow: '', title: 'STUDENT LEADERS', slots: 3 },
+  { id: 'student-members', eyebrow: '', title: 'STUDENT TEAM MEMBERS', slots: 28 },
 ];
-const isEmpty = (members: TeamMember[]): boolean => members.length === 0;
+
+const sectionIds = teamGroups.map((group) => group.id);
+const memberDividerUrl = `${import.meta.env.BASE_URL}images/team/member-divider.svg`;
+const detailDividerUrl = `${import.meta.env.BASE_URL}images/team/detail-divider.svg`;
 
 /**
- * 展示由数据驱动的团队成员列表及完整异步状态。
- * @returns 团队页面。
+ * 把已核验成员放入对应分组，其余设计卡位保持匿名占位。
+ * @param group 分组配置。
+ * @returns 与 Figma 卡片数量一致的成员槽位。
+ */
+function getGroupSlots(group: TeamGroupDefinition): Array<TeamMember | null> {
+  const members = teamMembers.filter((member) => member.group === group.id).slice(0, group.slots);
+  return [...members, ...Array<TeamMember | null>(group.slots - members.length).fill(null)];
+}
+
+/**
+ * 为尚未录入资料的设计卡位提供可交互的待补充详情，避免虚构成员信息。
+ * @param group 卡片所属分组。
+ * @param index 卡片在分组内的序号。
+ * @returns 可供统一详情弹窗展示的占位成员。
+ */
+function getPlaceholderMember(group: TeamGroupDefinition, index: number): TeamMember {
+  return {
+    id: `${group.id}-placeholder-${index + 1}`,
+    name: 'Member name',
+    role: group.title,
+    group: group.id,
+    bio: 'Member details will be added after the team information has been confirmed.',
+  };
+}
+
+/**
+ * 按 Figma Team 画板展示成员分组，并实现画板注释指定的滚动高亮和详情卡。
+ * @returns Members 页面。
  */
 export function TeamPage() {
-  /** 保留异步边界，后续可接入经团队核验的数据源。 */
-  const loadMembers = useCallback(
-    async (): Promise<TeamMember[]> => Promise.resolve(teamMembers),
-    [],
-  );
-  const { state, retry } = useAsyncData(loadMembers, isEmpty);
+  useDocumentTitle('Members');
+  const activeSection = useActiveSection(sectionIds);
+  const [selectedMember, setSelectedMember] = useState<TeamMember | null>(null);
+  const dialogRef = useRef<HTMLDialogElement>(null);
+
+  useEffect(() => {
+    const dialog = dialogRef.current;
+    if (!dialog) return;
+    if (selectedMember && !dialog.open) dialog.showModal();
+    if (!selectedMember && dialog.open) dialog.close();
+  }, [selectedMember]);
+
   return (
-    <PageLayout
-      pageClassName="wiki-page--team"
-      title="团队介绍"
-      lead="跨学科协作不是一张合影，而是清晰的角色、责任和归因边界。"
-      group="Team"
-      sections={sections}
-    >
-      <section className="content-section" id="team-overview">
-        <SectionHeading eyebrow="01 / People" title="一个团队，多种视角" />
-        <Callout title="内容核验中" tone="warning">
-          <p>成员数量、姓名、角色、个人简介与照片将在成员本人及团队负责人核验后发布。</p>
-        </Callout>
-      </section>
-      <section className="content-section" id="members">
-        <SectionHeading
-          eyebrow="02 / Members"
-          title="团队成员"
-          description="成员由独立数据文件驱动，美术可自由替换卡片排版。"
-        />
-        {state.status === 'loading' ? <AsyncStateView status="loading" /> : null}
-        {state.status === 'error' ? (
-          <AsyncStateView status="error" message={state.error.message} onRetry={retry} />
+    <main className="team-page" id="main-content" tabIndex={-1}>
+      <header className="team-page__hero">
+        <h1>Our Team</h1>
+        <div className="team-page__group-photo" role="img" aria-label="团队合照预留区域">
+          <span>Group photo</span>
+        </div>
+      </header>
+
+      <div className="team-page__shell">
+        <aside className="team-page__aside" aria-label="Members sections">
+          <a
+            className={
+              activeSection === 'primary-pis' || activeSection === 'secondary-pis'
+                ? 'team-page__aside-link--active'
+                : undefined
+            }
+            href="#primary-pis"
+          >
+            Team PIs
+          </a>
+          <a
+            className={
+              activeSection === 'student-leaders' ? 'team-page__aside-link--active' : undefined
+            }
+            href="#student-leaders"
+          >
+            Student Leaders
+          </a>
+          <a
+            className={
+              activeSection === 'student-members' ? 'team-page__aside-link--active' : undefined
+            }
+            href="#student-members"
+          >
+            Student Team Members
+          </a>
+        </aside>
+
+        <div className="team-page__groups">
+          {teamGroups.map((group) => (
+            <section className="team-group" id={group.id} key={group.id}>
+              <h2>
+                {group.eyebrow ? <span>{group.eyebrow}</span> : null}
+                <strong>{group.title}</strong>
+              </h2>
+              <div className="team-group__grid">
+                {getGroupSlots(group).map((member, index) =>
+                  member ? (
+                    <button
+                      className="team-member-card"
+                      type="button"
+                      key={member.id}
+                      onClick={() => setSelectedMember(member)}
+                      aria-label={`View details for ${member.name}`}
+                    >
+                      <span className="team-member-card__portrait">
+                        {member.portraitUrl ? <img src={member.portraitUrl} alt="" /> : null}
+                      </span>
+                      <img className="team-member-card__divider" src={memberDividerUrl} alt="" />
+                      <strong>{member.name}</strong>
+                    </button>
+                  ) : (
+                    <button
+                      className="team-member-card team-member-card--placeholder"
+                      type="button"
+                      key={`${group.id}-${index}`}
+                      onClick={() => setSelectedMember(getPlaceholderMember(group, index))}
+                      aria-label={`View details for ${group.title} member ${index + 1}`}
+                    >
+                      <span className="team-member-card__portrait" aria-hidden="true" />
+                      <img className="team-member-card__divider" src={memberDividerUrl} alt="" />
+                      <strong>Member name</strong>
+                    </button>
+                  ),
+                )}
+              </div>
+            </section>
+          ))}
+        </div>
+      </div>
+
+      <dialog
+        className="team-member-dialog"
+        ref={dialogRef}
+        onClose={() => setSelectedMember(null)}
+        onClick={(event) => {
+          if (event.target === event.currentTarget) setSelectedMember(null);
+        }}
+      >
+        {selectedMember ? (
+          <article>
+            <button
+              className="team-member-dialog__close"
+              type="button"
+              aria-label="Close member details"
+              onClick={() => setSelectedMember(null)}
+            >
+              ×
+            </button>
+            <h2>{selectedMember.name}</h2>
+            <img src={detailDividerUrl} alt="" />
+            <p>{selectedMember.bio}</p>
+          </article>
         ) : null}
-        {state.status === 'empty' ? <AsyncStateView status="empty" /> : null}
-        {state.status === 'success' ? (
-          <div className="card-grid card-grid--two">
-            {state.data.map((member, index) => (
-              <Card
-                key={member.id}
-                title={
-                  <>
-                    <span className="member-card__index">{String(index + 1).padStart(2, '0')}</span>
-                    {member.name}
-                  </>
-                }
-                headingLevel={3}
-              >
-                <div
-                  className="member-card__portrait"
-                  role="img"
-                  aria-label={`${member.name} 的头像预留区域`}
-                >
-                  PORTRAIT
-                </div>
-                <Badge>{member.role}</Badge>
-                <p>{member.bio}</p>
-              </Card>
-            ))}
-          </div>
-        ) : null}
-      </section>
-      <section className="content-section" id="collaboration">
-        <SectionHeading eyebrow="03 / Workflow" title="我们如何协作" />
-        <ol className="numbered-list">
-          <li>
-            <strong>每周对齐：</strong>同步假设、结果、阻塞和决策。
-          </li>
-          <li>
-            <strong>双人复核：</strong>实验记录、数据和页面内容至少由两人检查。
-          </li>
-          <li>
-            <strong>持续归因：</strong>贡献发生时记录，不在截止日前凭记忆补写。
-          </li>
-        </ol>
-      </section>
-    </PageLayout>
+      </dialog>
+    </main>
   );
 }

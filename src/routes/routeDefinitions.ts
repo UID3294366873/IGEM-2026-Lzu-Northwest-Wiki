@@ -15,6 +15,14 @@ const EntrepreneurshipPage = lazy(() =>
   })),
 );
 
+const EducationPage = lazy(() =>
+  import('../pages/EducationPage').then((module) => ({ default: module.EducationPage })),
+);
+
+const IntegratedHpPage = lazy(() =>
+  import('../pages/IntegratedHpPage').then((module) => ({ default: module.IntegratedHpPage })),
+);
+
 /**
  * 组件路径映射。页面文案统一维护在 navigation 数据中，避免产生循环依赖。
  */
@@ -25,6 +33,8 @@ const componentByPath = {
   '/notebook': NotebookPage,
   '/contribution': ContributionPage,
   '/entrepreneurship': EntrepreneurshipPage,
+  '/Education': EducationPage,
+  '/human-practices': IntegratedHpPage,
   '/search': SearchPage,
   '/contact': ContactPage,
 } as const;

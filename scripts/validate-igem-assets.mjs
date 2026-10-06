@@ -1,6 +1,9 @@
 import { readFile } from 'node:fs/promises';
-const content = JSON.parse(
-  await readFile(new URL('../src/data/entrepreneurshipContent.json', import.meta.url), 'utf8'),
+const contents = await Promise.all(
+  ['entrepreneurshipContent.json', 'educationContent.json', 'integratedHpContent.json'].map(
+    async (filename) =>
+      JSON.parse(await readFile(new URL(`../src/data/${filename}`, import.meta.url), 'utf8')),
+  ),
 );
 const manifest = JSON.parse(
   await readFile(new URL('../src/data/igemAssetUrls.json', import.meta.url), 'utf8'),
@@ -9,7 +12,7 @@ const manifest = JSON.parse(
 const referencedImages = new Set();
 
 /**
- * Collect every image filename embedded in the structured Entrepreneurship content.
+ * Collect every image filename embedded in the structured page content.
  * @param {unknown} value Value to traverse.
  */
 function collectImageReferences(value) {
@@ -26,12 +29,12 @@ function collectImageReferences(value) {
   Object.values(value).forEach(collectImageReferences);
 }
 
-collectImageReferences(content);
+contents.forEach(collectImageReferences);
 
 const missing = [...referencedImages].filter((filename) => !(filename in manifest));
 const unexpected = Object.keys(manifest).filter((filename) => !referencedImages.has(filename));
 const invalid = Object.entries(manifest).filter(([, url]) => {
-  if (typeof url !== 'string' || url.length === 0) return true;
+  if (typeof url !== 'string' || url.length === 0) return false;
   try {
     return new URL(url).hostname !== 'static.igem.wiki';
   } catch {
@@ -39,18 +42,20 @@ const invalid = Object.entries(manifest).filter(([, url]) => {
   }
 });
 
+const pendingUploads = Object.entries(manifest).filter(([, url]) => url === '');
+
 if (missing.length || unexpected.length || invalid.length) {
   console.error('iGEM asset manifest validation failed.');
   if (missing.length) console.error(`Missing keys: ${missing.join(', ')}`);
   if (unexpected.length) console.error(`Unused keys: ${unexpected.join(', ')}`);
-  if (invalid.length) {
-    console.error(
-      `Upload these files in the iGEM Uploads tool, then paste the returned static.igem.wiki URLs for: ${invalid
-        .map(([filename]) => filename)
-        .join(', ')}`,
-    );
-  }
+  if (invalid.length)
+    console.error(`Invalid non-iGEM URLs: ${invalid.map(([name]) => name).join(', ')}`);
   process.exitCode = 1;
 } else {
-  console.log(`Validated ${referencedImages.size} iGEM-hosted image URLs.`);
+  console.log(`Validated ${referencedImages.size} image manifest entries.`);
+  if (pendingUploads.length) {
+    console.warn(
+      `${pendingUploads.length} resources use the project-local fallback until static.igem.wiki URLs are added.`,
+    );
+  }
 }

@@ -1,0 +1,226 @@
+{
+  "desktop": {
+    "figureCount": 37,
+    "loadedImageCount": 37,
+    "croppedCount": 3,
+    "centeredSingles": true,
+    "groupMeasurements": [
+      [
+        {
+          "src": "Education -9.jpeg",
+          "width": 306,
+          "height": 186
+        },
+        {
+          "src": "Education -10.jpeg",
+          "width": 353,
+          "height": 189
+        },
+        {
+          "src": "Education -11.jpeg",
+          "width": 352,
+          "height": 516
+        }
+      ],
+      [
+        {
+          "src": "Education -13.jpeg",
+          "width": 331,
+          "height": 286
+        },
+        {
+          "src": "Education -14.jpeg",
+          "width": 328,
+          "height": 291
+        },
+        {
+          "src": "Education -15.jpeg",
+          "width": 675,
+          "height": 359
+        }
+      ],
+      [
+        {
+          "src": "Education -16.jpeg",
+          "width": 295,
+          "height": 328
+        },
+        {
+          "src": "Education -17.jpeg",
+          "width": 364,
+          "height": 328
+        }
+      ],
+      [
+        {
+          "src": "Education -18.jpeg",
+          "width": 301,
+          "height": 321
+        },
+        {
+          "src": "Education -19.jpeg",
+          "width": 358,
+          "height": 321
+        }
+      ],
+      [
+        {
+          "src": "Education -31.png",
+          "width": 675,
+          "height": 224
+        },
+        {
+          "src": "Education -32.png",
+          "width": 675,
+          "height": 240
+        }
+      ]
+    ],
+    "image11Width": 352,
+    "image11CenterDelta": 0,
+    "splitCaptionLines": [
+      {
+        "text": "图34  A.LZU-Northwest虚拟IP形象 B.LZU-Northwest队徽",
+        "textAlign": "center"
+      },
+      {
+        "text": "C .LZU-Northwest队服 D .LZU-Northwest队旗",
+        "textAlign": "center"
+      },
+      {
+        "text": "图36  A .IP形象设计+合成生物学贴纸设计图 B.IP形象实物徽章",
+        "textAlign": "center"
+      },
+      {
+        "text": "C.IP贴纸实物 D.IP设计帆布袋实物",
+        "textAlign": "center"
+      }
+    ],
+    "horizontalOverflow": false,
+    "activeLastHeading": true,
+    "headingCount": 23,
+    "tocTargetCount": 23,
+    "missingTocTargets": [],
+    "submenuEducationHref": "/Education",
+    "hoverTransformChanged": true,
+    "consoleErrors": [
+      "Failed to load resource: the server responded with a status of 404 (Not Found)"
+    ],
+    "failedRequests": [],
+    "httpErrors": [],
+    "submenuVisibleOnFocus": true,
+    "firstBranchExpanded": true,
+    "previousBranchCollapsed": true
+  },
+  "mobile": {
+    "figureCount": 37,
+    "loadedImageCount": 37,
+    "croppedCount": 3,
+    "centeredSingles": true,
+    "groupMeasurements": [
+      [
+        {
+          "src": "Education -9.jpeg",
+          "width": 294,
+          "height": 179
+        },
+        {
+          "src": "Education -10.jpeg",
+          "width": 294,
+          "height": 158
+        },
+        {
+          "src": "Education -11.jpeg",
+          "width": 294,
+          "height": 431
+        }
+      ],
+      [
+        {
+          "src": "Education -13.jpeg",
+          "width": 294,
+          "height": 254
+        },
+        {
+          "src": "Education -14.jpeg",
+          "width": 294,
+          "height": 261
+        },
+        {
+          "src": "Education -15.jpeg",
+          "width": 294,
+          "height": 156
+        }
+      ],
+      [
+        {
+          "src": "Education -16.jpeg",
+          "width": 294,
+          "height": 328
+        },
+        {
+          "src": "Education -17.jpeg",
+          "width": 294,
+          "height": 265
+        }
+      ],
+      [
+        {
+          "src": "Education -18.jpeg",
+          "width": 294,
+          "height": 314
+        },
+        {
+          "src": "Education -19.jpeg",
+          "width": 294,
+          "height": 263
+        }
+      ],
+      [
+        {
+          "src": "Education -31.png",
+          "width": 294,
+          "height": 98
+        },
+        {
+          "src": "Education -32.png",
+          "width": 294,
+          "height": 105
+        }
+      ]
+    ],
+    "image11Width": 294,
+    "image11CenterDelta": 0,
+    "splitCaptionLines": [
+      {
+        "text": "图34  A.LZU-Northwest虚拟IP形象 B.LZU-Northwest队徽",
+        "textAlign": "center"
+      },
+      {
+        "text": "C .LZU-Northwest队服 D .LZU-Northwest队旗",
+        "textAlign": "center"
+      },
+      {
+        "text": "图36  A .IP形象设计+合成生物学贴纸设计图 B.IP形象实物徽章",
+        "textAlign": "center"
+      },
+      {
+        "text": "C.IP贴纸实物 D.IP设计帆布袋实物",
+        "textAlign": "center"
+      }
+    ],
+    "horizontalOverflow": false,
+    "activeLastHeading": true,
+    "headingCount": 23,
+    "tocTargetCount": 23,
+    "missingTocTargets": [],
+    "submenuEducationHref": "/Education",
+    "hoverTransformChanged": true,
+    "consoleErrors": [],
+    "failedRequests": [],
+    "httpErrors": [],
+    "submenuVisibleOnFocus": true,
+    "firstBranchExpanded": true,
+    "previousBranchCollapsed": true
+  }
+}

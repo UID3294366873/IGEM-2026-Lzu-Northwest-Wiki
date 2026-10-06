@@ -1,4 +1,4 @@
-import { Fragment, type ReactNode } from 'react';
+import { Fragment, type CSSProperties, type ReactNode } from 'react';
 import { EntrepreneurshipTableOfContents } from '../components/navigation/EntrepreneurshipTableOfContents';
 import type { EntrepreneurshipTocItem } from '../components/navigation/EntrepreneurshipTableOfContents';
 import { PageLayout } from '../components/layout/PageLayout';
@@ -20,6 +20,16 @@ interface ContentImage {
   alt: string;
   width: number;
   height: number;
+  wordLayout?: {
+    widthEmu: number;
+    heightEmu: number;
+    crop: {
+      left: number;
+      top: number;
+      right: number;
+      bottom: number;
+    };
+  };
 }
 
 interface ParagraphBlock {
@@ -40,7 +50,7 @@ interface HeadingBlock {
 
 interface TableBlock {
   type: 'table';
-  mediaLayout?: 'equal-pair' | 'partners';
+  mediaLayout?: 'equal-height' | 'equal-pair' | 'partners';
   rows: Array<{
     cells: Array<{
       paragraphs: ParagraphBlock[];
@@ -57,6 +67,7 @@ interface EntrepreneurshipContent {
 }
 
 const content = entrepreneurshipContent as EntrepreneurshipContent;
+const WORD_MAX_IMAGE_WIDTH_EMU = 5_398_770;
 
 /**
  * 优先使用 iGEM Uploads 正式地址，未上传时回退到项目内的图片目录。
@@ -92,19 +103,55 @@ function renderRichText(segments: RichSegment[], fallback: string): ReactNode {
  * 渲染 Word 中位于当前块位置的图片。
  * @param images 当前段落或表格单元格中的图片。
  * @param keyPrefix React key 前缀。
- * @returns 保持文档顺序的图片节点。
+ * @param preserveWordWidth 是否按 Word 页面中的显示宽度限制图片。
+ * @param displayHeightEmuOverride 并排图片需要等高时使用的统一 Word 高度。
+ * @returns 保持文档顺序、裁剪和缩放比例的图片节点。
  */
-function renderImages(images: ContentImage[] | undefined, keyPrefix: string): ReactNode {
+function renderImages(
+  images: ContentImage[] | undefined,
+  keyPrefix: string,
+  preserveWordWidth = true,
+  displayHeightEmuOverride?: number,
+): ReactNode {
   if (!images?.length) return null;
   return images.map((image, index) => {
     const src = imageUrl(image.src);
     if (!src) return null;
+    const layout = image.wordLayout;
+    const crop = layout?.crop ?? { left: 0, top: 0, right: 0, bottom: 0 };
+    const visibleWidth = 100_000 - crop.left - crop.right;
+    const visibleHeight = 100_000 - crop.top - crop.bottom;
+    const figureStyle: CSSProperties | undefined =
+      preserveWordWidth && layout
+        ? { maxWidth: `${Math.min((layout.widthEmu / WORD_MAX_IMAGE_WIDTH_EMU) * 100, 100)}%` }
+        : undefined;
+    const frameStyle: CSSProperties = {
+      aspectRatio: layout
+        ? `${layout.widthEmu} / ${displayHeightEmuOverride ?? layout.heightEmu}`
+        : `${image.width} / ${image.height}`,
+    };
+    const imageStyle: CSSProperties = {
+      width: `${(100_000 / visibleWidth) * 100}%`,
+      height: `${(100_000 / visibleHeight) * 100}%`,
+      left: `${(-crop.left / visibleWidth) * 100}%`,
+      top: `${(-crop.top / visibleHeight) * 100}%`,
+    };
     return (
       <figure
         className="entrepreneurship-document__figure"
         key={`${keyPrefix}-${image.src}-${index}`}
+        style={figureStyle}
       >
-        <img loading="lazy" src={src} alt={image.alt} width={image.width} height={image.height} />
+        <div className="entrepreneurship-document__image-frame" style={frameStyle}>
+          <img
+            loading="lazy"
+            src={src}
+            alt={image.alt}
+            width={image.width}
+            height={image.height}
+            style={imageStyle}
+          />
+        </div>
       </figure>
     );
   });
@@ -146,7 +193,7 @@ function renderPartnersMediaTable(block: TableBlock, blockIndex: number): ReactN
                 className="entrepreneurship-document__partners-cell"
                 key={`partners-cell-${blockIndex}-${rowIndex}-${cellIndex}`}
               >
-                {renderImages(images, `partners-${blockIndex}-${rowIndex}-${cellIndex}`)}
+                {renderImages(images, `partners-${blockIndex}-${rowIndex}-${cellIndex}`, false)}
               </div>
             );
           })}
@@ -172,11 +219,23 @@ function renderTable(block: TableBlock, blockIndex: number): ReactNode {
   }
 
   if (!hasCellText && images.length > 0) {
+    const equalHeight = block.mediaLayout === 'equal-height' || block.mediaLayout === 'equal-pair';
+    const commonHeightEmu = equalHeight
+      ? Math.max(...images.map((image) => image.wordLayout?.heightEmu ?? image.height))
+      : undefined;
+    const gridStyle: CSSProperties | undefined = equalHeight
+      ? {
+          gridTemplateColumns: images
+            .map((image) => `${image.wordLayout?.widthEmu ?? image.width}fr`)
+            .join(' '),
+        }
+      : undefined;
     return (
       <div
-        className={`entrepreneurship-document__media-grid${block.mediaLayout === 'equal-pair' ? ' entrepreneurship-document__media-grid--equal-pair' : ''}`}
+        className={`entrepreneurship-document__media-grid${block.mediaLayout === 'equal-height' ? ' entrepreneurship-document__media-grid--equal-height' : ''}${block.mediaLayout === 'equal-pair' ? ' entrepreneurship-document__media-grid--equal-pair' : ''}`}
+        style={gridStyle}
       >
-        {renderImages(images, `media-table-${blockIndex}`)}
+        {renderImages(images, `media-table-${blockIndex}`, false, commonHeightEmu)}
       </div>
     );
   }

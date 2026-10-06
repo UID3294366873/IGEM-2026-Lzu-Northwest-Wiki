@@ -17,9 +17,16 @@ export function SiteHeader() {
       </a>
       <div className="site-header__inner">
         <p className="site-header__brand">
-          <NavLink to="/">
-            <span className="site-header__mark" aria-hidden="true" />
-            <span>{teamName}</span>
+          <NavLink to="/" aria-label={`${teamName} 首页`}>
+            <img
+              className="site-header__mark"
+              src={`${import.meta.env.BASE_URL}images/team/lzu-northwest-logo.png`}
+              alt=""
+            />
+            <span className="site-header__wordmark" aria-hidden="true">
+              <span>LZU-</span>
+              <span>Northwest</span>
+            </span>
           </NavLink>
         </p>
         <button
@@ -40,28 +47,54 @@ export function SiteHeader() {
             {routeMetadata
               .filter((route) => route.showInNavigation !== false)
               .map((route) => {
-                const isEngagement = route.path === '/contribution';
-                const isEngagementActive =
+                const isHumanPractices = route.path === '/contribution';
+                const isTeam = route.path === '/team';
+                const hasSubmenu = isHumanPractices || isTeam;
+                const isHumanPracticesActive =
                   location.pathname === '/contribution' ||
-                  location.pathname === '/entrepreneurship';
+                  location.pathname === '/entrepreneurship' ||
+                  location.pathname === '/Education' ||
+                  location.pathname === '/human-practices';
                 return (
                   <li
-                    className={`site-header__item${isEngagement ? ' site-header__item--dropdown' : ''}`}
+                    className={`site-header__item${hasSubmenu ? ' site-header__item--dropdown' : ''}`}
                     key={route.path}
                   >
                     <NavLink
                       className={({ isActive }) =>
-                        `site-header__link${isActive || (isEngagement && isEngagementActive) ? ' site-header__link--active' : ''}`
+                        `site-header__link${isActive || (isHumanPractices && isHumanPracticesActive) ? ' site-header__link--active' : ''}`
                       }
                       end={route.path === '/'}
                       to={route.path}
                       onClick={menu.close}
-                      aria-haspopup={isEngagement ? 'true' : undefined}
+                      aria-haspopup={hasSubmenu ? 'true' : undefined}
                     >
                       {route.label}
                     </NavLink>
-                    {isEngagement ? (
-                      <ul className="site-header__submenu" aria-label="Engagement submenu">
+                    {isHumanPractices ? (
+                      <ul className="site-header__submenu" aria-label="Human Practices submenu">
+                        <li>
+                          <NavLink
+                            className={({ isActive }) =>
+                              `site-header__submenu-link${isActive ? ' site-header__submenu-link--active' : ''}`
+                            }
+                            to="/Education"
+                            onClick={menu.close}
+                          >
+                            Education
+                          </NavLink>
+                        </li>
+                        <li>
+                          <NavLink
+                            className={({ isActive }) =>
+                              `site-header__submenu-link${isActive ? ' site-header__submenu-link--active' : ''}`
+                            }
+                            to="/human-practices"
+                            onClick={menu.close}
+                          >
+                            Integrated HP
+                          </NavLink>
+                        </li>
                         <li>
                           <NavLink
                             className={({ isActive }) =>
@@ -72,6 +105,29 @@ export function SiteHeader() {
                           >
                             Entrepreneurship
                           </NavLink>
+                        </li>
+                      </ul>
+                    ) : null}
+                    {isTeam ? (
+                      <ul className="site-header__submenu" aria-label="Team submenu">
+                        <li>
+                          <NavLink
+                            className={({ isActive }) =>
+                              `site-header__submenu-link${isActive ? ' site-header__submenu-link--active' : ''}`
+                            }
+                            to="/team"
+                            onClick={menu.close}
+                          >
+                            Members
+                          </NavLink>
+                        </li>
+                        <li>
+                          <span
+                            className="site-header__submenu-link site-header__submenu-link--disabled"
+                            aria-disabled="true"
+                          >
+                            Attributions
+                          </span>
                         </li>
                       </ul>
                     ) : null}
