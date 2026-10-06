@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef, useState, type CSSProperties } from 'react';
 import { teamMembers } from '../data/team';
 import { useActiveSection } from '../hooks/useActiveSection';
 import { useDocumentTitle } from '../hooks/useDocumentTitle';
@@ -8,14 +8,14 @@ interface TeamGroupDefinition {
   id: TeamGroupId;
   eyebrow: string;
   title: string;
-  slots: number;
 }
 
 const teamGroups: TeamGroupDefinition[] = [
-  { id: 'primary-pis', eyebrow: 'Team PIs', title: 'PRIMARY PIs', slots: 1 },
-  { id: 'secondary-pis', eyebrow: 'Team PIs', title: 'SECONDARY PIs', slots: 4 },
-  { id: 'student-leaders', eyebrow: '', title: 'STUDENT LEADERS', slots: 3 },
-  { id: 'student-members', eyebrow: '', title: 'STUDENT TEAM MEMBERS', slots: 28 },
+  { id: 'primary-pis', eyebrow: 'Team PIs', title: 'PRIMARY PIs' },
+  { id: 'secondary-pis', eyebrow: 'Team PIs', title: 'SECONDARY PIs' },
+  { id: 'student-leaders', eyebrow: '', title: 'STUDENT LEADERS' },
+  { id: 'student-members', eyebrow: '', title: 'STUDENT TEAM MEMBERS' },
+  { id: 'instructors', eyebrow: '', title: 'INSTRUCTORS' },
 ];
 
 const sectionIds = teamGroups.map((group) => group.id);
@@ -27,24 +27,35 @@ const detailDividerUrl = `${import.meta.env.BASE_URL}images/team/detail-divider.
  * @param group 分组配置。
  * @returns 与 Figma 卡片数量一致的成员槽位。
  */
-function getGroupSlots(group: TeamGroupDefinition): Array<TeamMember | null> {
-  const members = teamMembers.filter((member) => member.group === group.id).slice(0, group.slots);
-  return [...members, ...Array<TeamMember | null>(group.slots - members.length).fill(null)];
+function getGroupMembers(group: TeamGroupDefinition): TeamMember[] {
+  return teamMembers.filter((member) => member.group === group.id);
 }
 
 /**
- * 为尚未录入资料的设计卡位提供可交互的待补充详情，避免虚构成员信息。
- * @param group 卡片所属分组。
- * @param index 卡片在分组内的序号。
- * @returns 可供统一详情弹窗展示的占位成员。
+ * 将 Word 的显示尺寸、裁剪和翻转信息转换为头像框内的 CSS。
+ * @param member 团队成员数据。
+ * @returns 图片裁剪层和原图样式。
  */
-function getPlaceholderMember(group: TeamGroupDefinition, index: number): TeamMember {
+function getPortraitStyles(member: TeamMember): {
+  frame: CSSProperties;
+  image: CSSProperties;
+} {
+  const layout = member.portraitLayout;
+  if (!layout) return { frame: {}, image: {} };
+  const { l, t, r, b } = layout.crop;
+  const visibleWidth = Math.max(1, 100000 - l - r);
+  const visibleHeight = Math.max(1, 100000 - t - b);
+  const flipX = layout.flipHorizontal ? -1 : 1;
+  const flipY = layout.flipVertical ? -1 : 1;
   return {
-    id: `${group.id}-placeholder-${index + 1}`,
-    name: 'Member name',
-    role: group.title,
-    group: group.id,
-    bio: 'Member details will be added after the team information has been confirmed.',
+    frame: { aspectRatio: `${layout.widthEmu} / ${layout.heightEmu}` },
+    image: {
+      width: `${(100000 / visibleWidth) * 100}%`,
+      height: `${(100000 / visibleHeight) * 100}%`,
+      left: `${(-l / visibleWidth) * 100}%`,
+      top: `${(-t / visibleHeight) * 100}%`,
+      transform: `rotate(${layout.rotation / 60000}deg) scale(${flipX}, ${flipY})`,
+    },
   };
 }
 
@@ -102,6 +113,14 @@ export function TeamPage() {
           >
             Student Team Members
           </a>
+          <a
+            className={
+              activeSection === 'instructors' ? 'team-page__aside-link--active' : undefined
+            }
+            href="#instructors"
+          >
+            Instructors
+          </a>
         </aside>
 
         <div className="team-page__groups">
@@ -112,8 +131,9 @@ export function TeamPage() {
                 <strong>{group.title}</strong>
               </h2>
               <div className="team-group__grid">
-                {getGroupSlots(group).map((member, index) =>
-                  member ? (
+                {getGroupMembers(group).map((member) => {
+                  const portraitStyles = getPortraitStyles(member);
+                  return (
                     <button
                       className="team-member-card"
                       type="button"
@@ -122,25 +142,24 @@ export function TeamPage() {
                       aria-label={`View details for ${member.name}`}
                     >
                       <span className="team-member-card__portrait">
-                        {member.portraitUrl ? <img src={member.portraitUrl} alt="" /> : null}
+                        {member.portraitUrl ? (
+                          <span
+                            className="team-member-card__portrait-frame"
+                            style={portraitStyles.frame}
+                          >
+                            <img
+                              src={`${import.meta.env.BASE_URL}${member.portraitUrl}`}
+                              alt={`Portrait of ${member.name}`}
+                              style={portraitStyles.image}
+                            />
+                          </span>
+                        ) : null}
                       </span>
                       <img className="team-member-card__divider" src={memberDividerUrl} alt="" />
                       <strong>{member.name}</strong>
                     </button>
-                  ) : (
-                    <button
-                      className="team-member-card team-member-card--placeholder"
-                      type="button"
-                      key={`${group.id}-${index}`}
-                      onClick={() => setSelectedMember(getPlaceholderMember(group, index))}
-                      aria-label={`View details for ${group.title} member ${index + 1}`}
-                    >
-                      <span className="team-member-card__portrait" aria-hidden="true" />
-                      <img className="team-member-card__divider" src={memberDividerUrl} alt="" />
-                      <strong>Member name</strong>
-                    </button>
-                  ),
-                )}
+                  );
+                })}
               </div>
             </section>
           ))}
@@ -167,7 +186,9 @@ export function TeamPage() {
             </button>
             <h2>{selectedMember.name}</h2>
             <img src={detailDividerUrl} alt="" />
-            <p>{selectedMember.bio}</p>
+            {selectedMember.bio.split('\n\n').map((paragraph) => (
+              <p key={paragraph}>{paragraph}</p>
+            ))}
           </article>
         ) : null}
       </dialog>

@@ -1661,19 +1661,29 @@ a {
   box-shadow: 0 0.75rem 1.5rem rgb(0 0 0 / 18%);
 }
 .team-member-card__portrait {
-  display: block;
+  display: grid;
   width: 11.75rem;
   height: 15.125rem;
   overflow: hidden;
   flex: 0 0 auto;
   border-radius: 1rem;
-  background: var(--team-cyan);
+  background: var(--color-surface);
+  place-items: center;
 }
-.team-member-card__portrait img {
+.team-member-card__portrait-frame {
+  position: relative;
   display: block;
   width: 100%;
-  height: 100%;
-  object-fit: cover;
+  max-width: 100%;
+  max-height: 100%;
+  overflow: hidden;
+}
+.team-member-card__portrait-frame img {
+  position: absolute;
+  display: block;
+  max-width: none;
+  max-height: none;
+  transform-origin: center;
 }
 .team-member-card__divider {
   width: 9.4375rem;
@@ -1724,6 +1734,9 @@ a {
   font-size: var(--font-size-sm);
   line-height: 1.35;
 }
+.team-member-dialog p + p {
+  margin-top: 0.75rem;
+}
 .team-member-dialog__close {
   position: absolute;
   top: var(--space-3);
@@ -1738,6 +1751,27 @@ a {
   color: var(--team-blue);
   font-size: 1.75rem;
   cursor: pointer;
+}
+
+@media (max-width: 88rem) {
+  .team-page__hero,
+  .team-page__shell {
+    width: min(calc(100% - 4rem), 72rem);
+  }
+  .team-page__shell {
+    grid-template-columns: 13rem minmax(0, 1fr);
+    gap: var(--space-6);
+  }
+  .team-group__grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: var(--space-6) var(--space-4);
+  }
+  .team-member-card {
+    width: 100%;
+  }
+  .team-member-card__portrait {
+    width: calc(100% - 1.25rem);
+  }
 }
 
 @media (max-width: 64rem) {

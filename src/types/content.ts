@@ -1,5 +1,16 @@
 /** Team 画板中的成员分组。 */
-export type TeamGroupId = 'primary-pis' | 'secondary-pis' | 'student-leaders' | 'student-members';
+export type TeamGroupId =
+  'primary-pis' | 'secondary-pis' | 'student-leaders' | 'student-members' | 'instructors';
+
+/** Word 中成员头像的显示与裁剪参数。 */
+export interface TeamPortraitLayout {
+  widthEmu: number;
+  heightEmu: number;
+  crop: { l: number; t: number; r: number; b: number };
+  rotation: number;
+  flipHorizontal: boolean;
+  flipVertical: boolean;
+}
 
 /** 团队成员展示数据。 */
 export interface TeamMember {
@@ -9,6 +20,7 @@ export interface TeamMember {
   bio: string;
   group: TeamGroupId;
   portraitUrl?: string;
+  portraitLayout?: TeamPortraitLayout;
 }
 
 /** 项目时间线事件。 */
