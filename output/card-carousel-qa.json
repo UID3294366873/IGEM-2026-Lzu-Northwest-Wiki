@@ -1,0 +1,32 @@
+{
+  "desktop": {
+    "cardCount": 19,
+    "loadedImageCount": 16,
+    "visibleCardCount": 7,
+    "activeCentered": true,
+    "horizontalOverflow": false,
+    "initial": "01 / 19",
+    "wrappedPrevious": "19 / 19",
+    "wrappedNext": "01 / 19",
+    "afterDrag": "04 / 19",
+    "afterWheel": "05 / 19",
+    "wheelKeptPageStill": true,
+    "consoleErrors": [],
+    "failedRequests": []
+  },
+  "mobile": {
+    "cardCount": 19,
+    "loadedImageCount": 19,
+    "visibleCardCount": 7,
+    "activeCentered": true,
+    "horizontalOverflow": false,
+    "initial": "01 / 19",
+    "wrappedPrevious": "19 / 19",
+    "wrappedNext": "01 / 19",
+    "afterDrag": "04 / 19",
+    "afterWheel": "05 / 19",
+    "wheelKeptPageStill": true,
+    "consoleErrors": [],
+    "failedRequests": []
+  }
+}

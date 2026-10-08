@@ -1485,6 +1485,135 @@ a {
 .ihp-document a {
   overflow-wrap: anywhere;
 }
+
+.card-carousel {
+  --carousel-accent: #1f6f58;
+  position: relative;
+  width: min(100%, 46rem);
+  margin: var(--space-7) auto var(--space-8);
+  padding-bottom: 2.75rem;
+  outline: none;
+}
+.card-carousel:focus-visible {
+  outline: 3px solid color-mix(in srgb, var(--carousel-accent) 65%, transparent);
+  outline-offset: 5px;
+}
+.card-carousel__viewport {
+  position: relative;
+  height: clamp(22rem, 55vw, 34rem);
+  overflow: hidden;
+  cursor: grab;
+  touch-action: pan-y;
+  user-select: none;
+  -webkit-user-select: none;
+}
+.card-carousel--dragging .card-carousel__viewport {
+  cursor: grabbing;
+}
+.card-carousel__rail {
+  position: absolute;
+  inset: 0;
+}
+.card-carousel__card {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: clamp(14rem, 39vw, 21rem);
+  margin: 0;
+  opacity: var(--card-opacity);
+  z-index: var(--card-z);
+  transform: translate(calc(-50% + var(--card-offset) * clamp(9rem, 23vw, 13rem)), -50%)
+    scale(var(--card-scale));
+  filter: brightness(calc(0.68 + (var(--card-opacity) * 0.32)));
+  transition:
+    transform 520ms cubic-bezier(0.22, 0.76, 0.28, 1),
+    opacity 420ms ease,
+    filter 420ms ease;
+  will-change: transform, opacity;
+}
+.card-carousel--dragging .card-carousel__card {
+  transition: none;
+}
+.card-carousel__card img {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: 31rem;
+  object-fit: contain;
+  border-radius: 0.75rem;
+  box-shadow: 0 0.7rem 1.8rem rgb(25 48 42 / 18%);
+  pointer-events: none;
+}
+.card-carousel__card[data-active='true'] img {
+  box-shadow: 0 1.1rem 2.6rem rgb(25 48 42 / 28%);
+}
+.card-carousel__button {
+  position: absolute;
+  bottom: 0;
+  display: grid;
+  width: 2.4rem;
+  height: 2.4rem;
+  padding: 0;
+  border: 1px solid color-mix(in srgb, var(--carousel-accent) 45%, transparent);
+  border-radius: 50%;
+  background: var(--color-surface);
+  color: var(--carousel-accent);
+  place-items: center;
+  cursor: pointer;
+  transition: transform 180ms ease, background 180ms ease, color 180ms ease;
+}
+.card-carousel__button:hover {
+  transform: translateY(-2px);
+  background: var(--carousel-accent);
+  color: white;
+}
+.card-carousel__button:focus-visible {
+  outline: 3px solid color-mix(in srgb, var(--carousel-accent) 35%, transparent);
+  outline-offset: 2px;
+}
+.card-carousel__button--previous {
+  left: calc(50% - 5.2rem);
+}
+.card-carousel__button--next {
+  right: calc(50% - 5.2rem);
+}
+.card-carousel__status {
+  position: absolute;
+  bottom: 0.45rem;
+  left: 50%;
+  margin: 0 !important;
+  color: var(--color-muted);
+  font-family: var(--font-mono);
+  font-size: var(--font-size-xs);
+  letter-spacing: 0.08em;
+  transform: translateX(-50%);
+}
+.card-carousel__status span:first-child {
+  color: var(--carousel-accent);
+  font-weight: var(--weight-bold);
+}
+
+@media (max-width: 40rem) {
+  .card-carousel {
+    width: calc(100% + 2rem);
+    margin-left: -1rem;
+  }
+  .card-carousel__viewport {
+    height: clamp(20rem, 112vw, 29rem);
+  }
+  .card-carousel__card {
+    width: min(68vw, 18rem);
+    transform: translate(calc(-50% + var(--card-offset) * min(50vw, 10.5rem)), -50%)
+      scale(var(--card-scale));
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .card-carousel__card,
+  .card-carousel__button {
+    transition-duration: 1ms;
+  }
+}
 .education-document p {
   margin: 0 0 var(--space-4);
 }
@@ -1956,9 +2085,9 @@ a {
     top: 0;
     display: flex;
     padding: var(--space-3) 0;
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap: var(--space-3) var(--space-5);
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--space-3);
     background: var(--team-blue);
   }
   .team-group h2 span {

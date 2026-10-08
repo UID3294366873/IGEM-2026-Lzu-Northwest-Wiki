@@ -2,6 +2,7 @@ import { Fragment, type CSSProperties, type ReactNode } from 'react';
 import { PageLayout } from '../components/layout/PageLayout';
 import { IntegratedHpTableOfContents } from '../components/navigation/IntegratedHpTableOfContents';
 import type { IntegratedHpTocItem } from '../components/navigation/IntegratedHpTableOfContents';
+import { CardCarousel } from '../components/content/CardCarousel';
 import igemAssetUrls from '../data/igemAssetUrls.json';
 import integratedHpContent from '../data/integratedHpContent.json';
 
@@ -42,7 +43,11 @@ interface HeadingBlock {
   id: string;
 }
 
-type IntegratedHpBlock = ParagraphBlock | HeadingBlock;
+interface CardCarouselBlock {
+  type: 'card-carousel';
+}
+
+type IntegratedHpBlock = ParagraphBlock | HeadingBlock | CardCarouselBlock;
 
 interface IntegratedHpContent {
   title: string;
@@ -54,6 +59,32 @@ interface IntegratedHpContent {
 
 const content = integratedHpContent as IntegratedHpContent;
 const WORD_TEXT_WIDTH_EMU = 5_494_020;
+const CARD_FILES = [
+  '画板 1.png',
+  '画板 2.png',
+  '画板 3.png',
+  '画板 4.png',
+  '画板 5.png',
+  '画板 6.png',
+  '画板 7.png',
+  '画板 8.png',
+  '画板 9.png',
+  '画板 10.png',
+  '说明卡1.png',
+  '说明卡2.jpg',
+  '说明卡3.png',
+  '说明卡4.png',
+  '说明卡5.png',
+  '说明卡6.png',
+  '说明卡7.png',
+  '自杀开关1.png',
+  '自杀开关2.png',
+] as const;
+
+const cards = CARD_FILES.map((filename, index) => ({
+  src: `${import.meta.env.BASE_URL}images/ihp/cards/${encodeURIComponent(filename)}`,
+  alt: `细菌卫士卡牌 ${index + 1}`,
+}));
 
 /**
  * 优先使用 iGEM 正式地址，否则使用部署基路径下的本地原图。
@@ -132,6 +163,9 @@ function renderImage(image: IntegratedHpImage): ReactNode {
  * @returns 页面节点。
  */
 function renderBlock(block: IntegratedHpBlock, index: number): ReactNode {
+  if (block.type === 'card-carousel') {
+    return <CardCarousel cards={cards} key="bacteria-guardian-card-carousel" />;
+  }
   if (block.type === 'heading') {
     if (block.level === 1)
       return (

@@ -2221,13 +2221,7 @@
       ]
     },
     {
-      "type": "paragraph",
-      "text": "此处插入卡牌照片",
-      "segments": [
-        {
-          "text": "此处插入卡牌照片"
-        }
-      ]
+      "type": "card-carousel"
     },
     {
       "type": "heading",
