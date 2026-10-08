@@ -2,8 +2,14 @@ import { Fragment, type CSSProperties, type ReactNode } from 'react';
 import { PageLayout } from '../components/layout/PageLayout';
 import { EducationTableOfContents } from '../components/navigation/EducationTableOfContents';
 import type { EducationTocItem } from '../components/navigation/EducationTableOfContents';
+import { PdfPairViewer } from '../components/content/PdfComparisonViewer';
+import { ImagePdfPairViewer } from '../components/content/ImagePdfPairViewer';
+import { LandscapePdfViewer } from '../components/content/LandscapePdfViewer';
+import { CardCarousel } from '../components/content/CardCarousel';
+import { ColorGuardTool } from '../components/content/ColorGuardTool';
 import educationContent from '../data/educationContent.json';
 import igemAssetUrls from '../data/igemAssetUrls.json';
+import { bacteriaGuardianCards } from '../data/bacteriaGuardianCards';
 
 interface RichSegment {
   text: string;
@@ -43,7 +49,11 @@ interface HeadingBlock {
   id: string;
 }
 
-type EducationBlock = ParagraphBlock | HeadingBlock;
+interface CardCarouselBlock {
+  type: 'card-carousel';
+}
+
+type EducationBlock = ParagraphBlock | HeadingBlock | CardCarouselBlock;
 
 interface EducationContent {
   title: string;
@@ -55,6 +65,62 @@ interface EducationContent {
 
 const content = educationContent as EducationContent;
 const WORD_TEXT_WIDTH_EMU = 5_274_310;
+const EDUCATION_ARTICLE_POSTER = 'Education -24.png';
+const EDUCATION_ARTICLE_CAPTION = '图24 科普文章海报';
+const EDUCATION_ARTICLE_PLACEHOLDER = '此处右侧的科普论文插入为网页文档';
+const educationArticlePosterUrl = `${import.meta.env.BASE_URL}images/education/${encodeURIComponent(EDUCATION_ARTICLE_POSTER)}`;
+const educationArticlePdfUrl = `${import.meta.env.BASE_URL}documents/education/science-communication-article-en.pdf`;
+const BROCHURE_PDF_NOTE = '(小册子在附带pdf中）';
+const multilingualBrochurePdfUrl = `${import.meta.env.BASE_URL}documents/education/multilingual-brochure.pdf`;
+
+const surveyDocuments = [
+  {
+    number: 1,
+    title: 'iGEM 星宝特殊儿童学校生物与合成生物学科普活动调查问卷',
+    resultTitle: '星宝特殊儿童学校科普活动问卷结果',
+    questionnaireFile: 'questionnaire-1-xingbao.pdf',
+    resultFile: 'result-1-xingbao.pdf',
+  },
+  {
+    number: 2,
+    title: '科研图表中的颜色友好性认知调查',
+    resultTitle: '科研图表颜色友好性认知调查结果',
+    questionnaireFile: 'questionnaire-2-color-accessibility.pdf',
+    resultFile: 'result-2-color-accessibility.pdf',
+  },
+  {
+    number: 3,
+    title: 'iGEM 合成生物学辩论赛观众反馈调查问卷',
+    resultTitle: '合成生物学辩论赛观众反馈调查结果',
+    questionnaireFile: 'questionnaire-3-debate-feedback.pdf',
+    resultFile: 'result-3-debate-feedback.pdf',
+  },
+  {
+    number: 4,
+    title: '探秘合成生物学：iGEM 海报科普调研问卷',
+    resultTitle: 'iGEM 海报科普调研结果',
+    questionnaireFile: 'questionnaire-4-poster-outreach.pdf',
+    resultFile: 'result-4-poster-outreach.pdf',
+  },
+  {
+    number: 5,
+    title: 'iGEM 团队合成生物学线下摆摊科普活动调研问卷',
+    resultTitle: '合成生物学线下摆摊科普活动调研结果',
+    questionnaireFile: 'questionnaire-5-campus-outreach.pdf',
+    resultFile: 'result-5-campus-outreach.pdf',
+  },
+] as const;
+
+/** @returns public 目录中 Education PDF 的部署安全地址。 */
+function publicDocumentUrl(filename: string): string {
+  return `${import.meta.env.BASE_URL}documents/education/${filename}`;
+}
+
+/** @returns Word 占位段落中标记的问卷编号。 */
+function surveyNumberFromPlaceholder(text: string): number | undefined {
+  const match = text.match(/(?:问卷|PDF)\s*([1-5])/i);
+  return match ? Number(match[1]) : undefined;
+}
 
 /**
  * 优先使用已配置的 iGEM 静态地址，否则回退到部署基路径下的本地原图。
@@ -137,6 +203,11 @@ function renderImage(image: EducationImage, key: string, grouped: boolean): Reac
  * @returns 页面节点。
  */
 function renderBlock(block: EducationBlock, index: number): ReactNode {
+  if (block.type === 'card-carousel') {
+    return (
+      <CardCarousel cards={bacteriaGuardianCards} key="education-bacteria-guardian-carousel" />
+    );
+  }
   if (block.type === 'heading') {
     return block.level === 1 ? (
       <h2 className="education-document__h2" id={block.id} key={block.id}>
@@ -148,11 +219,52 @@ function renderBlock(block: EducationBlock, index: number): ReactNode {
       </h3>
     );
   }
+  const surveyNumber = surveyNumberFromPlaceholder(block.text);
+  const survey = surveyDocuments.find((item) => item.number === surveyNumber);
+  if (survey && /问卷内容和结果详看pdf/i.test(block.text)) {
+    return (
+      <PdfPairViewer
+        key={`questionnaire-${survey.number}-pdf-comparison`}
+        ariaLabel={`问卷 ${survey.number} 与调查结果 PDF 对照查看器`}
+        leftDocument={{
+          label: `问卷 ${String(survey.number).padStart(2, '0')}`,
+          title: survey.title,
+          url: publicDocumentUrl(survey.questionnaireFile),
+        }}
+        rightDocument={{
+          label: `调查结果 ${String(survey.number).padStart(2, '0')}`,
+          title: survey.resultTitle,
+          url: publicDocumentUrl(survey.resultFile),
+        }}
+      />
+    );
+  }
   const grouped = block.mediaLayout === 'inline-group' && Boolean(block.images?.length);
   const imageNames = block.images?.map((image) => image.src).join('|') ?? '';
+  if (imageNames === 'Education -5.jpeg|Education -6.jpeg|Education -7.jpeg') {
+    return <ColorGuardTool key="education-color-guard-tool" />;
+  }
+  if (imageNames === EDUCATION_ARTICLE_POSTER) {
+    return (
+      <ImagePdfPairViewer
+        key="education-article-image-pdf-pair"
+        imageUrl={educationArticlePosterUrl}
+        imageAlt="From Radiation Protection to Gut Repair 英文科普文章海报"
+        pdfUrl={educationArticlePdfUrl}
+        pdfLabel="English article"
+        pdfTitle="Radiation Hazards, Melanin and Lactate in Intestinal Repair"
+      />
+    );
+  }
+  if (
+    block.text === EDUCATION_ARTICLE_CAPTION ||
+    block.text === EDUCATION_ARTICLE_PLACEHOLDER ||
+    block.text === '图5-7   ColorGuard 科学图像色彩友好工具界面'
+  )
+    return null;
   const equalHeight =
-    imageNames === 'Education -16.jpeg|Education -17.jpeg' ||
-    imageNames === 'Education -18.jpeg|Education -19.jpeg';
+    imageNames === 'Education -12.jpeg|Education -13.jpeg' ||
+    imageNames === 'Education -14.jpeg|Education -15.jpeg';
   const groupStyle: CSSProperties | undefined =
     equalHeight && block.images
       ? {
@@ -161,9 +273,20 @@ function renderBlock(block: EducationBlock, index: number): ReactNode {
             .join(' '),
         }
       : undefined;
+  const includesBrochurePdf = block.text.includes(BROCHURE_PDF_NOTE);
+  const displayText = includesBrochurePdf ? block.text.replace(BROCHURE_PDF_NOTE, '') : block.text;
+  const displaySegments =
+    block.type === 'caption'
+      ? []
+      : block.segments
+          .map((segment) => ({
+            ...segment,
+            text: includesBrochurePdf ? segment.text.replace(BROCHURE_PDF_NOTE, '') : segment.text,
+          }))
+          .filter((segment) => segment.text);
   return (
     <Fragment key={`${block.type}-${index}`}>
-      {block.text ? (
+      {displayText ? (
         <p
           className={block.type === 'caption' ? 'education-document__caption' : undefined}
           style={
@@ -177,8 +300,15 @@ function renderBlock(block: EducationBlock, index: number): ReactNode {
               : undefined
           }
         >
-          {renderRichText(block.segments, block.text)}
+          {renderRichText(displaySegments, displayText)}
         </p>
+      ) : null}
+      {includesBrochurePdf ? (
+        <LandscapePdfViewer
+          pdfUrl={multilingualBrochurePdfUrl}
+          label="11 languages"
+          title="《从太空辐射到肠道健康》多语言科普小册子"
+        />
       ) : null}
       {block.images?.length ? (
         <div

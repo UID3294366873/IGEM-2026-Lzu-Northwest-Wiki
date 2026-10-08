@@ -13,8 +13,8 @@ const navigationGroups: NavigationGroup[] = [
   {
     label: 'Human Practices',
     items: [
-      { label: 'Education', path: '/Education' },
       { label: 'Integrated HP', path: '/human-practices' },
+      { label: 'Education', path: '/Education' },
       { label: 'Entrepreneurship', path: '/entrepreneurship' },
     ],
   },

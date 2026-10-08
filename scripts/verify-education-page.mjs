@@ -35,7 +35,7 @@ for (const viewport of [
   const humanPracticesLink = page.getByRole('link', { name: 'Human Practices' });
   await humanPracticesLink.focus();
   const submenuVisibleOnFocus = await page
-    .locator('.site-header__submenu')
+    .getByLabel('Human Practices submenu')
     .evaluate((element) => getComputedStyle(element).display !== 'none');
   if (viewport.width <= 704) await page.getByRole('button', { name: /关闭菜单/ }).click();
   await page
@@ -76,6 +76,17 @@ for (const viewport of [
       figureCount: figures.length,
       loadedImageCount: images.filter((image) => image.naturalWidth > 0).length,
       croppedCount: figures.filter((figure) => figure.dataset.cropped === 'true').length,
+      carouselCount: document.querySelectorAll('.card-carousel').length,
+      carouselCardCount: document.querySelectorAll('.card-carousel__card').length,
+      carouselStatus: document.querySelector('.card-carousel__status')?.textContent?.trim(),
+      hasObsoleteCardCaption: [...document.querySelectorAll('.education-document__caption')].some(
+        (caption) => /图[4-7].*《细菌卫士》卡牌/.test(caption.textContent ?? ''),
+      ),
+      firstRenumberedCaption: [...document.querySelectorAll('.education-document__caption')].find(
+        (caption) => caption.textContent?.includes('科普课堂活动现场'),
+      )?.textContent,
+      lastFigureCaption: [...document.querySelectorAll('.education-document__caption')].at(-1)
+        ?.textContent,
       centeredSingles: figures
         .filter((figure) => !figure.closest('.education-document__media-group'))
         .every((figure) => {
@@ -95,12 +106,12 @@ for (const viewport of [
           };
         }),
       ),
-      image11Width: Math.round(
-        document.querySelector('[data-image-src="Education -11.jpeg"]').getBoundingClientRect()
+      image7Width: Math.round(
+        document.querySelector('[data-image-src="Education -7.jpeg"]').getBoundingClientRect()
           .width,
       ),
-      image11CenterDelta: (() => {
-        const figure = document.querySelector('[data-image-src="Education -11.jpeg"]');
+      image7CenterDelta: (() => {
+        const figure = document.querySelector('[data-image-src="Education -7.jpeg"]');
         const figureRect = figure.getBoundingClientRect();
         const parentRect = figure.parentElement.getBoundingClientRect();
         return Math.round(
@@ -110,9 +121,9 @@ for (const viewport of [
       splitCaptionLines: [...document.querySelectorAll('.education-document__caption')]
         .filter(
           (caption) =>
-            caption.textContent.startsWith('图34') ||
+            caption.textContent.startsWith('图30') ||
             caption.textContent.startsWith('C .LZU-Northwest队服') ||
-            caption.textContent.startsWith('图36') ||
+            caption.textContent.startsWith('图32') ||
             caption.textContent.startsWith('C.IP贴纸实物'),
         )
         .map((caption) => ({
@@ -160,16 +171,22 @@ console.log(JSON.stringify(results, null, 2));
 
 for (const [name, metrics] of Object.entries(results)) {
   if (
-    metrics.figureCount !== 37 ||
-    metrics.loadedImageCount !== 37 ||
-    metrics.croppedCount !== 3 ||
+    metrics.figureCount !== 32 ||
+    metrics.loadedImageCount !== 32 ||
+    metrics.croppedCount !== 2 ||
+    metrics.carouselCount !== 1 ||
+    metrics.carouselCardCount !== 19 ||
+    metrics.carouselStatus !== '01 / 19' ||
+    metrics.hasObsoleteCardCaption ||
+    !metrics.firstRenumberedCaption?.startsWith('图4') ||
+    !metrics.lastFigureCaption?.startsWith('图33') ||
     metrics.horizontalOverflow ||
     !metrics.centeredSingles ||
     !metrics.activeLastHeading ||
     metrics.headingCount !== metrics.tocTargetCount ||
     metrics.missingTocTargets.length ||
-    (name === 'desktop' && metrics.image11Width > 360) ||
-    metrics.image11CenterDelta > 1 ||
+    (name === 'desktop' && metrics.image7Width > 360) ||
+    metrics.image7CenterDelta > 1 ||
     metrics.splitCaptionLines.length !== 4 ||
     metrics.splitCaptionLines.some((line) => line.textAlign !== 'center') ||
     (name === 'desktop' &&

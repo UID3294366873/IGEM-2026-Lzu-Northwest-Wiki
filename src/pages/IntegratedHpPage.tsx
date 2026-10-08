@@ -3,8 +3,10 @@ import { PageLayout } from '../components/layout/PageLayout';
 import { IntegratedHpTableOfContents } from '../components/navigation/IntegratedHpTableOfContents';
 import type { IntegratedHpTocItem } from '../components/navigation/IntegratedHpTableOfContents';
 import { CardCarousel } from '../components/content/CardCarousel';
+import { PdfPairViewer } from '../components/content/PdfComparisonViewer';
 import igemAssetUrls from '../data/igemAssetUrls.json';
 import integratedHpContent from '../data/integratedHpContent.json';
+import { bacteriaGuardianCards } from '../data/bacteriaGuardianCards';
 
 interface RichSegment {
   text: string;
@@ -59,32 +61,14 @@ interface IntegratedHpContent {
 
 const content = integratedHpContent as IntegratedHpContent;
 const WORD_TEXT_WIDTH_EMU = 5_494_020;
-const CARD_FILES = [
-  '画板 1.png',
-  '画板 2.png',
-  '画板 3.png',
-  '画板 4.png',
-  '画板 5.png',
-  '画板 6.png',
-  '画板 7.png',
-  '画板 8.png',
-  '画板 9.png',
-  '画板 10.png',
-  '说明卡1.png',
-  '说明卡2.jpg',
-  '说明卡3.png',
-  '说明卡4.png',
-  '说明卡5.png',
-  '说明卡6.png',
-  '说明卡7.png',
-  '自杀开关1.png',
-  '自杀开关2.png',
-] as const;
-
-const cards = CARD_FILES.map((filename, index) => ({
-  src: `${import.meta.env.BASE_URL}images/ihp/cards/${encodeURIComponent(filename)}`,
-  alt: `细菌卫士卡牌 ${index + 1}`,
-}));
+const nasaVastPdfUrl = `${import.meta.env.BASE_URL}documents/human-practices/nasa-vast-announcement.pdf`;
+const nasaCrew12PdfUrl = `${import.meta.env.BASE_URL}documents/human-practices/nasa-crew-12-launch-announcement.pdf`;
+const NASA_VAST_PLACEHOLDER = 'NASA Vast任务公告；（网址截图成pdf放在网页上）';
+const NASA_PDF_REPLACED_PARAGRAPHS = new Set([
+  'https://www.nasa.gov/news-release/nasa-selects-vast-for-sixth-private-mission-to-space-station/',
+  'NASA Crew-12发射公告（网址截图成pdf放在网页上）',
+  'https://www.nasa.gov/news-release/nasas-spacex-crew-12-launches-to-international-space-station/',
+]);
 
 /**
  * 优先使用 iGEM 正式地址，否则使用部署基路径下的本地原图。
@@ -164,7 +148,7 @@ function renderImage(image: IntegratedHpImage): ReactNode {
  */
 function renderBlock(block: IntegratedHpBlock, index: number): ReactNode {
   if (block.type === 'card-carousel') {
-    return <CardCarousel cards={cards} key="bacteria-guardian-card-carousel" />;
+    return <CardCarousel cards={bacteriaGuardianCards} key="bacteria-guardian-card-carousel" />;
   }
   if (block.type === 'heading') {
     if (block.level === 1)
@@ -185,6 +169,25 @@ function renderBlock(block: IntegratedHpBlock, index: number): ReactNode {
       </h4>
     );
   }
+  if (block.text === NASA_VAST_PLACEHOLDER) {
+    return (
+      <PdfPairViewer
+        key="nasa-announcement-pdf-pair"
+        ariaLabel="NASA Vast 与 Crew-12 公告 PDF 查看器"
+        leftDocument={{
+          label: 'NASA 公告 01',
+          title: 'Vast 第六次私人宇航员任务公告',
+          url: nasaVastPdfUrl,
+        }}
+        rightDocument={{
+          label: 'NASA 公告 02',
+          title: 'SpaceX Crew-12 发射公告',
+          url: nasaCrew12PdfUrl,
+        }}
+      />
+    );
+  }
+  if (NASA_PDF_REPLACED_PARAGRAPHS.has(block.text)) return null;
   const isUrl = /^https?:\/\/\S+$/.test(block.text);
   return (
     <Fragment key={`paragraph-${index}`}>
