@@ -5,7 +5,7 @@
     "role": "Primary PI",
     "group": "primary-pis",
     "bio": "Zhang Baoping is an associate professor and attending physician at the School of Stomatology. They hold a PhD and are affiliated with the Department of Oral and Maxillofacial Surgery.",
-    "portraitUrl": "images/team/team-primary-pis-baoping-zhang.jpeg",
+    "portraitUrl": "pages/team/images/portraits/team-primary-pis-baoping-zhang.jpeg",
     "portraitLayout": {
       "widthEmu": 1733550,
       "heightEmu": 2432050,
@@ -26,7 +26,7 @@
     "role": "Secondary PI",
     "group": "secondary-pis",
     "bio": "Di Cuixia is an associate researcher and master’s supervisor at the Institute of Modern Physics, Chinese Academy of Sciences. She holds a PhD in Science. Her research focuses on cancer, DNA damage repair, and epigenetics, including the screening of radiosensitizing drugs.",
-    "portraitUrl": "images/team/team-secondary-pis-di-cuixia.png",
+    "portraitUrl": "pages/team/images/portraits/team-secondary-pis-di-cuixia.png",
     "portraitLayout": {
       "widthEmu": 1974850,
       "heightEmu": 2787015,
@@ -47,7 +47,7 @@
     "role": "Secondary PI",
     "group": "secondary-pis",
     "bio": "Song Yangbo is a lecturer with a PhD at the College of Agriculture and Animal Husbandry, Qinghai University, and a recipient of Qinghai Province’s “Kunlun Talent” designation for introduced top-tier talent. His research focuses on fruit wine fermentation microbiology, functional fermentation products made from plateau berries, and foodomics.",
-    "portraitUrl": "images/team/team-secondary-pis-song-yangbo.jpeg",
+    "portraitUrl": "pages/team/images/portraits/team-secondary-pis-song-yangbo.jpeg",
     "portraitLayout": {
       "widthEmu": 1986280,
       "heightEmu": 2785110,
@@ -68,7 +68,7 @@
     "role": "Secondary PI",
     "group": "secondary-pis",
     "bio": "Zhang Jingxiang is a postdoctoral researcher at the School of Stomatology, Lanzhou University.",
-    "portraitUrl": "images/team/team-secondary-pis-zhang-jingxiang.jpeg",
+    "portraitUrl": "pages/team/images/portraits/team-secondary-pis-zhang-jingxiang.jpeg",
     "portraitLayout": {
       "widthEmu": 1661160,
       "heightEmu": 2256790,
@@ -89,7 +89,7 @@
     "role": "Secondary PI",
     "group": "secondary-pis",
     "bio": "Doctoral student (academic degree) at the School of Stomatology, Lanzhou University",
-    "portraitUrl": "images/team/team-secondary-pis-zhidong-zhang.jpeg",
+    "portraitUrl": "pages/team/images/portraits/team-secondary-pis-zhidong-zhang.jpeg",
     "portraitLayout": {
       "widthEmu": 1684655,
       "heightEmu": 2165350,
@@ -110,7 +110,7 @@
     "role": "Student Leader",
     "group": "student-leaders",
     "bio": "Gengmin is a Fusion Engineering student at Lanzhou University and the Student Leader of LZU-Northwest. His interests span nuclear fusion, computational modeling, and synthetic biology. He enjoys exploring how ideas from different disciplines can come together to solve real-world problems. Outside the lab, he is always curious about new technologies, new challenges, and anything that sounds a little crazy but might actually work.",
-    "portraitUrl": "images/team/team-student-leaders-gengmin-ren.jpeg",
+    "portraitUrl": "pages/team/images/portraits/team-student-leaders-gengmin-ren.jpeg",
     "portraitLayout": {
       "widthEmu": 1504950,
       "heightEmu": 2112010,
@@ -131,7 +131,7 @@
     "role": "Student Leader",
     "group": "student-leaders",
     "bio": "Hi, I’m Xuanqiao Wang, captain of the LZU-Northwest 2026 team and a student at the School of Stomatology. As captain, I enjoy turning fresh ideas into action alongside my teammates, and I’m excited to explore the connections between stomatology and synthetic biology through iGEM. Outside the lab, I’m passionate about microcontroller programming and embedded systems, especially the process of bringing an idea to life—from building the hardware to debugging the code. I’m looking forward to staying curious, trying new things, and creating an exciting and meaningful project with the team!",
-    "portraitUrl": "images/team/team-student-leaders-xuanqiao-wang.jpeg",
+    "portraitUrl": "pages/team/images/portraits/team-student-leaders-xuanqiao-wang.jpeg",
     "portraitLayout": {
       "widthEmu": 1840865,
       "heightEmu": 2555240,
@@ -152,7 +152,7 @@
     "role": "Student Leader",
     "group": "student-leaders",
     "bio": "As a medical student, I mainly participate in wetlab helping with the extraction of protein. About myself, I quite enjoy raising hypothesis and proving them in the lab. Every small success fascinates me. And I do think through iGEM I gain some synthetic biology skills, which you can’t learn in medical research. I used to like complete all the experiment by myself, but I realize that without collaboration, such a comprehensive study in this competition is impossible for a single dog. That maybe the most precious lesson I learn from this encounter with everyone else.",
-    "portraitUrl": "images/team/team-student-leaders-qu-zhang.jpeg",
+    "portraitUrl": "pages/team/images/portraits/team-student-leaders-qu-zhang.jpeg",
     "portraitLayout": {
       "widthEmu": 1746885,
       "heightEmu": 2497455,
@@ -173,7 +173,7 @@
     "role": "Student Team Member",
     "group": "student-members",
     "bio": "Ziyuan Mou is a clinical medicine undergraduate student at Lanzhou University. She mainly planned the wet experiments in the project regarding the verification plan for Caco-2 cells. She enjoys appreciating the world from different perspectives and is also very curious about the iGEM competition. She hopes to gain novel and wonderful experiences with each exploration.",
-    "portraitUrl": "images/team/team-student-members-ziyuan-mou.jpeg",
+    "portraitUrl": "pages/team/images/portraits/team-student-members-ziyuan-mou.jpeg",
     "portraitLayout": {
       "widthEmu": 1381125,
       "heightEmu": 2073910,
@@ -194,7 +194,7 @@
     "role": "Student Team Member",
     "group": "student-members",
     "bio": "Wang Jin is an undergraduate student studying Clinical Medicine at Lanzhou University and a member of the LZU-Northwest wet lab team. Within this project, she is primarily responsible for planning and carrying out experiments using HIEC-6 cells. She enjoys observing experimental results and drawing conclusions from them, and relishes analysing and discussing these results with her fellow students. She greatly values this opportunity to participate in iGEM and is grateful for the contributions of every team member.",
-    "portraitUrl": "images/team/team-student-members-jin-wang.jpeg",
+    "portraitUrl": "pages/team/images/portraits/team-student-members-jin-wang.jpeg",
     "portraitLayout": {
       "widthEmu": 1537970,
       "heightEmu": 2052320,
@@ -215,7 +215,7 @@
     "role": "Student Team Member",
     "group": "student-members",
     "bio": "As a clinical medicine student, he is drawn to the practical possibilities where medicine meets synthetic biology. iGEM offers him a space to test out new thoughts alongside people from varied disciplines. Away from heavy academic workloads, he enjoys exploring music, browsing casual reading materials, having casual chats with friends and unwinding at his own pace.",
-    "portraitUrl": "images/team/team-student-members-dongyuan-han.png",
+    "portraitUrl": "pages/team/images/portraits/team-student-members-dongyuan-han.png",
     "portraitLayout": {
       "widthEmu": 1527810,
       "heightEmu": 2087880,
@@ -236,7 +236,7 @@
     "role": "Student Team Member",
     "group": "student-members",
     "bio": "Earlier this year, Yang Hao joined the iGEM team. He is eager to keep learning, contribute in his own way, and grow alongside a team he truly admires.For him, iGEM is where curiosity meets collaboration—a chance to explore the unknown, ask questions, and turn ideas into something real.Outside of research, he is passionate about bioinformatics, traveling, visiting historic sites, and appreciating oil paintings.",
-    "portraitUrl": "images/team/team-student-members-hao-yang.png",
+    "portraitUrl": "pages/team/images/portraits/team-student-members-hao-yang.png",
     "portraitLayout": {
       "widthEmu": 1560830,
       "heightEmu": 2018030,
@@ -257,7 +257,7 @@
     "role": "Student Team Member",
     "group": "student-members",
     "bio": "When Jiayang Hu first learned about bioengineering in middle school, he became deeply fascinated by it. To him, iGEM is a great chance to explore the mysteries of life in practice. Studying biology with engineering ideas always amazes Jiayang Hu by how wonderful living structures are. The more he learns, the more he enjoys studying and exploring, and his curiosity goes far beyond biology. He has many interests. Besides biology, he also likes science popularization. He hopes he can keep learning about these fields in the future. Outside of his studies, he enjoys playing board games and listening to music to relax.",
-    "portraitUrl": "images/team/team-student-members-jiayang-hu.png",
+    "portraitUrl": "pages/team/images/portraits/team-student-members-jiayang-hu.png",
     "portraitLayout": {
       "widthEmu": 1377950,
       "heightEmu": 1962785,
@@ -278,7 +278,7 @@
     "role": "Student Team Member",
     "group": "student-members",
     "bio": "\"The human brain is inherently a vision-first organ.\" Liu Yichao loves all classic and timeless products, and she is dedicated to exploring how visual experiences can bring joy and inspire thought. Besides design, she also enjoys painting and practicing Chinese calligraphy (though not very well). The iGEM competition allows her ideas to collide with those of others, enabling her to collaborate and turn shared insights—those that capture the unique essence of a project—into reality. This is the process she enjoys most.、",
-    "portraitUrl": "images/team/team-student-members-yichao-liu.png",
+    "portraitUrl": "pages/team/images/portraits/team-student-members-yichao-liu.png",
     "portraitLayout": {
       "widthEmu": 1195070,
       "heightEmu": 1670050,
@@ -299,7 +299,7 @@
     "role": "Student Team Member",
     "group": "student-members",
     "bio": "Wang Chenghang usually likes to stay at home and take it easy, and he also likes to go out for walks; sometimes he reads novels until he loses track of time. This is his first time taking part in iGEM. To him, iGEM is not just a line on a résumé, but a place where curiosity turns into action: a group of people from different backgrounds argue around a whiteboard and repeatedly refine rough ideas until they can be validated, communicated, and perhaps truly help others. He is deeply grateful for his teammates’ dedication in discussions, experiments, and presentations—it is these bits and pieces of effort that have turned the Lzu-Northwest iGEM project from an extracurricular attempt into an experience worth taking seriously and being proud of.",
-    "portraitUrl": "images/team/team-student-members-chenghang-wang.jpeg",
+    "portraitUrl": "pages/team/images/portraits/team-student-members-chenghang-wang.jpeg",
     "portraitLayout": {
       "widthEmu": 1852930,
       "heightEmu": 2595245,
@@ -320,7 +320,7 @@
     "role": "Student Team Member",
     "group": "student-members",
     "bio": "sayimaierdan is a dental student at Lanzhou University and a wet-lab member of  LZU-Northwest for iGEM. He mainly works on cell and bacterial experiments, including culture, transformation, PCR, and cell viability assays. With a dental background, sayimaierdan is interested in combining oral health with synthetic biology and is eager to contribute to the team and grow as a researcher.",
-    "portraitUrl": "images/team/team-student-members-sayimaierdan.png",
+    "portraitUrl": "pages/team/images/portraits/team-student-members-sayimaierdan.png",
     "portraitLayout": {
       "widthEmu": 1524000,
       "heightEmu": 2261870,
@@ -341,7 +341,7 @@
     "role": "Student Team Member",
     "group": "student-members",
     "bio": "Bachelor student in Stomatology, Lanzhou University, member of the iGEM WetLab team. She is mainly engaged in handson experiments of synthetic biology, including bacterial culture, protein induction and optimization of experimental conditions. With a rigorous experimental attitude, she cooperates with the team to advance the project and improves laboratory skills and teamwork competence through scientific research practice.",
-    "portraitUrl": "images/team/team-student-members-ruili-zhu.png",
+    "portraitUrl": "pages/team/images/portraits/team-student-members-ruili-zhu.png",
     "portraitLayout": {
       "widthEmu": 1761490,
       "heightEmu": 1694815,
@@ -362,7 +362,7 @@
     "role": "Student Team Member",
     "group": "student-members",
     "bio": "Yuzheng enjoys exploring new technologies, trying out new ideas, and learning things that are completely outside his comfort zone. He joined iGEM because he loves the idea of bringing people from different backgrounds together to solve one meaningful problem. For him, iGEM is not only about biology—it is also about creativity, collaboration, and turning an idea into something that can actually make a difference. When he is not working on projects, he enjoys spending time with friends, discovering new things, and convincing himself that the next bug will definitely be the last one.",
-    "portraitUrl": "images/team/team-student-members-yuzheng-xiao.png",
+    "portraitUrl": "pages/team/images/portraits/team-student-members-yuzheng-xiao.png",
     "portraitLayout": {
       "widthEmu": 1444625,
       "heightEmu": 2023745,
@@ -383,7 +383,7 @@
     "role": "Student Team Member",
     "group": "student-members",
     "bio": "Yuchen Tao is a third-year undergraduate student at Lanzhou University majoring in Economics. She is a member of the Human Practices team and was mainly responsible for writing the business plan and activity proposals. She contributed to project planning and helped organize the team’s ideas into clear and practical strategies for implementation and outreach throughout the iGEM cycle.",
-    "portraitUrl": "images/team/team-student-members-yuchen-tao.png",
+    "portraitUrl": "pages/team/images/portraits/team-student-members-yuchen-tao.png",
     "portraitLayout": {
       "widthEmu": 1340485,
       "heightEmu": 1817370,
@@ -404,7 +404,7 @@
     "role": "Student Team Member",
     "group": "student-members",
     "bio": "Zhou Letao is a 21-year-old undergraduate at the School of Management. She enjoys playing the piano, practicing pen calligraphy, and binge-watching TV series. This is her first time participating in iGEM. To her, iGEM is an opportunity for people from different disciplines to come together and work toward the same goal. She absolutely loves chatting with her teammates about work, study, and everyday life — the whole process of working together to bring the project to life is genuinely one of the happiest things for her!",
-    "portraitUrl": "images/team/team-student-members-letao-zhou.png",
+    "portraitUrl": "pages/team/images/portraits/team-student-members-letao-zhou.png",
     "portraitLayout": {
       "widthEmu": 1115695,
       "heightEmu": 1554480,
@@ -425,7 +425,7 @@
     "role": "Student Team Member",
     "group": "student-members",
     "bio": "Hi, I’m Yinan Ding, a member of the LZU-Northwest 2026 team and a student at the School of Pharmacy. I enjoy hands-on experimentation and testing ideas in the lab, and I’m also fascinated by history. Experiments inspire me to ask new questions, while the stories of the past offer fresh perspectives. I’m excited to explore the possibilities of synthetic biology with my teammates and turn our curiosity into a fun and meaningful project!",
-    "portraitUrl": "images/team/team-student-members-yinan-ding.jpeg",
+    "portraitUrl": "pages/team/images/portraits/team-student-members-yinan-ding.jpeg",
     "portraitLayout": {
       "widthEmu": 1779905,
       "heightEmu": 2496185,
@@ -446,7 +446,7 @@
     "role": "Student Team Member",
     "group": "student-members",
     "bio": "Human Practices lets Hangyu connect with all kinds of people and draw new sparks of inspiration for the team. Working alongside his peers, he feels the team’s enthusiasm surround him, just like the water he glides through while swimming. When he’s not busy with iGEM, you can find him hiking, swimming, or blasting Taylor Swift’s songs.",
-    "portraitUrl": "images/team/team-student-members-hangyu-song.png",
+    "portraitUrl": "pages/team/images/portraits/team-student-members-hangyu-song.png",
     "portraitLayout": {
       "widthEmu": 1377950,
       "heightEmu": 1743710,
@@ -467,7 +467,7 @@
     "role": "Student Team Member",
     "group": "student-members",
     "bio": "Sihan Liu is a 4th-year medical student at the First School of Clinical Medicine and has been involved in our iGEM team since 2025. Majoring in clinical medicine, she works within the HP team to conduct social research, medical ethics assessment and science outreach, helping the team connect with clinical scenarios and refine our Human Practices design.",
-    "portraitUrl": "images/team/team-student-members-sihan-liu.png",
+    "portraitUrl": "pages/team/images/portraits/team-student-members-sihan-liu.png",
     "portraitLayout": {
       "widthEmu": 1347470,
       "heightEmu": 1791970,
@@ -488,7 +488,7 @@
     "role": "Student Team Member",
     "group": "student-members",
     "bio": "Being introduced to iGEM from the perspective of a pharmacy student who had spent two years memorizing drug names and metabolic pathways before ever getting near a pipette has been a refreshing reminder of what Junzheng Sun was missing out on. It's so interesting to him that biology can be engineered — designed, built, and even debugged like a piece of code — and watching a strain he constructed finally grow on a plate almost made him regret treating biology as pure memorization all those years. iGEM has also done a wonderful job of showing Junzheng what it's like to work in a team environment, where it's never one person who stays up all night for a transformation, but rather the whole team stays up together.",
-    "portraitUrl": "images/team/team-student-members-junzheng-sun.png",
+    "portraitUrl": "pages/team/images/portraits/team-student-members-junzheng-sun.png",
     "portraitLayout": {
       "widthEmu": 1353185,
       "heightEmu": 1938655,
@@ -509,7 +509,7 @@
     "role": "Student Team Member",
     "group": "student-members",
     "bio": "Guo Dejun is a third-year undergraduate student at the School of Pharmacy, Lanzhou University. His research interests lie in synthetic biology and engineered probiotics.\n\nWithin this iGEM project, he is mainly responsible for wet-lab experiment operation and experimental document sorting.",
-    "portraitUrl": "images/team/team-student-members-dejun-guo.png",
+    "portraitUrl": "pages/team/images/portraits/team-student-members-dejun-guo.png",
     "portraitLayout": {
       "widthEmu": 1249680,
       "heightEmu": 1755775,
@@ -530,7 +530,7 @@
     "role": "Student Team Member",
     "group": "student-members",
     "bio": "Li Zhitai enjoys music, basketball, and fitness. This is his first time participating in the iGEM competition, which he sees as an opportunity to collaborate with others who share a passion for scientific research on a project. He is deeply grateful to every member of the team, whose support enabled him to successfully and happily complete this competition.",
-    "portraitUrl": "images/team/team-student-members-zhetai-li.png",
+    "portraitUrl": "pages/team/images/portraits/team-student-members-zhetai-li.png",
     "portraitLayout": {
       "widthEmu": 1395730,
       "heightEmu": 2096770,
@@ -551,7 +551,7 @@
     "role": "Student Team Member",
     "group": "student-members",
     "bio": "“Progress unfolds one steady step at a time, whether on a marathon course or along the path of scientific exploration.” Guided by my belief that life lies in movement, I find resilience through longdistance marathon running. Majoring in Atmospheric Science with a minor in Computer Science and Technology, I seek to connect atmospheric observations with computational thinking. As our team’s Wiki Lead, I document, curate, and weave together every fragment of our project journey for the iGEM wiki page. Every kilometre I run and every line of code I write reinforces the same truth: meaningful achievements are forged through sustained, patient forward motion.",
-    "portraitUrl": "images/team/team-student-members-xiaoxi-peng.png",
+    "portraitUrl": "pages/team/images/portraits/team-student-members-xiaoxi-peng.png",
     "portraitLayout": {
       "widthEmu": 1383665,
       "heightEmu": 1974850,
@@ -572,7 +572,7 @@
     "role": "Student Team Member",
     "group": "student-members",
     "bio": "Zhiyuan Jiang is a third-year undergraduate student majoring in Computer Science and Technology at Lanzhou University. He joined the LZU-Northwest iGEM team in 2026 and was responsible for building the team’s official website using the React framework, implementing page structure construction, interactive component development and front-end function deployment for the team wiki.",
-    "portraitUrl": "images/team/team-student-members-zhiyuan-jiang.png",
+    "portraitUrl": "pages/team/images/portraits/team-student-members-zhiyuan-jiang.png",
     "portraitLayout": {
       "widthEmu": 1359535,
       "heightEmu": 1908175,
@@ -593,7 +593,7 @@
     "role": "Student Team Member",
     "group": "student-members",
     "bio": "Norris is a first-year student reading Visual Communication Design at Wales College, Lanzhou University. She has a strong interest in visual design and traditional Chinese aesthetics. This is her first time doing iGEM! iGEM to her is an avenue bridging her inner passion with teamwork.",
-    "portraitUrl": "images/team/team-student-members-norris-diamond.png",
+    "portraitUrl": "pages/team/images/portraits/team-student-members-norris-diamond.png",
     "portraitLayout": {
       "widthEmu": 1536065,
       "heightEmu": 2048510,
@@ -614,7 +614,7 @@
     "role": "Student Team Member",
     "group": "student-members",
     "bio": "Yu Qi is a student of Digital Media Art who is passionate about exploring how technology can forge more meaningful connections between people, cultures and the world around us. Her research interests span interactive design, human–computer interaction, generative artificial intelligence and digital cultural heritage, with a particular focus on transforming complex technologies into intuitive and engaging experiences.\n\nShe is passionate about interdisciplinary collaboration and transforming unconventional ideas into tangible interactive experiences—ranging from AI-assisted cultural heritage projects to experimental installations and wearable interfaces. For Qi, design is not merely about solving problems, but about asking better questions and creating new ways for people to perceive, communicate and engage with the world.",
-    "portraitUrl": "images/team/team-student-members-zhang-yuki.png",
+    "portraitUrl": "pages/team/images/portraits/team-student-members-zhang-yuki.png",
     "portraitLayout": {
       "widthEmu": 1700530,
       "heightEmu": 2035810,
@@ -635,7 +635,7 @@
     "role": "Student Team Member",
     "group": "student-members",
     "bio": "Zhao Xueqian is a student of Art and Design at Lanzhou University. Originally from Tai’an in Shandong, she enjoys exploring how illustration and information visualisation can make complex concepts easier to understand. Her design interests also extend to cultural narratives and interactive experiences, bringing a creative perspective to interdisciplinary projects. In her spare time, she enjoys watching films, listening to music and long-distance running – activities which, in their own ways, help her to uncover stories, find inspiration and recharge her batteries.",
-    "portraitUrl": "images/team/team-student-members-xueqian-zhao.png",
+    "portraitUrl": "pages/team/images/portraits/team-student-members-xueqian-zhao.png",
     "portraitLayout": {
       "widthEmu": 1645920,
       "heightEmu": 2304415,
@@ -656,7 +656,7 @@
     "role": "Student Team Member",
     "group": "student-members",
     "bio": "Li Jiaxun is an undergraduate student at Lanzhou University, majoring in Visual Communication Design with a minor in Administrative Management. She is mainly responsible for the visual presentation of the project. She creates visual assets for the team, completes the production of promotional videos, and heavily helps us build and beautify the Wiki page through meetings with the design group.",
-    "portraitUrl": "images/team/team-student-members-li-jiaxun.png",
+    "portraitUrl": "pages/team/images/portraits/team-student-members-li-jiaxun.png",
     "portraitLayout": {
       "widthEmu": 1341120,
       "heightEmu": 1920240,
@@ -677,7 +677,7 @@
     "role": "Student Team Member",
     "group": "student-members",
     "bio": "Jiayu CAO is an undergraduate student majoring in Visual Communication Design at Lanzhou University Wales College. With an interdisciplinary background in visual design, interaction design, and human-computer interaction, she is interested in exploring the integration of design, emerging technologies, and user experience. Her current research interests focus on interactive systems, AI-supported design, wearable sensing technologies, and immersive experiences. She is particularly interested in how design methods, intelligent technologies, and interactive media can create meaningful connections between humans, environments, and digital systems.",
-    "portraitUrl": "images/team/team-student-members-jiayu-cao.png",
+    "portraitUrl": "pages/team/images/portraits/team-student-members-jiayu-cao.png",
     "portraitLayout": {
       "widthEmu": 1164590,
       "heightEmu": 1627505,
@@ -698,7 +698,7 @@
     "role": "Student Team Member",
     "group": "student-members",
     "bio": "CHUNER LI came to iGEM with a stethoscope in mind, and somehow ended up thinking about medicine in outer space. In iGEM, she takes on the final presentation and defense, where her mission is to turn a mountain of science into a story that makes sense—and maybe even makes people smile. Working on a synthetic biology-based intestinal protection system for space radiation has given her a new perspective on healthcare: sometimes, protecting human health means looking far beyond the clinic, and even beyond Earth. When she is not preparing to take the stage or tackling the team’s latest ideas, she is probably enjoying some fruit gummies and wondering what problem science should tackle next.",
-    "portraitUrl": "images/team/team-student-members-chuner-li.png",
+    "portraitUrl": "pages/team/images/portraits/team-student-members-chuner-li.png",
     "portraitLayout": {
       "widthEmu": 1207135,
       "heightEmu": 1694815,
@@ -719,7 +719,7 @@
     "role": "Student Team Member",
     "group": "student-members",
     "bio": "Shuolin Zhong is a clinical medicine student at Lanzhou University who is fascinated by the intersection of medicine and synthetic biology. In our team, he has been involved in developing the engineered E. coli Nissle 1917 system, with a particular focus on the lactate-responsive genetic circuit, plasmid design, and biosafety module. His medical background often leads him to think about our project from a clinical perspective: not only whether a biological system can work, but also whether it could eventually become useful for patients. Beyond synthetic biology, he is especially interested in neuroscience and neurosurgery. He joined iGEM to explore how ideas from different disciplines can come together to solve complex medical problems.",
-    "portraitUrl": "images/team/team-student-members-shuolin-zhong.png",
+    "portraitUrl": "pages/team/images/portraits/team-student-members-shuolin-zhong.png",
     "portraitLayout": {
       "widthEmu": 1475105,
       "heightEmu": 1962785,
@@ -740,7 +740,7 @@
     "role": "Instructor",
     "group": "instructors",
     "bio": "Bo Yang is a senior engineer and master’s supervisor at the Institute of Modern Physics, Chinese Academy of Sciences. His research focuses on radiation safety and protection. He provided expert guidance and technical support for the team’s FLUKA simulations of melanin-based radiation shielding.",
-    "portraitUrl": "images/team/team-instructors-bo-yang.png",
+    "portraitUrl": "pages/team/images/portraits/team-instructors-bo-yang.png",
     "portraitLayout": {
       "widthEmu": 2084705,
       "heightEmu": 2513330,
@@ -761,7 +761,7 @@
     "role": "Instructor",
     "group": "instructors",
     "bio": "Gao Ying is a postdoctoral researcher at the School of Stomatology, Lanzhou University.",
-    "portraitUrl": "images/team/team-instructors-ying-gao.png",
+    "portraitUrl": "pages/team/images/portraits/team-instructors-ying-gao.png",
     "portraitLayout": {
       "widthEmu": 2068195,
       "heightEmu": 2897505,

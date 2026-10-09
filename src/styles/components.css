@@ -17,6 +17,16 @@ body {
   font-size: var(--font-size-base);
   line-height: var(--line-height-body);
 }
+/* Media keeps its intrinsic geometry while its container remains responsive. */
+img,
+svg,
+canvas {
+  max-width: 100%;
+}
+img,
+canvas {
+  height: auto;
+}
 body::before {
   content: '';
   display: block;
@@ -1652,14 +1662,46 @@ a {
 .education-document__media-group .education-document__figure {
   margin: 0;
 }
-.education-document__figure[data-image-src='Education -7.jpeg'] {
-  width: 100%;
-  flex: 0 1 22rem !important;
-  max-width: min(100%, 22rem);
-  margin-inline: auto !important;
-}
 .education-document__media-group--equal-height {
   display: grid;
+}
+.education-document__media-group--figures-12-13,
+.education-document__media-group--figures-14-15 {
+  gap: var(--space-5);
+  align-items: stretch;
+}
+.education-document__media-group--equal-height .education-document__figure,
+.education-document__media-group--equal-height .education-document__image-frame {
+  height: 100%;
+}
+.education-document__figure[data-image-src='Education -16.jpeg'] {
+  width: min(72%, 32rem);
+  max-width: 100% !important;
+}
+.education-document__figure[data-image-src='Education -18.png'],
+.education-document__figure[data-image-src='Education -19.png'] {
+  width: min(100%, 38rem);
+  max-width: 100% !important;
+}
+.ihp-document__media-pair {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-5);
+  align-items: center;
+  margin-block: var(--space-5);
+}
+.ihp-document__media-pair .education-document__figure {
+  width: 100%;
+  max-width: none !important;
+  margin: 0;
+}
+.ihp-document .education-document__figure[data-image-src='Integrated HP -16.png'],
+.ihp-document .education-document__figure[data-image-src='Integrated HP -17.png'],
+.ihp-document .education-document__figure[data-image-src='Integrated HP -18.png'],
+.ihp-document .education-document__figure[data-image-src='Integrated HP -19.png'] {
+  width: min(100%, 38rem);
+  max-width: 100% !important;
+  margin-inline: auto;
 }
 .color-guard {
   margin: var(--space-7) 0;
@@ -2017,9 +2059,11 @@ a {
   gap: 3.625rem 2rem;
 }
 .team-member-card {
+  container-type: inline-size;
   display: flex;
   width: 13.0625rem;
-  height: 21.6875rem;
+  height: auto;
+  aspect-ratio: 209 / 347;
   min-height: 0;
   padding: 1.4375rem 0 1rem;
   overflow: hidden;
@@ -2040,7 +2084,8 @@ a {
 .team-member-card__portrait {
   display: grid;
   width: 11.75rem;
-  height: 15.125rem;
+  height: auto;
+  aspect-ratio: 188 / 242;
   overflow: hidden;
   flex: 0 0 auto;
   border-radius: 1rem;
@@ -2051,6 +2096,7 @@ a {
   position: relative;
   display: block;
   width: 100%;
+  height: 100%;
   max-width: 100%;
   max-height: 100%;
   overflow: hidden;
@@ -2060,18 +2106,21 @@ a {
   display: block;
   max-width: none;
   max-height: none;
+  object-fit: cover;
   transform-origin: center;
 }
 .team-member-card__divider {
   width: 9.4375rem;
   height: 1px;
   margin: 0.9375rem 0 0.875rem;
+  object-fit: contain;
 }
 .team-member-card strong {
   width: 100%;
   padding-inline: var(--space-2);
-  font-size: 1.125rem;
-  line-height: 1.2;
+  overflow-wrap: anywhere;
+  font-size: clamp(0.6875rem, 8.6cqi, 1.125rem);
+  line-height: 1.15;
   text-align: center;
 }
 .team-member-card--placeholder strong {
@@ -2147,7 +2196,7 @@ a {
     width: 100%;
   }
   .team-member-card__portrait {
-    width: calc(100% - 1.25rem);
+    width: 90%;
   }
 }
 
@@ -2177,7 +2226,7 @@ a {
     width: 100%;
   }
   .team-member-card__portrait {
-    width: calc(100% - 1.25rem);
+    width: 90%;
   }
   .home-pathways__grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -2347,6 +2396,12 @@ a {
   .team-group__grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
+  .team-member-card {
+    padding-block: var(--space-3);
+  }
+  .team-member-card__divider {
+    margin-block: 0.625rem var(--space-2);
+  }
   .team-member-dialog article {
     padding: 2.5rem var(--space-5);
   }
@@ -2403,6 +2458,12 @@ a {
   }
   .education-document__media-group--equal-height {
     grid-template-columns: 1fr !important;
+  }
+  .education-document__figure[data-image-src='Education -16.jpeg'] {
+    width: 100%;
+  }
+  .ihp-document__media-pair {
+    grid-template-columns: 1fr;
   }
   .color-guard__header {
     grid-template-columns: 1fr;

@@ -566,63 +566,7 @@
       ]
     },
     {
-      "type": "paragraph",
-      "text": "",
-      "segments": [],
-      "images": [
-        {
-          "src": "Education -5.jpeg",
-          "alt": "图5-7   ColorGuard 科学图像色彩友好工具界面",
-          "width": 547,
-          "height": 334,
-          "wordLayout": {
-            "widthEmu": 2273935,
-            "heightEmu": 1386840,
-            "crop": {
-              "left": 0,
-              "top": 0,
-              "right": 0,
-              "bottom": 0
-            },
-            "placement": "inline"
-          }
-        },
-        {
-          "src": "Education -6.jpeg",
-          "alt": "图5-7   ColorGuard 科学图像色彩友好工具界面",
-          "width": 633,
-          "height": 339,
-          "wordLayout": {
-            "widthEmu": 2629535,
-            "heightEmu": 1409065,
-            "crop": {
-              "left": 0,
-              "top": 0,
-              "right": 0,
-              "bottom": 0
-            },
-            "placement": "inline"
-          }
-        },
-        {
-          "src": "Education -7.jpeg",
-          "alt": "图5-7   ColorGuard 科学图像色彩友好工具界面",
-          "width": 575,
-          "height": 754,
-          "wordLayout": {
-            "widthEmu": 2289175,
-            "heightEmu": 3358515,
-            "crop": {
-              "left": 0,
-              "top": 0,
-              "right": 0,
-              "bottom": 0
-            },
-            "placement": "inline"
-          }
-        }
-      ],
-      "mediaLayout": "inline-group"
+      "type": "color-guard"
     },
     {
       "type": "caption",
@@ -2313,30 +2257,6 @@
       "height": 759,
       "extension": "png",
       "bytes": 1282555
-    },
-    {
-      "filename": "Education -5.jpeg",
-      "sourceMedia": "image9.jpeg",
-      "width": 547,
-      "height": 334,
-      "extension": "jpeg",
-      "bytes": 20062
-    },
-    {
-      "filename": "Education -6.jpeg",
-      "sourceMedia": "image10.jpeg",
-      "width": 633,
-      "height": 339,
-      "extension": "jpeg",
-      "bytes": 23600
-    },
-    {
-      "filename": "Education -7.jpeg",
-      "sourceMedia": "image11.jpeg",
-      "width": 575,
-      "height": 754,
-      "extension": "jpeg",
-      "bytes": 31195
     },
     {
       "filename": "Education -8.jpeg",

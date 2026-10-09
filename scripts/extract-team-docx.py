@@ -169,7 +169,7 @@ def main() -> None:
                 "role": role_by_group[member["group"]],
                 "group": member["group"],
                 "bio": member["bio"],
-                "portraitUrl": f"images/team/{image['file']}",
+                "portraitUrl": f"pages/team/images/portraits/{image['file']}",
                 "portraitLayout": {
                     "widthEmu": image["widthEmu"],
                     "heightEmu": image["heightEmu"],

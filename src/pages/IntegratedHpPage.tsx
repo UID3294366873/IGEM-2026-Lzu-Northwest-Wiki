@@ -61,8 +61,8 @@ interface IntegratedHpContent {
 
 const content = integratedHpContent as IntegratedHpContent;
 const WORD_TEXT_WIDTH_EMU = 5_494_020;
-const nasaVastPdfUrl = `${import.meta.env.BASE_URL}documents/human-practices/nasa-vast-announcement.pdf`;
-const nasaCrew12PdfUrl = `${import.meta.env.BASE_URL}documents/human-practices/nasa-crew-12-launch-announcement.pdf`;
+const nasaVastPdfUrl = `${import.meta.env.BASE_URL}pages/human-practices/documents/nasa-vast-announcement.pdf`;
+const nasaCrew12PdfUrl = `${import.meta.env.BASE_URL}pages/human-practices/documents/nasa-crew-12-launch-announcement.pdf`;
 const NASA_VAST_PLACEHOLDER = 'NASA Vast任务公告；（网址截图成pdf放在网页上）';
 const NASA_PDF_REPLACED_PARAGRAPHS = new Set([
   'https://www.nasa.gov/news-release/nasa-selects-vast-for-sixth-private-mission-to-space-station/',
@@ -77,7 +77,10 @@ const NASA_PDF_REPLACED_PARAGRAPHS = new Set([
  */
 function imageUrl(filename: string): string {
   const hostedUrl = (igemAssetUrls as Record<string, string>)[filename];
-  return hostedUrl || `${import.meta.env.BASE_URL}images/ihp/${encodeURIComponent(filename)}`;
+  return (
+    hostedUrl ||
+    `${import.meta.env.BASE_URL}pages/human-practices/images/content/${encodeURIComponent(filename)}`
+  );
 }
 
 /**
@@ -105,7 +108,7 @@ function renderRichText(segments: RichSegment[], fallback: string): ReactNode {
  * @returns 图片节点。
  */
 function renderImage(image: IntegratedHpImage): ReactNode {
-  const { crop, widthEmu, heightEmu, placement } = image.wordLayout;
+  const { crop, widthEmu, placement } = image.wordLayout;
   const visibleWidth = 100_000 - crop.left - crop.right;
   const visibleHeight = 100_000 - crop.top - crop.bottom;
   const cropped = crop.left > 0 || crop.top > 0 || crop.right > 0 || crop.bottom > 0;
@@ -120,7 +123,9 @@ function renderImage(image: IntegratedHpImage): ReactNode {
     >
       <div
         className="education-document__image-frame"
-        style={{ aspectRatio: `${widthEmu} / ${heightEmu}` }}
+        style={{
+          aspectRatio: `${image.width * visibleWidth} / ${image.height * visibleHeight}`,
+        }}
       >
         <img
           src={imageUrl(image.src)}
@@ -130,7 +135,7 @@ function renderImage(image: IntegratedHpImage): ReactNode {
           loading="lazy"
           style={{
             width: `${(100_000 / visibleWidth) * 100}%`,
-            height: `${(100_000 / visibleHeight) * 100}%`,
+            height: 'auto',
             left: `${(-crop.left / visibleWidth) * 100}%`,
             top: `${(-crop.top / visibleHeight) * 100}%`,
           }}
@@ -227,7 +232,25 @@ export function IntegratedHpPage() {
       sidebar={<IntegratedHpTableOfContents items={content.toc} headingIds={content.headingIds} />}
     >
       <div className="education-document ihp-document">
-        {content.blocks.map((block, index) => renderBlock(block, index))}
+        {content.blocks.map((block, index) => {
+          if (block.type === 'paragraph') {
+            const imageSource = block.images?.[0]?.src;
+            if (imageSource === 'Integrated HP -13.jpeg') return null;
+            if (imageSource === 'Integrated HP -12.jpeg') {
+              const nextBlock = content.blocks[index + 1];
+              const pairedImages = [
+                ...(block.images ?? []),
+                ...(nextBlock?.type === 'paragraph' ? (nextBlock.images ?? []) : []),
+              ];
+              return (
+                <div className="ihp-document__media-pair" key="ihp-section-7-3-1-pair">
+                  {pairedImages.map((image) => renderImage(image))}
+                </div>
+              );
+            }
+          }
+          return renderBlock(block, index);
+        })}
       </div>
     </PageLayout>
   );

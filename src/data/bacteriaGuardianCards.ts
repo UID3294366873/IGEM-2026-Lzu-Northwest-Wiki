@@ -21,6 +21,6 @@ const CARD_FILES = [
 ] as const;
 
 export const bacteriaGuardianCards = CARD_FILES.map(({ filename, alt }) => ({
-  src: `${import.meta.env.BASE_URL}images/ihp/cards/${encodeURIComponent(filename)}`,
+  src: `${import.meta.env.BASE_URL}shared/images/bacteria-guardian/${encodeURIComponent(filename)}`,
   alt,
 }));

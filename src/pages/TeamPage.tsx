@@ -19,8 +19,8 @@ const teamGroups: TeamGroupDefinition[] = [
 ];
 
 const sectionIds = teamGroups.map((group) => group.id);
-const memberDividerUrl = `${import.meta.env.BASE_URL}images/team/member-divider.svg`;
-const detailDividerUrl = `${import.meta.env.BASE_URL}images/team/detail-divider.svg`;
+const memberDividerUrl = `${import.meta.env.BASE_URL}pages/team/images/decorations/member-divider.svg`;
+const detailDividerUrl = `${import.meta.env.BASE_URL}pages/team/images/decorations/detail-divider.svg`;
 
 /**
  * 把已核验成员放入对应分组，其余设计卡位保持匿名占位。

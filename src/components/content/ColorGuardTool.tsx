@@ -42,7 +42,7 @@ export function ColorGuardTool() {
   const inputRef = useRef<HTMLInputElement>(null);
   const objectUrlRef = useRef<string | undefined>(undefined);
   const [source, setSource] = useState(
-    `${import.meta.env.BASE_URL}images/colorguard/${presets[0].file}`,
+    `${import.meta.env.BASE_URL}pages/education/images/colorguard/${presets[0].file}`,
   );
   const [sourceLabel, setSourceLabel] = useState(presets[0].label);
   const [simulation, setSimulation] = useState<Simulation>('deuteranopia');
@@ -66,10 +66,8 @@ export function ColorGuardTool() {
         const green = data[index + 1];
         const blue = data[index + 2];
         data[index] = matrix[0][0] * red + matrix[0][1] * green + matrix[0][2] * blue;
-        data[index + 1] =
-          matrix[1][0] * red + matrix[1][1] * green + matrix[1][2] * blue;
-        data[index + 2] =
-          matrix[2][0] * red + matrix[2][1] * green + matrix[2][2] * blue;
+        data[index + 1] = matrix[1][0] * red + matrix[1][1] * green + matrix[1][2] * blue;
+        data[index + 2] = matrix[2][0] * red + matrix[2][1] * green + matrix[2][2] * blue;
       }
       context.putImageData(imageData, 0, 0);
       setProcessed(canvas.toDataURL('image/png'));
@@ -103,7 +101,7 @@ export function ColorGuardTool() {
 
   /** 选择随 Wiki 发布的测试图。 */
   function choosePreset(label: string, file: string) {
-    setSource(`${import.meta.env.BASE_URL}images/colorguard/${file}`);
+    setSource(`${import.meta.env.BASE_URL}pages/education/images/colorguard/${file}`);
     setSourceLabel(label);
   }
 
@@ -115,7 +113,11 @@ export function ColorGuardTool() {
           <h3 id="color-guard-title">ColorGuard 色觉模拟</h3>
           <p>选择测试图，或从设备载入图片，立即比较原图与模拟结果。</p>
         </div>
-        <button className="color-guard__upload" type="button" onClick={() => inputRef.current?.click()}>
+        <button
+          className="color-guard__upload"
+          type="button"
+          onClick={() => inputRef.current?.click()}
+        >
           选择本地图片
         </button>
         <input ref={inputRef} type="file" accept="image/*" onChange={handleUpload} hidden />
@@ -137,13 +139,21 @@ export function ColorGuardTool() {
 
       <div className="color-guard__comparison" aria-live="polite">
         <figure>
-          <figcaption><span>01</span> 原始图像</figcaption>
-          <div className="color-guard__image"><img src={source} alt={`${sourceLabel}原始图像`} /></div>
+          <figcaption>
+            <span>01</span> 原始图像
+          </figcaption>
+          <div className="color-guard__image">
+            <img src={source} alt={`${sourceLabel}原始图像`} />
+          </div>
         </figure>
         <figure>
-          <figcaption><span>02</span> {simulations[simulation].label}模拟</figcaption>
+          <figcaption>
+            <span>02</span> {simulations[simulation].label}模拟
+          </figcaption>
           <div className="color-guard__image">
-            {processed ? <img src={processed} alt={`${sourceLabel}${simulations[simulation].label}模拟结果`} /> : null}
+            {processed ? (
+              <img src={processed} alt={`${sourceLabel}${simulations[simulation].label}模拟结果`} />
+            ) : null}
           </div>
         </figure>
       </div>
@@ -151,13 +161,22 @@ export function ColorGuardTool() {
       <div className="color-guard__footer">
         <div className="color-guard__filters" aria-label="色觉模拟类型">
           {(Object.keys(simulations) as Simulation[]).map((key) => (
-            <button type="button" key={key} aria-pressed={simulation === key} onClick={() => setSimulation(key)}>
+            <button
+              type="button"
+              key={key}
+              aria-pressed={simulation === key}
+              onClick={() => setSimulation(key)}
+            >
               {simulations[key].label}
             </button>
           ))}
         </div>
       </div>
-      {error ? <p className="color-guard__error" role="alert">{error}</p> : null}
+      {error ? (
+        <p className="color-guard__error" role="alert">
+          {error}
+        </p>
+      ) : null}
     </section>
   );
 }

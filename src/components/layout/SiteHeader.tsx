@@ -40,7 +40,7 @@ export function SiteHeader() {
           <NavLink to="/" aria-label={`${teamName} 首页`}>
             <img
               className="site-header__mark"
-              src={`${import.meta.env.BASE_URL}images/team/lzu-northwest-logo.png`}
+              src={`${import.meta.env.BASE_URL}shared/images/branding/lzu-northwest-logo.png`}
               alt=""
             />
             <span className="site-header__wordmark" aria-hidden="true">
@@ -66,7 +66,8 @@ export function SiteHeader() {
           <ul className="site-header__list">
             {navigationGroups.map((group) => {
               const hasSubmenu = Boolean(group.items?.length);
-              const isActive = group.items?.some((item) => item.path === location.pathname) ?? false;
+              const isActive =
+                group.items?.some((item) => item.path === location.pathname) ?? false;
 
               return (
                 <li

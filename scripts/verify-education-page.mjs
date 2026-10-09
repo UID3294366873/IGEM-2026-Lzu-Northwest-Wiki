@@ -106,18 +106,6 @@ for (const viewport of [
           };
         }),
       ),
-      image7Width: Math.round(
-        document.querySelector('[data-image-src="Education -7.jpeg"]').getBoundingClientRect()
-          .width,
-      ),
-      image7CenterDelta: (() => {
-        const figure = document.querySelector('[data-image-src="Education -7.jpeg"]');
-        const figureRect = figure.getBoundingClientRect();
-        const parentRect = figure.parentElement.getBoundingClientRect();
-        return Math.round(
-          Math.abs(figureRect.left - parentRect.left - (parentRect.right - figureRect.right)),
-        );
-      })(),
       splitCaptionLines: [...document.querySelectorAll('.education-document__caption')]
         .filter(
           (caption) =>

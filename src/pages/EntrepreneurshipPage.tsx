@@ -2,7 +2,6 @@ import { Fragment, type CSSProperties, type ReactNode } from 'react';
 import { EntrepreneurshipTableOfContents } from '../components/navigation/EntrepreneurshipTableOfContents';
 import type { EntrepreneurshipTocItem } from '../components/navigation/EntrepreneurshipTableOfContents';
 import { PageLayout } from '../components/layout/PageLayout';
-import businessPlanPdfUrl from '../assets/documents/entrepreneurship/entrepreneurship-business-plan.pdf?url';
 import entrepreneurshipContent from '../data/entrepreneurshipContent.json';
 import igemAssetUrls from '../data/igemAssetUrls.json';
 
@@ -68,6 +67,7 @@ interface EntrepreneurshipContent {
 
 const content = entrepreneurshipContent as EntrepreneurshipContent;
 const WORD_MAX_IMAGE_WIDTH_EMU = 5_398_770;
+const businessPlanPdfUrl = `${import.meta.env.BASE_URL}pages/entrepreneurship/documents/entrepreneurship-business-plan.pdf`;
 
 /**
  * 优先使用 iGEM Uploads 正式地址，未上传时回退到项目内的图片目录。
@@ -76,7 +76,7 @@ const WORD_MAX_IMAGE_WIDTH_EMU = 5_398_770;
  */
 function imageUrl(filename: string): string {
   const hostedUrl = (igemAssetUrls as Record<string, string>)[filename];
-  const localUrl = `${import.meta.env.BASE_URL}images/entrepreneurship/${encodeURIComponent(filename)}`;
+  const localUrl = `${import.meta.env.BASE_URL}pages/entrepreneurship/images/content/${encodeURIComponent(filename)}`;
   return hostedUrl || localUrl;
 }
 
@@ -104,14 +104,12 @@ function renderRichText(segments: RichSegment[], fallback: string): ReactNode {
  * @param images 当前段落或表格单元格中的图片。
  * @param keyPrefix React key 前缀。
  * @param preserveWordWidth 是否按 Word 页面中的显示宽度限制图片。
- * @param displayHeightEmuOverride 并排图片需要等高时使用的统一 Word 高度。
  * @returns 保持文档顺序、裁剪和缩放比例的图片节点。
  */
 function renderImages(
   images: ContentImage[] | undefined,
   keyPrefix: string,
   preserveWordWidth = true,
-  displayHeightEmuOverride?: number,
 ): ReactNode {
   if (!images?.length) return null;
   return images.map((image, index) => {
@@ -126,13 +124,13 @@ function renderImages(
         ? { maxWidth: `${Math.min((layout.widthEmu / WORD_MAX_IMAGE_WIDTH_EMU) * 100, 100)}%` }
         : undefined;
     const frameStyle: CSSProperties = {
-      aspectRatio: layout
-        ? `${layout.widthEmu} / ${displayHeightEmuOverride ?? layout.heightEmu}`
-        : `${image.width} / ${image.height}`,
+      // Base the viewport on source pixels and the retained crop, not on a Word
+      // shape that may have been resized non-proportionally.
+      aspectRatio: `${image.width * visibleWidth} / ${image.height * visibleHeight}`,
     };
     const imageStyle: CSSProperties = {
       width: `${(100_000 / visibleWidth) * 100}%`,
-      height: `${(100_000 / visibleHeight) * 100}%`,
+      height: 'auto',
       left: `${(-crop.left / visibleWidth) * 100}%`,
       top: `${(-crop.top / visibleHeight) * 100}%`,
     };
@@ -220,13 +218,20 @@ function renderTable(block: TableBlock, blockIndex: number): ReactNode {
 
   if (!hasCellText && images.length > 0) {
     const equalHeight = block.mediaLayout === 'equal-height' || block.mediaLayout === 'equal-pair';
-    const commonHeightEmu = equalHeight
-      ? Math.max(...images.map((image) => image.wordLayout?.heightEmu ?? image.height))
-      : undefined;
     const gridStyle: CSSProperties | undefined = equalHeight
       ? {
           gridTemplateColumns: images
-            .map((image) => `${image.wordLayout?.widthEmu ?? image.width}fr`)
+            .map((image) => {
+              const crop = image.wordLayout?.crop ?? {
+                left: 0,
+                top: 0,
+                right: 0,
+                bottom: 0,
+              };
+              const visibleWidth = 100_000 - crop.left - crop.right;
+              const visibleHeight = 100_000 - crop.top - crop.bottom;
+              return `${(image.width * visibleWidth) / (image.height * visibleHeight)}fr`;
+            })
             .join(' '),
         }
       : undefined;
@@ -235,7 +240,7 @@ function renderTable(block: TableBlock, blockIndex: number): ReactNode {
         className={`entrepreneurship-document__media-grid${block.mediaLayout === 'equal-height' ? ' entrepreneurship-document__media-grid--equal-height' : ''}${block.mediaLayout === 'equal-pair' ? ' entrepreneurship-document__media-grid--equal-pair' : ''}`}
         style={gridStyle}
       >
-        {renderImages(images, `media-table-${blockIndex}`, false, commonHeightEmu)}
+        {renderImages(images, `media-table-${blockIndex}`, false)}
       </div>
     );
   }

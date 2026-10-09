@@ -53,7 +53,11 @@ interface CardCarouselBlock {
   type: 'card-carousel';
 }
 
-type EducationBlock = ParagraphBlock | HeadingBlock | CardCarouselBlock;
+interface ColorGuardBlock {
+  type: 'color-guard';
+}
+
+type EducationBlock = ParagraphBlock | HeadingBlock | CardCarouselBlock | ColorGuardBlock;
 
 interface EducationContent {
   title: string;
@@ -68,10 +72,10 @@ const WORD_TEXT_WIDTH_EMU = 5_274_310;
 const EDUCATION_ARTICLE_POSTER = 'Education -24.png';
 const EDUCATION_ARTICLE_CAPTION = '图24 科普文章海报';
 const EDUCATION_ARTICLE_PLACEHOLDER = '此处右侧的科普论文插入为网页文档';
-const educationArticlePosterUrl = `${import.meta.env.BASE_URL}images/education/${encodeURIComponent(EDUCATION_ARTICLE_POSTER)}`;
-const educationArticlePdfUrl = `${import.meta.env.BASE_URL}documents/education/science-communication-article-en.pdf`;
+const educationArticlePosterUrl = `${import.meta.env.BASE_URL}pages/education/images/content/${encodeURIComponent(EDUCATION_ARTICLE_POSTER)}`;
+const educationArticlePdfUrl = `${import.meta.env.BASE_URL}pages/education/documents/science-communication-article-en.pdf`;
 const BROCHURE_PDF_NOTE = '(小册子在附带pdf中）';
-const multilingualBrochurePdfUrl = `${import.meta.env.BASE_URL}documents/education/multilingual-brochure.pdf`;
+const multilingualBrochurePdfUrl = `${import.meta.env.BASE_URL}pages/education/documents/multilingual-brochure.pdf`;
 
 const surveyDocuments = [
   {
@@ -113,7 +117,7 @@ const surveyDocuments = [
 
 /** @returns public 目录中 Education PDF 的部署安全地址。 */
 function publicDocumentUrl(filename: string): string {
-  return `${import.meta.env.BASE_URL}documents/education/${filename}`;
+  return `${import.meta.env.BASE_URL}pages/education/documents/${filename}`;
 }
 
 /** @returns Word 占位段落中标记的问卷编号。 */
@@ -129,7 +133,10 @@ function surveyNumberFromPlaceholder(text: string): number | undefined {
  */
 function imageUrl(filename: string): string {
   const hostedUrl = (igemAssetUrls as Record<string, string>)[filename];
-  return hostedUrl || `${import.meta.env.BASE_URL}images/education/${encodeURIComponent(filename)}`;
+  return (
+    hostedUrl ||
+    `${import.meta.env.BASE_URL}pages/education/images/content/${encodeURIComponent(filename)}`
+  );
 }
 
 /**
@@ -159,17 +166,21 @@ function renderRichText(segments: RichSegment[], fallback: string): ReactNode {
  * @returns 图片节点。
  */
 function renderImage(image: EducationImage, key: string, grouped: boolean): ReactNode {
-  const { crop, widthEmu, heightEmu, placement } = image.wordLayout;
+  const { crop, widthEmu, placement } = image.wordLayout;
   const isCropped = crop.left > 0 || crop.top > 0 || crop.right > 0 || crop.bottom > 0;
   const visibleWidth = 100_000 - crop.left - crop.right;
   const visibleHeight = 100_000 - crop.top - crop.bottom;
   const figureStyle: CSSProperties = grouped
     ? { flexGrow: widthEmu, flexBasis: `${Math.min((widthEmu / WORD_TEXT_WIDTH_EMU) * 100, 100)}%` }
     : { maxWidth: `${Math.min((widthEmu / WORD_TEXT_WIDTH_EMU) * 100, 100)}%` };
-  const frameStyle: CSSProperties = { aspectRatio: `${widthEmu} / ${heightEmu}` };
+  // The Word frame can have a different ratio from the source bitmap. Derive the
+  // visible crop from the source pixels so responsive resizing never distorts it.
+  const frameStyle: CSSProperties = {
+    aspectRatio: `${image.width * visibleWidth} / ${image.height * visibleHeight}`,
+  };
   const imageStyle: CSSProperties = {
     width: `${(100_000 / visibleWidth) * 100}%`,
-    height: `${(100_000 / visibleHeight) * 100}%`,
+    height: 'auto',
     left: `${(-crop.left / visibleWidth) * 100}%`,
     top: `${(-crop.top / visibleHeight) * 100}%`,
   };
@@ -208,6 +219,9 @@ function renderBlock(block: EducationBlock, index: number): ReactNode {
       <CardCarousel cards={bacteriaGuardianCards} key="education-bacteria-guardian-carousel" />
     );
   }
+  if (block.type === 'color-guard') {
+    return <ColorGuardTool key="education-color-guard-tool" />;
+  }
   if (block.type === 'heading') {
     return block.level === 1 ? (
       <h2 className="education-document__h2" id={block.id} key={block.id}>
@@ -241,9 +255,6 @@ function renderBlock(block: EducationBlock, index: number): ReactNode {
   }
   const grouped = block.mediaLayout === 'inline-group' && Boolean(block.images?.length);
   const imageNames = block.images?.map((image) => image.src).join('|') ?? '';
-  if (imageNames === 'Education -5.jpeg|Education -6.jpeg|Education -7.jpeg') {
-    return <ColorGuardTool key="education-color-guard-tool" />;
-  }
   if (imageNames === EDUCATION_ARTICLE_POSTER) {
     return (
       <ImagePdfPairViewer
@@ -265,11 +276,22 @@ function renderBlock(block: EducationBlock, index: number): ReactNode {
   const equalHeight =
     imageNames === 'Education -12.jpeg|Education -13.jpeg' ||
     imageNames === 'Education -14.jpeg|Education -15.jpeg';
+  const mediaGroupModifier =
+    imageNames === 'Education -12.jpeg|Education -13.jpeg'
+      ? ' education-document__media-group--figures-12-13'
+      : imageNames === 'Education -14.jpeg|Education -15.jpeg'
+        ? ' education-document__media-group--figures-14-15'
+        : '';
   const groupStyle: CSSProperties | undefined =
     equalHeight && block.images
       ? {
           gridTemplateColumns: block.images
-            .map((image) => `${image.wordLayout.widthEmu / image.wordLayout.heightEmu}fr`)
+            .map((image) => {
+              const { crop } = image.wordLayout;
+              const visibleWidth = 100_000 - crop.left - crop.right;
+              const visibleHeight = 100_000 - crop.top - crop.bottom;
+              return `${(image.width * visibleWidth) / (image.height * visibleHeight)}fr`;
+            })
             .join(' '),
         }
       : undefined;
@@ -314,7 +336,7 @@ function renderBlock(block: EducationBlock, index: number): ReactNode {
         <div
           className={
             grouped
-              ? `education-document__media-group${equalHeight ? ' education-document__media-group--equal-height' : ''}`
+              ? `education-document__media-group${equalHeight ? ' education-document__media-group--equal-height' : ''}${mediaGroupModifier}`
               : undefined
           }
           style={groupStyle}
