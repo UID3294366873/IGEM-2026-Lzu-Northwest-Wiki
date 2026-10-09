@@ -10,10 +10,14 @@ const browser = await chromium.launch({
 });
 const results = {};
 
-for (const viewport of [
-  { name: 'desktop', width: 1440, height: 900 },
-  { name: 'mobile', width: 390, height: 844 },
-]) {
+const scenarios = [
+  { name: 'education-desktop', route: '/Education', width: 1440, height: 900 },
+  { name: 'education-mobile', route: '/Education', width: 390, height: 844 },
+  { name: 'ihp-desktop', route: '/human-practices', width: 1440, height: 900 },
+  { name: 'ihp-mobile', route: '/human-practices', width: 390, height: 844 },
+];
+
+for (const viewport of scenarios) {
   const page = await browser.newPage({ viewport });
   const consoleErrors = [];
   const failedRequests = [];
@@ -23,7 +27,7 @@ for (const viewport of [
     }
   });
   page.on('requestfailed', (request) => failedRequests.push(request.url()));
-  await page.goto('http://127.0.0.1:4176/human-practices', { waitUntil: 'networkidle' });
+  await page.goto(`http://127.0.0.1:4176${viewport.route}`, { waitUntil: 'networkidle' });
 
   const carousel = page.locator('.card-carousel');
   await carousel.scrollIntoViewIfNeeded();

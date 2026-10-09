@@ -1536,10 +1536,11 @@ a {
 }
 .card-carousel__card img {
   display: block;
-  width: 100%;
+  width: auto;
   height: auto;
+  max-width: 100%;
   max-height: 31rem;
-  object-fit: contain;
+  margin-inline: auto;
   border-radius: 0.75rem;
   box-shadow: 0 0.7rem 1.8rem rgb(25 48 42 / 18%);
   pointer-events: none;
