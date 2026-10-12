@@ -52,11 +52,16 @@ export function SiteHeader() {
         <button
           className="site-header__toggle"
           type="button"
+          aria-label={menu.isOpen ? '收回菜单' : '打开菜单'}
           aria-expanded={menu.isOpen}
           aria-controls="primary-navigation"
           onClick={menu.toggle}
         >
-          {menu.isOpen ? '关闭菜单 ×' : '打开菜单 ≡'}
+          <img
+            className="site-header__toggle-icon"
+            src={`${import.meta.env.BASE_URL}shared/images/icons/hamburger-button.svg`}
+            alt=""
+          />
         </button>
         <nav
           id="primary-navigation"

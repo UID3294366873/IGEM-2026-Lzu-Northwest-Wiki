@@ -10,8 +10,8 @@ export function BackToTop() {
   /** 平滑滚动到文档顶部，并交由浏览器尊重用户的 reduced-motion 设置。 */
   const scrollToTop = (): void => window.scrollTo({ top: 0, behavior: 'smooth' });
   return visible ? (
-    <button className="back-to-top" type="button" onClick={scrollToTop}>
-      回到顶部
+    <button className="back-to-top" type="button" aria-label="Back to top" onClick={scrollToTop}>
+      Back to top
     </button>
   ) : null;
 }

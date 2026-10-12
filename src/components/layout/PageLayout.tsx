@@ -8,7 +8,7 @@ import { Container } from './Container';
 /** 页面布局属性。 */
 interface PageLayoutProps extends PropsWithChildren {
   title: string;
-  lead: string;
+  lead?: string;
   group?: string;
   sections?: PageSection[];
   /** 仅作用于当前页面的类名，用于在不改动共享模板的情况下覆写布局。 */
@@ -50,7 +50,7 @@ export function PageLayout({
           <div className={`project-hero__copy${titleSizeClass}`}>
             <p className="project-hero__eyebrow">{group} / 2026 Wiki</p>
             <h1>{title}</h1>
-            <p>{lead}</p>
+            {lead ? <p>{lead}</p> : null}
           </div>
           {heroMedia ?? (
             <div

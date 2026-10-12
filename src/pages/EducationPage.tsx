@@ -355,7 +355,6 @@ export function EducationPage() {
   return (
     <PageLayout
       title={content.title}
-      lead={content.lead}
       group="Human Practices"
       pageClassName="wiki-page--education"
       sidebar={<EducationTableOfContents items={content.toc} headingIds={content.headingIds} />}

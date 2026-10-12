@@ -328,7 +328,6 @@ export function EntrepreneurshipPage() {
   return (
     <PageLayout
       title="Entrepreneurship"
-      lead="Sybio-Gutweaver business plan and commercialization pathway."
       group="Engagement"
       pageClassName="wiki-page--entrepreneurship"
       sidebar={

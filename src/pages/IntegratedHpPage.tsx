@@ -226,7 +226,6 @@ export function IntegratedHpPage() {
   return (
     <PageLayout
       title={content.title}
-      lead={content.lead}
       group="Human Practices"
       pageClassName="wiki-page--ihp"
       sidebar={<IntegratedHpTableOfContents items={content.toc} headingIds={content.headingIds} />}

@@ -4,7 +4,7 @@ interface LandscapePdfViewerProps {
   title: string;
 }
 
-/** 以全栏宽、低高度视口展示横向内容为主的 PDF。 */
+/** 以居中横向视口完整展示 PDF 单页。 */
 export function LandscapePdfViewer({ pdfUrl, label, title }: LandscapePdfViewerProps) {
   return (
     <section className="landscape-pdf" aria-label={`${title} PDF 查看器`}>
@@ -25,7 +25,7 @@ export function LandscapePdfViewer({ pdfUrl, label, title }: LandscapePdfViewerP
       </header>
       <div className="landscape-pdf__viewport">
         <iframe
-          src={`${pdfUrl}#page=1&view=FitH&pagemode=none&toolbar=0&navpanes=0`}
+          src={`${pdfUrl}#page=1&view=Fit&pagemode=none&toolbar=0&navpanes=0`}
           title={title}
           loading="lazy"
         >
