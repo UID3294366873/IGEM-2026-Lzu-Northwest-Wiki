@@ -8,6 +8,7 @@ export const routeMetadata: RouteMetadata[] = [
     title: 'Integrated Human Practices',
     description: 'Stakeholder feedback and its integration into project decisions.',
     group: 'Human Practices',
+    shell: 'project-description',
   },
   {
     path: '/Education',
@@ -15,6 +16,7 @@ export const routeMetadata: RouteMetadata[] = [
     title: 'Education',
     description: '让更多人理解、参与和讨论合成生物学。',
     group: 'Human Practices',
+    shell: 'project-description',
   },
   {
     path: '/entrepreneurship',
@@ -22,6 +24,7 @@ export const routeMetadata: RouteMetadata[] = [
     title: 'Entrepreneurship',
     description: 'Sybio-Gutweaver business plan and commercialization pathway.',
     group: 'Human Practices',
+    shell: 'project-description',
   },
   {
     path: '/team',
@@ -29,5 +32,6 @@ export const routeMetadata: RouteMetadata[] = [
     title: '团队介绍',
     description: '成员、分工与协作者。',
     group: 'Team',
+    footer: 'project-description',
   },
 ];

@@ -36,11 +36,18 @@ export function PageLayout({
 }: PageLayoutProps) {
   useDocumentTitle(title);
   const hasSidebar = sections.length > 0 || Boolean(sidebar);
+  const titleLength = [...title].length;
+  const titleSizeClass =
+    titleLength > 32
+      ? ' project-hero__copy--extra-long-title'
+      : titleLength > 22
+        ? ' project-hero__copy--long-title'
+        : '';
   return (
     <Container as="main" className={`page project-page ${pageClassName}`.trim()}>
       <div id="main-content" tabIndex={-1}>
         <header className="project-hero">
-          <div className="project-hero__copy">
+          <div className={`project-hero__copy${titleSizeClass}`}>
             <p className="project-hero__eyebrow">{group} / 2026 Wiki</p>
             <h1>{title}</h1>
             <p>{lead}</p>

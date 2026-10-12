@@ -7,6 +7,10 @@ export interface RouteMetadata {
   title: string;
   description: string;
   group: string;
+  /** 页面使用的共享视觉外壳；同类长内容页统一使用 Project Description 设计。 */
+  shell?: 'project-description';
+  /** 页面使用的共享页脚变体；可独立于页面视觉外壳复用。 */
+  footer?: 'project-description';
   showInNavigation?: boolean;
 }
 

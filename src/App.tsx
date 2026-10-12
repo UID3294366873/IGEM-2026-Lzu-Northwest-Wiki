@@ -30,8 +30,13 @@ function ScrollToPageTop() {
  * @returns 应用根组件。
  */
 export default function App() {
+  const { pathname } = useLocation();
+  const shell = routeDefinitions.find((route) => route.path === pathname)?.shell;
+
   return (
-    <div className="app-shell">
+    <div
+      className={`app-shell${shell === 'project-description' ? ' app-shell--project-description' : ''}`}
+    >
       <ScrollToPageTop />
       <SiteHeader />
       <Suspense fallback={<main className="async-state">正在加载页面…</main>}>

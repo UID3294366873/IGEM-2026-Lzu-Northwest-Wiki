@@ -828,6 +828,12 @@ a {
 .site-footer__status span {
   color: var(--color-accent);
 }
+.site-footer__project-description-art {
+  display: none;
+}
+.site-footer__project-description-divider {
+  display: none;
+}
 
 /* Figma low-fidelity shell: a dedicated home composition and one shared Wiki template. */
 .site-header {
@@ -1721,7 +1727,9 @@ a {
   margin: var(--space-1) 0 var(--space-2);
   font-size: var(--font-size-h3);
 }
-.color-guard__header p { margin: 0; }
+.color-guard__header p {
+  margin: 0;
+}
 .color-guard__eyebrow {
   font-family: var(--font-mono);
   font-size: var(--font-size-xs);
@@ -1738,9 +1746,17 @@ a {
   cursor: pointer;
 }
 .color-guard button:hover,
-.color-guard button[aria-pressed='true'] { background: var(--color-accent); }
-.color-guard button:focus-visible { outline: 3px solid var(--color-focus); outline-offset: 2px; }
-.color-guard__upload { padding: 0 var(--space-4); box-shadow: 0.2rem 0.2rem 0 var(--color-ink); }
+.color-guard button[aria-pressed='true'] {
+  background: var(--color-accent);
+}
+.color-guard button:focus-visible {
+  outline: 3px solid var(--color-focus);
+  outline-offset: 2px;
+}
+.color-guard__upload {
+  padding: 0 var(--space-4);
+  box-shadow: 0.2rem 0.2rem 0 var(--color-ink);
+}
 .color-guard__presets {
   display: flex;
   flex-wrap: wrap;
@@ -1750,12 +1766,26 @@ a {
   border-bottom: var(--border-thin) solid var(--color-ink);
   background: var(--color-paper);
 }
-.color-guard__presets span { margin-right: var(--space-2); font-family: var(--font-mono); font-size: var(--font-size-sm); }
+.color-guard__presets span {
+  margin-right: var(--space-2);
+  font-family: var(--font-mono);
+  font-size: var(--font-size-sm);
+}
 .color-guard__presets button,
-.color-guard__filters button { padding: var(--space-2) var(--space-3); }
-.color-guard__comparison { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); }
-.color-guard__comparison figure { min-width: 0; margin: 0; }
-.color-guard__comparison figure + figure { border-left: var(--border-thin) solid var(--color-ink); }
+.color-guard__filters button {
+  padding: var(--space-2) var(--space-3);
+}
+.color-guard__comparison {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+.color-guard__comparison figure {
+  min-width: 0;
+  margin: 0;
+}
+.color-guard__comparison figure + figure {
+  border-left: var(--border-thin) solid var(--color-ink);
+}
 .color-guard__comparison figcaption {
   display: flex;
   gap: var(--space-2);
@@ -1764,18 +1794,34 @@ a {
   border-bottom: var(--border-thin) solid var(--color-ink);
   font-weight: var(--weight-bold);
 }
-.color-guard__comparison figcaption span { font-family: var(--font-mono); color: var(--color-muted); }
+.color-guard__comparison figcaption span {
+  font-family: var(--font-mono);
+  color: var(--color-muted);
+}
 .color-guard__image {
   display: grid;
   min-height: 21rem;
   padding: var(--space-4);
   place-items: center;
-  background-color: #ededE8;
-  background-image: linear-gradient(45deg, #e2e2dc 25%, transparent 25%), linear-gradient(-45deg, #e2e2dc 25%, transparent 25%), linear-gradient(45deg, transparent 75%, #e2e2dc 75%), linear-gradient(-45deg, transparent 75%, #e2e2dc 75%);
-  background-position: 0 0, 0 0.5rem, 0.5rem -0.5rem, -0.5rem 0;
+  background-color: #edede8;
+  background-image:
+    linear-gradient(45deg, #e2e2dc 25%, transparent 25%),
+    linear-gradient(-45deg, #e2e2dc 25%, transparent 25%),
+    linear-gradient(45deg, transparent 75%, #e2e2dc 75%),
+    linear-gradient(-45deg, transparent 75%, #e2e2dc 75%);
+  background-position:
+    0 0,
+    0 0.5rem,
+    0.5rem -0.5rem,
+    -0.5rem 0;
   background-size: 1rem 1rem;
 }
-.color-guard__image img { display: block; width: 100%; height: 19rem; object-fit: contain; }
+.color-guard__image img {
+  display: block;
+  width: 100%;
+  height: 19rem;
+  object-fit: contain;
+}
 .color-guard__footer {
   display: flex;
   gap: var(--space-4);
@@ -1784,8 +1830,17 @@ a {
   padding: var(--space-4) var(--space-5);
   border-top: var(--border-thin) solid var(--color-ink);
 }
-.color-guard__filters { display: flex; flex-wrap: wrap; gap: var(--space-2); }
-.color-guard__error { margin: 0; padding: var(--space-3) var(--space-5); border-top: var(--border-thin) solid var(--color-ink); background: var(--color-warning); }
+.color-guard__filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+}
+.color-guard__error {
+  margin: 0;
+  padding: var(--space-3) var(--space-5);
+  border-top: var(--border-thin) solid var(--color-ink);
+  background: var(--color-warning);
+}
 .education-document__caption {
   margin-top: calc(var(--space-3) * -1) !important;
   color: var(--color-muted);
@@ -2179,6 +2234,331 @@ a {
   cursor: pointer;
 }
 
+/* Project Description visual shell — reusable for all long-form Wiki content pages. */
+.app-shell--project-description {
+  --project-shell-blue: #006fa0;
+  --project-shell-cyan: #09acc6;
+  --project-shell-pink: #f39a9d;
+  --project-shell-blush: #ffeaec;
+  --project-shell-paper: #f7feff;
+  background: var(--project-shell-blue);
+}
+.app-shell--project-description .site-header {
+  min-height: 4.375rem;
+  padding-inline: var(--space-5);
+  background: var(--project-shell-paper);
+}
+.app-shell--project-description .site-header__inner {
+  width: min(100%, 73.75rem);
+  min-height: 4.375rem;
+  gap: 1.25rem;
+}
+.app-shell--project-description .site-header__mark {
+  width: 3.625rem;
+  height: 3.25rem;
+}
+.app-shell--project-description .site-header__wordmark {
+  font-size: 2rem;
+}
+.app-shell--project-description .site-header__list {
+  gap: 2.5rem;
+}
+.app-shell--project-description .site-header__link {
+  color: var(--project-shell-blue);
+  font-size: 1.125rem;
+}
+.app-shell--project-description .project-page {
+  padding-inline: 0;
+  overflow: clip;
+  background: var(--project-shell-blue);
+  color: var(--project-shell-blue);
+}
+.app-shell--project-description .project-hero {
+  position: relative;
+  display: block;
+  width: 100%;
+  min-height: 38.75rem;
+  overflow: hidden;
+  background: linear-gradient(
+    to bottom,
+    var(--project-shell-blue) 0%,
+    var(--project-shell-cyan) 17%,
+    var(--project-shell-blush) 34%,
+    var(--project-shell-blush) 66%,
+    var(--project-shell-cyan) 83%,
+    var(--project-shell-blue) 100%
+  );
+}
+.app-shell--project-description .project-hero::before,
+.app-shell--project-description .project-hero::after,
+.app-shell--project-description .project-hero__copy::after {
+  position: absolute;
+  z-index: 0;
+  display: block;
+  aspect-ratio: 1;
+  background: url('/shared/images/project-description-shell/hero-moon.png') center / contain
+    no-repeat;
+  content: '';
+  pointer-events: none;
+}
+.app-shell--project-description .project-hero::before {
+  top: -30vw;
+  left: -15.7639vw;
+  width: 64.5139vw;
+}
+.app-shell--project-description .project-hero::after {
+  top: -11.1806vw;
+  right: -8.8889vw;
+  width: 26.875vw;
+}
+.app-shell--project-description .project-hero__copy {
+  position: relative;
+  z-index: 1;
+  width: min(100%, 90rem);
+  height: 38.75rem;
+  margin-inline: auto;
+  padding-top: 12.75rem;
+}
+.app-shell--project-description .project-hero__copy::after {
+  z-index: -1;
+  top: 12.1528vw;
+  left: 61.9%;
+  width: 18.0556vw;
+}
+.app-shell--project-description .project-hero__eyebrow {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: 0;
+  overflow: hidden;
+  clip-path: inset(50%);
+}
+.app-shell--project-description .project-hero h1 {
+  position: relative;
+  z-index: 1;
+  max-width: 100%;
+  margin: 0 1.5rem 0 -0.375rem;
+  color: var(--project-shell-pink);
+  font-size: clamp(4.5rem, 8.9vw, 8rem);
+  font-style: italic;
+  font-weight: var(--weight-bold);
+  letter-spacing: -0.045em;
+  line-height: 0.95;
+}
+.app-shell--project-description .project-hero__copy--long-title h1 {
+  max-width: 92%;
+  font-size: clamp(4rem, 6.2vw, 5.75rem);
+  line-height: 0.92;
+}
+.app-shell--project-description .project-hero__copy--extra-long-title h1 {
+  max-width: 94%;
+  font-size: clamp(3.5rem, 5.25vw, 4.75rem);
+  line-height: 0.9;
+}
+.app-shell--project-description .project-hero__copy > p:last-child {
+  position: relative;
+  z-index: 1;
+  width: fit-content;
+  max-width: min(48rem, calc(100% - 9.5rem));
+  margin: 1.25rem 0 0 4.75rem;
+  padding: 0.5rem 0.75rem;
+  border-radius: 999px;
+  background: rgb(255 234 236 / 88%);
+  color: var(--project-shell-blue);
+  font-size: 1rem;
+  font-weight: var(--weight-bold);
+  line-height: 1.45;
+}
+.app-shell--project-description .project-hero__media {
+  display: none;
+}
+.app-shell--project-description .project-page__body,
+.app-shell--project-description .project-page__body--single,
+.app-shell--project-description .wiki-page--entrepreneurship .project-page__body,
+.app-shell--project-description .wiki-page--education .project-page__body,
+.app-shell--project-description .wiki-page--ihp .project-page__body {
+  grid-template-columns: 15.375rem minmax(0, 58.75rem);
+  width: min(calc(100% - 4rem), 80.5rem);
+  margin-inline: auto;
+  padding-block: 4.4375rem 8.125rem;
+  justify-content: start;
+  gap: 4rem;
+}
+.app-shell--project-description .project-page__aside {
+  top: 2rem;
+  padding-top: 1.25rem;
+}
+.app-shell--project-description .entrepreneurship-toc,
+.app-shell--project-description .education-toc {
+  max-height: calc(100vh - 4rem);
+  color: var(--project-shell-paper);
+  scrollbar-color: var(--project-shell-pink) transparent;
+}
+.app-shell--project-description .entrepreneurship-toc__title,
+.app-shell--project-description .education-toc__title {
+  margin: 0 0 0.75rem;
+  color: var(--project-shell-pink);
+  font-family: var(--font-body);
+  font-size: 1.75rem;
+  font-style: italic;
+  font-weight: var(--weight-bold);
+  line-height: 1.1;
+  text-transform: none;
+}
+.app-shell--project-description .entrepreneurship-toc__link,
+.app-shell--project-description .education-toc__link {
+  padding: 0.25rem 0;
+  color: var(--project-shell-paper);
+  font-size: 0.8125rem;
+  font-style: italic;
+  font-weight: var(--weight-bold);
+  line-height: 1.25;
+  text-decoration: none;
+}
+.app-shell--project-description .entrepreneurship-toc__list--level-2 .entrepreneurship-toc__link,
+.app-shell--project-description .entrepreneurship-toc__list--level-3 .entrepreneurship-toc__link,
+.app-shell--project-description .education-toc__link--child {
+  color: rgb(247 254 255 / 78%);
+  font-size: 0.75rem;
+}
+.app-shell--project-description .entrepreneurship-toc__link:hover,
+.app-shell--project-description .entrepreneurship-toc__link--active,
+.app-shell--project-description .education-toc__link:hover,
+.app-shell--project-description .education-toc__link--active {
+  color: var(--project-shell-pink);
+  background: transparent;
+}
+.app-shell--project-description .entrepreneurship-toc__sublist,
+.app-shell--project-description .education-toc__sublist {
+  border-left-color: rgb(247 254 255 / 32%);
+}
+.app-shell--project-description .project-page__article {
+  min-width: 0;
+  padding: 3rem 2.5rem;
+  border-radius: 2rem;
+  background: var(--project-shell-paper);
+  color: var(--project-shell-blue);
+}
+.app-shell--project-description .project-page__article p,
+.app-shell--project-description .project-page__article li,
+.app-shell--project-description .project-page__article td,
+.app-shell--project-description .project-page__article th {
+  color: var(--project-shell-blue);
+  font-size: 0.875rem;
+  line-height: 1.45;
+}
+.app-shell--project-description .project-page__article a {
+  color: var(--project-shell-cyan);
+}
+.app-shell--project-description .entrepreneurship-document__h2,
+.app-shell--project-description .education-document__h2 {
+  color: var(--project-shell-cyan);
+  font-size: 2rem;
+  font-style: italic;
+  line-height: 1.1;
+}
+.app-shell--project-description .entrepreneurship-document__h3,
+.app-shell--project-description .education-document__h3 {
+  color: var(--project-shell-blue);
+  font-size: 1.25rem;
+  line-height: 1.2;
+}
+.app-shell--project-description .entrepreneurship-document__h4,
+.app-shell--project-description .education-document__h4 {
+  color: var(--project-shell-blue);
+  font-size: 1rem;
+  line-height: 1.25;
+}
+.app-shell--project-description .project-page .page-navigation {
+  overflow: hidden;
+  border: 1px solid var(--project-shell-cyan);
+  border-radius: 1rem;
+}
+.site-footer--project-description {
+  --project-shell-blue: #006fa0;
+  --project-shell-cyan: #09acc6;
+  --project-shell-pink: #f39a9d;
+  --project-shell-blush: #ffeaec;
+  --project-shell-paper: #f7feff;
+  position: relative;
+  z-index: 1;
+  display: block;
+  width: 100%;
+  min-height: 31.25rem;
+  padding: 7.6875rem max(2rem, calc((100% - 76rem) / 2)) 5.3125rem;
+  border: 0;
+  background:
+    linear-gradient(to bottom, #ffeaec 6.731%, #09acc6 58.654%, #006fa0 100%) top / 100% 13.0625rem
+      no-repeat,
+    #006fa0;
+  color: var(--project-shell-paper);
+}
+.site-footer--project-description::before {
+  position: absolute;
+  z-index: 1;
+  top: -2.75rem;
+  left: 0;
+  width: 100%;
+  height: calc(2.75rem + 1px);
+  background-image: url('/shared/images/project-description-shell/footer-wave.png');
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: 138.6111% auto;
+  content: '';
+  pointer-events: none;
+}
+.site-footer--project-description .site-footer__project-description-art {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  min-height: 18.1875rem;
+  gap: 3rem;
+  align-items: start;
+}
+.site-footer--project-description .site-footer__project-description-divider {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  margin-inline: auto;
+}
+.site-footer--project-description .site-footer__partners {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(8rem, 1fr));
+  gap: 1.5rem 2rem;
+  align-items: center;
+}
+.site-footer--project-description .site-footer__partners img {
+  width: 100%;
+  max-height: 4.75rem;
+  object-fit: contain;
+}
+.site-footer--project-description .site-footer__social {
+  display: grid;
+  grid-template-columns: repeat(2, 8rem);
+  gap: 0.625rem 1rem;
+  padding-top: 0;
+  color: var(--project-shell-paper);
+  text-align: center;
+}
+.site-footer--project-description .site-footer__social > p {
+  grid-column: 1 / -1;
+  margin: 0;
+  font-size: 0.875rem;
+}
+.site-footer--project-description .site-footer__social figure {
+  margin: 0;
+}
+.site-footer--project-description .site-footer__social img {
+  width: 8rem;
+  height: 8rem;
+  object-fit: contain;
+}
+.site-footer--project-description .site-footer__social figcaption {
+  margin-top: 0.375rem;
+  font-size: 0.75rem;
+}
+.site-footer--project-description a {
+  color: var(--project-shell-paper);
+}
 @media (max-width: 88rem) {
   .team-page__hero,
   .team-page__shell {
@@ -2288,6 +2668,12 @@ a {
   .site-footer {
     grid-template-columns: 1fr 1fr;
   }
+  .site-footer--project-description {
+    padding-inline: 2rem;
+  }
+  .site-footer--project-description .site-footer__partners {
+    grid-template-columns: repeat(3, minmax(7rem, 1fr));
+  }
 }
 
 @media (max-width: 44rem) {
@@ -2356,6 +2742,101 @@ a {
   .site-header__submenu-link {
     padding: var(--space-2) 0;
     font-size: var(--font-size-xs);
+  }
+  .app-shell--project-description .site-header__inner {
+    flex-wrap: nowrap;
+  }
+  .app-shell--project-description .site-header__brand a {
+    gap: 0.5rem;
+  }
+  .app-shell--project-description .site-header__mark {
+    width: 2.75rem;
+    height: 2.5rem;
+  }
+  .app-shell--project-description .site-header__wordmark {
+    font-size: 1rem;
+  }
+  .app-shell--project-description .site-header__toggle {
+    flex: 0 0 auto;
+    padding-inline: 0.625rem;
+  }
+  .app-shell--project-description .project-hero {
+    min-height: 36rem;
+    padding: 0;
+  }
+  .app-shell--project-description .project-hero::before {
+    top: -42vw;
+    left: -42vw;
+    width: 105vw;
+  }
+  .app-shell--project-description .project-hero::after {
+    top: -13vw;
+    right: -16vw;
+    width: 50vw;
+  }
+  .app-shell--project-description .project-hero__copy {
+    width: 100%;
+    height: 36rem;
+    padding: 8rem 1rem 0;
+  }
+  .app-shell--project-description .project-hero__copy::after {
+    top: 64vw;
+    left: 64%;
+    width: 30vw;
+  }
+  .app-shell--project-description .project-hero__eyebrow {
+    margin-left: 0;
+  }
+  .app-shell--project-description .project-hero h1,
+  .app-shell--project-description .wiki-page--entrepreneurship .project-hero h1,
+  .app-shell--project-description .wiki-page--education .project-hero h1,
+  .app-shell--project-description .wiki-page--ihp .project-hero h1 {
+    margin: 0;
+    font-size: clamp(3rem, 16vw, 5rem);
+    overflow-wrap: anywhere;
+  }
+  .app-shell--project-description .project-hero__copy > p:last-child {
+    max-width: 100%;
+    margin: 1rem 0 0;
+    font-size: 0.75rem;
+  }
+  .app-shell--project-description .project-hero__copy--long-title h1 {
+    font-size: clamp(2.75rem, 13vw, 3.5rem);
+  }
+  .app-shell--project-description .project-hero__copy--extra-long-title h1 {
+    font-size: clamp(2.5rem, 12vw, 3.25rem);
+  }
+  .app-shell--project-description .project-page__body,
+  .app-shell--project-description .project-page__body--single,
+  .app-shell--project-description .wiki-page--entrepreneurship .project-page__body,
+  .app-shell--project-description .wiki-page--education .project-page__body,
+  .app-shell--project-description .wiki-page--ihp .project-page__body {
+    grid-template-columns: minmax(0, 1fr);
+    width: calc(100% - 2rem);
+    padding-block: 2rem 5rem;
+    gap: 2rem;
+  }
+  .app-shell--project-description .project-page__article {
+    padding: 1.5rem 1.125rem;
+    border-radius: 1.25rem;
+  }
+  .app-shell--project-description .entrepreneurship-toc__title,
+  .app-shell--project-description .education-toc__title {
+    font-size: 1.5rem;
+  }
+  .site-footer--project-description {
+    padding: 9rem 1.25rem 2rem;
+  }
+  .site-footer--project-description .site-footer__project-description-art {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  .site-footer--project-description .site-footer__partners {
+    grid-template-columns: repeat(2, minmax(7rem, 1fr));
+  }
+  .site-footer--project-description .site-footer__social {
+    justify-content: center;
+    padding-top: 0;
   }
   .team-page {
     padding-bottom: var(--space-8);
